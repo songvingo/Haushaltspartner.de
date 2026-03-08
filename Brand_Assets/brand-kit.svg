@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', Inter, sans-serif">
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="#f7fdf9"/>
+
+  <!-- Header -->
+  <rect width="900" height="80" fill="#1b4332"/>
+  <text x="40" y="36" font-size="11" font-weight="700" fill="#95d5b2" letter-spacing="3" text-anchor="start">HAUSHALTSPARTNER</text>
+  <text x="40" y="58" font-size="22" font-weight="800" fill="#ffffff" letter-spacing="-0.5">Brand Color Kit</text>
+  <text x="860" y="48" font-size="11" fill="#74c69d" text-anchor="end">haushaltspartner.de</text>
+
+  <!-- ── SECTION: Primärfarben (Grün) ── -->
+  <text x="40" y="110" font-size="10" font-weight="700" fill="#40916c" letter-spacing="2">PRIMÄRFARBEN — GRÜN</text>
+
+  <!-- Swatch row 1: dark greens -->
+  <!-- 950 -->
+  <rect x="40" y="122" width="90" height="70" rx="8" fill="#0d2318"/>
+  <text x="85" y="168" font-size="10" fill="#52b788" text-anchor="middle" font-weight="600">950</text>
+  <text x="85" y="208" font-size="10" fill="#1a2e23" text-anchor="middle" font-weight="700">#0d2318</text>
+  <text x="85" y="220" font-size="9" fill="#4a7c63" text-anchor="middle">Footer BG</text>
+
+  <!-- 900 -->
+  <rect x="143" y="122" width="90" height="70" rx="8" fill="#1b4332"/>
+  <text x="188" y="168" font-size="10" fill="#74c69d" text-anchor="middle" font-weight="600">900</text>
+  <text x="188" y="208" font-size="10" fill="#1a2e23" text-anchor="middle" font-weight="700">#1b4332</text>
+  <text x="188" y="220" font-size="9" fill="#4a7c63" text-anchor="middle">Navbar · Primary</text>
+
+  <!-- 800 -->
+  <rect x="246" y="122" width="90" height="70" rx="8" fill="#2d6a4f"/>
+  <text x="291" y="168" font-size="10" fill="#95d5b2" text-anchor="middle" font-weight="600">800</text>
+  <text x="291" y="208" font-size="10" fill="#1a2e23" text-anchor="middle" font-weight="700">#2d6a4f</text>
+  <text x="291" y="220" font-size="9" fill="#4a7c63" text-anchor="middle">Stats · Icons</text>
+
+  <!-- 700 -->
+  <rect x="349" y="122" width="90" height="70" rx="8" fill="#40916c"/>
+  <text x="394" y="168" font-size="10" fill="#fff" text-anchor="middle" font-weight="600">700</text>
+  <text x="394" y="208" font-size="10" fill="#1a2e23" text-anchor="middle" font-weight="700">#40916c</text>
+  <text x="394" y="220" font-size="9" fill="#4a7c63" text-anchor="middle">Akzente · Labels</text>
+
+  <!-- 600 -->
+  <rect x="452" y="122" width="90" height="70" rx="8" fill="#52b788"/>
+  <text x="497" y="168" font-size="10" fill="#fff" text-anchor="middle" font-weight="600">600</text>
+  <text x="497" y="208" font-size="10" fill="#1a2e23" text-anchor="middle" font-weight="700">#52b788</text>
+  <text x="497" y="220" font-size="9" fill="#4a7c63" text-anchor="middle">Sekundär</text>
+
+  <!-- 500 -->
+  <rect x="555" y="122" width="90" height="70" rx="8" fill="#74c69d"/>
+  <text x="600" y="168" font-size="10" fill="#1b4332" text-anchor="middle" font-weight="600">500</text>
+  <text x="600" y="208" font-size="10" fill="#1a2e23" text-anchor="middle" font-weight="700">#74c69d</text>
+  <text x="600" y="220" font-size="9" fill="#4a7c63" text-anchor="middle">Zahlen · Highlights</text>
+
+  <!-- 400 -->
+  <rect x="658" y="122" width="90" height="70" rx="8" fill="#95d5b2"/>
+  <text x="703" y="168" font-size="10" fill="#1b4332" text-anchor="middle" font-weight="600">400</text>
+  <text x="703" y="208" font-size="10" fill="#1a2e23" text-anchor="middle" font-weight="700">#95d5b2</text>
+  <text x="703" y="220" font-size="9" fill="#4a7c63" text-anchor="middle">Nav-Links</text>
+
+  <!-- 300 -->
+  <rect x="761" y="122" width="99" height="70" rx="8" fill="#b7e4c7"/>
+  <text x="810" y="168" font-size="10" fill="#1b4332" text-anchor="middle" font-weight="600">300</text>
+  <text x="810" y="208" font-size="10" fill="#1a2e23" text-anchor="middle" font-weight="700">#b7e4c7</text>
+  <text x="810" y="220" font-size="9" fill="#4a7c63" text-anchor="middle">Text auf Dunkel</text>
+
+  <!-- Swatch row 2: light greens -->
+  <!-- 200 -->
+  <rect x="40" y="238" width="130" height="55" rx="8" fill="#d8f3dc" stroke="#e0eee4" stroke-width="1"/>
+  <text x="105" y="264" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">200 · #d8f3dc</text>
+  <text x="105" y="279" font-size="9" fill="#4a7c63" text-anchor="middle">Rahmen · Borders</text>
+
+  <!-- 100 -->
+  <rect x="182" y="238" width="130" height="55" rx="8" fill="#f0faf2" stroke="#e0eee4" stroke-width="1"/>
+  <text x="247" y="264" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">100 · #f0faf2</text>
+  <text x="247" y="279" font-size="9" fill="#4a7c63" text-anchor="middle">Icon-BG · Sektion</text>
+
+  <!-- 50 -->
+  <rect x="324" y="238" width="130" height="55" rx="8" fill="#f7fdf9" stroke="#e0eee4" stroke-width="1"/>
+  <text x="389" y="264" font-size="10" fill="#2d6a4f" text-anchor="middle" font-weight="600">50 · #f7fdf9</text>
+  <text x="389" y="279" font-size="9" fill="#4a7c63" text-anchor="middle">Testimonials-BG</text>
+
+  <!-- ── SECTION: Akzentfarbe Gold ── -->
+  <text x="530" y="248" font-size="10" font-weight="700" fill="#e8a320" letter-spacing="2">AKZENTFARBE — GOLD</text>
+
+  <!-- Gold 500 -->
+  <rect x="530" y="258" width="100" height="55" rx="8" fill="#e8a320"/>
+  <text x="580" y="284" font-size="10" fill="#fff" text-anchor="middle" font-weight="600">500 · #e8a320</text>
+  <text x="580" y="298" font-size="9" fill="rgba(255,255,255,0.85)" text-anchor="middle">Buttons · CTAs</text>
+
+  <!-- Gold 400 -->
+  <rect x="643" y="258" width="100" height="55" rx="8" fill="#f0b429"/>
+  <text x="693" y="284" font-size="10" fill="#fff" text-anchor="middle" font-weight="600">400 · #f0b429</text>
+  <text x="693" y="298" font-size="9" fill="rgba(255,255,255,0.85)" text-anchor="middle">Hover-Zustand</text>
+
+  <!-- Gold 300 -->
+  <rect x="756" y="258" width="104" height="55" rx="8" fill="#fcd05a"/>
+  <text x="808" y="284" font-size="10" fill="#1b4332" text-anchor="middle" font-weight="600">300 · #fcd05a</text>
+  <text x="808" y="298" font-size="9" fill="#4a7c63" text-anchor="middle">Highlights</text>
+
+  <!-- ── SECTION: Textfarben ── -->
+  <text x="40" y="330" font-size="10" font-weight="700" fill="#40916c" letter-spacing="2">TEXTFARBEN</text>
+
+  <!-- Body Dark -->
+  <rect x="40" y="342" width="110" height="55" rx="8" fill="#1a2e23"/>
+  <text x="95" y="368" font-size="10" fill="#74c69d" text-anchor="middle" font-weight="600">#1a2e23</text>
+  <text x="95" y="382" font-size="9" fill="#95d5b2" text-anchor="middle">Body-Text</text>
+
+  <!-- Text Mittel -->
+  <rect x="163" y="342" width="110" height="55" rx="8" fill="#4a7c63"/>
+  <text x="218" y="368" font-size="10" fill="#fff" text-anchor="middle" font-weight="600">#4a7c63</text>
+  <text x="218" y="382" font-size="9" fill="rgba(255,255,255,0.8)" text-anchor="middle">Sekundärtext</text>
+
+  <!-- Placeholder -->
+  <rect x="286" y="342" width="110" height="55" rx="8" fill="#9cafa4"/>
+  <text x="341" y="368" font-size="10" fill="#fff" text-anchor="middle" font-weight="600">#9cafa4</text>
+  <text x="341" y="382" font-size="9" fill="rgba(255,255,255,0.85)" text-anchor="middle">Placeholder</text>
+
+  <!-- White -->
+  <rect x="409" y="342" width="110" height="55" rx="8" fill="#ffffff" stroke="#e0eee4" stroke-width="1"/>
+  <text x="464" y="368" font-size="10" fill="#1b4332" text-anchor="middle" font-weight="600">#ffffff</text>
+  <text x="464" y="382" font-size="9" fill="#4a7c63" text-anchor="middle">Weiß · Texte</text>
+
+  <!-- ── SECTION: Typografie ── -->
+  <text x="40" y="432" font-size="10" font-weight="700" fill="#40916c" letter-spacing="2">TYPOGRAFIE</text>
+
+  <rect x="40" y="444" width="820" height="130" rx="10" fill="#fff" stroke="#e8f5ec" stroke-width="1"/>
+
+  <text x="64" y="474" font-size="28" font-weight="900" fill="#1b4332" letter-spacing="-1">Haushaltspartner</text>
+  <text x="64" y="496" font-size="11" fill="#40916c" letter-spacing="1" font-weight="600">HEADLINE — 900 WEIGHT · −0.04EM TRACKING</text>
+
+  <line x1="64" y1="510" x2="836" y2="510" stroke="#e8f5ec" stroke-width="1"/>
+
+  <text x="64" y="530" font-size="16" font-weight="600" fill="#1b4332">SF Pro Display / Inter</text>
+  <text x="64" y="548" font-size="13" fill="#4a7c63">Professionelle Haushaltshilfe, Alltagshilfe und Seniorenhilfe in Hannover für Menschen mit Pflegegrad 1–5.</text>
+  <text x="64" y="563" font-size="11" fill="#9cafa4" letter-spacing="0.5">BODY — 400–600 WEIGHT · 1.7 LINE-HEIGHT</text>
+
+  <!-- Footer -->
+  <rect y="590" width="900" height="30" fill="#1b4332"/>
+  <text x="450" y="609" font-size="10" fill="#52b788" text-anchor="middle" letter-spacing="1">HAUSHALTSPARTNER BRAND KIT · 2025</text>
+
+</svg>

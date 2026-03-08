@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Fonts (large binaries)
+Brand_Assets/SF-Pro.dmg
+
+# Inspiration screenshots (not part of the website)
+Inspo/

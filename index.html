@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Primary -->
+  <title>Haushaltspartner – Haushaltshilfe & Alltagshilfe in Hannover | Seniorenhilfe Pflegegrad 1–5</title>
+  <meta name="description" content="Professionelle Haushaltshilfe & Alltagshilfe in Hannover und Ronnenberg. Seniorenhilfe für Menschen mit Pflegegrad 1–5. Kostenlose Erstberatung – jetzt anfragen!">
+  <meta name="keywords" content="Haushaltshilfe Hannover, Alltagshilfe Hannover, Seniorenhilfe Hannover, Pflegegrad 1 2 3 4 5 Hannover, Haushaltshilfe Ronnenberg, Alltagshilfe Ronnenberg, Entlastungsbetrag Hannover">
+  <link rel="canonical" href="https://www.haushaltspartner.de">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.haushaltspartner.de">
+  <meta property="og:title" content="Haushaltspartner – Haushaltshilfe & Alltagshilfe in Hannover">
+  <meta property="og:description" content="Professionelle Haushaltshilfe, Alltagshilfe & Seniorenhilfe in Hannover für Menschen mit Pflegegrad 1–5. Jetzt kostenlos anfragen!">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Haushaltspartner",
+    "description": "Professionelle Haushaltshilfe, Alltagshilfe und Seniorenhilfe in Hannover für Menschen mit Pflegegrad 1–5",
+    "url": "https://www.haushaltspartner.de",
+    "telephone": "+49-5109-2638603",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Stadträr 14",
+      "postalCode": "30952",
+      "addressLocality": "Ronnenberg",
+      "addressRegion": "Niedersachsen",
+      "addressCountry": "DE"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Hannover" },
+      { "@type": "City", "name": "Ronnenberg" },
+      { "@type": "AdministrativeArea", "name": "Region Hannover" }
+    ],
+    "serviceType": ["Haushaltshilfe", "Alltagshilfe", "Seniorenhilfe"],
+    "priceRange": "$$"
+  }
+  </script>
+
+  <!-- Fonts: SF Pro on Apple, Inter as fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              950: '#0d2318',
+              900: '#1b4332',
+              800: '#2d6a4f',
+              700: '#40916c',
+              600: '#52b788',
+              500: '#74c69d',
+              400: '#95d5b2',
+              300: '#b7e4c7',
+              200: '#d8f3dc',
+              100: '#f0faf2',
+              50:  '#f7fdf9',
+            },
+            gold: {
+              500: '#e8a320',
+              400: '#f0b429',
+              300: '#fcd05a',
+            }
+          },
+          fontFamily: {
+            sans: [
+              '-apple-system',
+              'BlinkMacSystemFont',
+              '"SF Pro Display"',
+              '"SF Pro Text"',
+              'Inter',
+              'sans-serif'
+            ],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, sans-serif;
+      background: #fff;
+      color: #1a2e23;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Navigation ── */
+    #navbar {
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+    #navbar.scrolled {
+      background: #1b4332 !important;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.25);
+    }
+
+    /* ── Buttons ── */
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e8a320;
+      color: #fff;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 16px rgba(232,163,32,0.35);
+      letter-spacing: -0.01em;
+    }
+    .btn-gold:hover {
+      background: #f0b429;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 22px rgba(232,163,32,0.45);
+    }
+    .btn-gold:active { transform: translateY(0); }
+
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #fff;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 6px;
+      border: 2px solid rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+      letter-spacing: -0.01em;
+    }
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #fff;
+      transform: translateY(-1px);
+    }
+    .btn-outline-white:active { transform: translateY(0); }
+
+    .btn-outline-green {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #1b4332;
+      font-weight: 700;
+      padding: 13px 28px;
+      border-radius: 6px;
+      border: 2px solid #2d6a4f;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+      letter-spacing: -0.01em;
+    }
+    .btn-outline-green:hover {
+      background: #f0faf2;
+      border-color: #1b4332;
+      transform: translateY(-1px);
+    }
+    .btn-outline-green:active { transform: translateY(0); }
+
+    .btn-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: #1b4332;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      letter-spacing: -0.01em;
+    }
+    .btn-white:hover {
+      background: #f0faf2;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 22px rgba(0,0,0,0.2);
+    }
+    .btn-white:active { transform: translateY(0); }
+
+    /* ── Cards ── */
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 36px 32px;
+      border: 1px solid #e8f5ec;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 2px 12px rgba(27,67,50,0.06);
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(27,67,50,0.12);
+    }
+
+    .benefit-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .icon-circle {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: #f0faf2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── Testimonials ── */
+    .testimonial-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 28px 28px;
+      border: 1px solid #e8f5ec;
+      box-shadow: 0 2px 12px rgba(27,67,50,0.06);
+    }
+
+    .stars {
+      color: #e8a320;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    /* ── Section separators ── */
+    .section-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #40916c;
+      margin-bottom: 12px;
+    }
+    .section-label-light {
+      color: #95d5b2;
+    }
+
+    /* ── Pflegegrad badges ── */
+    .pg-badge {
+      background: #1b4332;
+      color: #fff;
+      border-radius: 8px;
+      padding: 14px 20px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+      transition: background 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .pg-badge:hover { background: #2d6a4f; }
+
+    /* ── Stats ── */
+    .stat-number {
+      font-size: clamp(40px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      color: #fff;
+    }
+
+    /* ── Region chips ── */
+    .region-chip {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .region-chip:hover { background: rgba(255,255,255,0.18); }
+    .region-chip.primary {
+      background: #e8a320;
+      border-color: #e8a320;
+      font-weight: 700;
+    }
+
+    /* ── Mobile nav ── */
+    #mobile-menu {
+      display: none;
+    }
+    #mobile-menu.open {
+      display: block;
+    }
+
+    /* ── Animated entrance ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up {
+      animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+    .fade-up-delay-1 { animation-delay: 0.1s; }
+    .fade-up-delay-2 { animation-delay: 0.2s; }
+    .fade-up-delay-3 { animation-delay: 0.3s; }
+
+    /* ── Responsive heading sizes ── */
+    .hero-headline {
+      font-size: clamp(32px, 5.5vw, 64px);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      color: #fff;
+    }
+    .section-headline {
+      font-size: clamp(26px, 3.5vw, 42px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: #1b4332;
+    }
+    .section-headline-light {
+      color: #fff;
+    }
+
+    /* ── CTA section gradient ── */
+    .cta-gradient {
+      background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+    }
+
+    /* ── Divider ── */
+    .zigzag-divider {
+      width: 100%;
+      height: 40px;
+      background: #fff;
+      clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 100%, 0 60%);
+    }
+
+    /* ── Form styles ── */
+    .form-input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 2px solid #e8f5ec;
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: inherit;
+      color: #1a2e23;
+      background: #fff;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      outline: none;
+    }
+    .form-input:focus {
+      border-color: #40916c;
+      box-shadow: 0 0 0 3px rgba(64,145,108,0.12);
+    }
+    .form-input::placeholder { color: #9cafa4; }
+
+    textarea.form-input { resize: vertical; min-height: 110px; }
+
+    /* ── Footer ── */
+    footer a {
+      transition: color 0.2s;
+    }
+    footer a:hover { color: #95d5b2; }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f0faf2; }
+    ::-webkit-scrollbar-thumb { background: #40916c; border-radius: 3px; }
+
+    /* ── Pflegegrad active ── */
+    .pg-badge { cursor: pointer; }
+    .pg-badge.pg-active { background: #e8a320 !important; }
+    .pg-badge.pg-active span { color: #fff !important; opacity: 1 !important; }
+    #pg-content { transition: opacity 0.3s ease; }
+    #pg-content.fading { opacity: 0; }
+
+    /* ── Step connector ── */
+    .step-connector {
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, #40916c, #74c69d);
+      margin: 0 8px;
+    }
+
+    /* ── Carousel ── */
+    #testimonial-track {
+      display: flex;
+      gap: 24px;
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform;
+    }
+    #testimonial-track .testimonial-card {
+      flex-shrink: 0;
+    }
+    .carousel-btn {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 2px solid #d8f3dc;
+      background: #fff;
+      color: #1b4332;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+      flex-shrink: 0;
+    }
+    .carousel-btn:hover { background: #1b4332; color: #fff; border-color: #1b4332; transform: scale(1.05); }
+    .carousel-btn:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
+
+    /* ── Grain texture overlay ── */
+    .grain-overlay::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#1b4332]" role="navigation" aria-label="Hauptnavigation">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between h-[70px]">
+
+      <!-- Logo -->
+      <a href="#" aria-label="Haushaltspartner – Startseite">
+        <img
+          src="Brand_Assets/Haushaltspartner%20Logo%20gr%C3%BCn.png"
+          alt="Haushaltspartner – Haushaltshilfe & Alltagshilfe Hannover"
+          class="h-11 w-auto"
+        >
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="#leistungen" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Leistungen</a>
+        <a href="#pflegegrad" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Pflegegrad 1–5</a>
+        <a href="#vorteile" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Über uns</a>
+        <a href="#region" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Einsatzgebiet</a>
+        <a href="#kontakt" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Kontakt</a>
+      </div>
+
+      <!-- Desktop CTA -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:+4951092638603" class="flex items-center gap-2 text-white font-700 text-sm hover:text-[#95d5b2] transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          05109 2638603
+        </a>
+        <a href="#kontakt" class="btn-gold text-sm py-2.5 px-5">Kostenlos anfragen</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button
+        id="menu-toggle"
+        class="lg:hidden text-white p-2 -mr-2 rounded-md hover:bg-white/10 transition-colors"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+      >
+        <svg id="menu-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg id="menu-icon-close" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden border-t border-white/10 py-4">
+      <div class="flex flex-col gap-1">
+        <a href="#leistungen" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Leistungen</a>
+        <a href="#pflegegrad" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Pflegegrad 1–5</a>
+        <a href="#vorteile" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Über uns</a>
+        <a href="#region" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Einsatzgebiet</a>
+        <a href="#kontakt" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Kontakt</a>
+        <div class="pt-3 border-t border-white/10 mt-1 flex flex-col gap-3">
+          <a href="tel:+4951092638603" class="flex items-center gap-2 text-white font-700 text-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            05109 2638603
+          </a>
+          <a href="#kontakt" class="btn-gold text-sm py-3 text-center">Kostenlos anfragen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════ -->
+<section
+  id="hero"
+  class="relative bg-white overflow-hidden pt-[70px]"
+  aria-label="Willkommen bei Haushaltspartner"
+>
+  <!-- Background subtle radial gradient -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div style="position:absolute;top:-20%;left:-10%;width:700px;height:700px;background:radial-gradient(circle,rgba(64,145,108,0.07) 0%,transparent 70%);"></div>
+    <div style="position:absolute;bottom:-10%;right:-5%;width:500px;height:500px;background:radial-gradient(circle,rgba(82,183,136,0.05) 0%,transparent 70%);"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-20 lg:py-28">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <!-- Left: Text -->
+      <div class="fade-up">
+        <span class="section-label">Hannover &amp; Region Hannover</span>
+
+        <h1 class="hero-headline mt-2 mb-6" style="color:#1b4332;">
+          Ihr zuverlässiger<br>
+          <span style="color:#40916c;">Haushaltspartner</span><br>
+          in Hannover
+        </h1>
+
+        <p class="text-[#4a7c63] text-lg leading-relaxed mb-8 max-w-[520px]">
+          Professionelle <strong class="text-[#1b4332]">Haushaltshilfe</strong>,
+          <strong class="text-[#1b4332]">Alltagshilfe</strong> und
+          <strong class="text-[#1b4332]">Seniorenhilfe</strong> für Menschen mit
+          Pflegegrad&nbsp;1–5. Wir unterstützen Sie zu Hause – mit Herz, Verlässlichkeit und Erfahrung.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-3 mb-10">
+          <a href="tel:+4951092638603" class="btn-gold justify-center sm:justify-start">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+            Jetzt anrufen
+          </a>
+          <a href="#kontakt" class="btn-outline-green justify-center sm:justify-start">
+            Kostenlos anfragen
+          </a>
+        </div>
+
+        <!-- Trust row -->
+        <div class="flex flex-wrap gap-x-6 gap-y-3">
+          <div class="flex items-center gap-2 text-[#4a7c63] text-sm font-500">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Pflegegrad 1–5 abrechenbar
+          </div>
+          <div class="flex items-center gap-2 text-[#4a7c63] text-sm font-500">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Kostenlose Erstberatung
+          </div>
+          <div class="flex items-center gap-2 text-[#4a7c63] text-sm font-500">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Aus Hannover – für Hannover
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="fade-up fade-up-delay-2 hidden lg:block">
+        <div class="relative">
+          <div style="border-radius:16px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.4);aspect-ratio:4/3;">
+            <img
+              src="Fotos/Haushaltshilfe%20Haushaltspartner%20Alltagshilfe%203.webp"
+              alt="Professionelle Haushaltshilfe und Alltagshilfe in Hannover"
+              style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;"
+              loading="eager"
+            >
+            <!-- Overlay -->
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(27,67,50,0.5) 0%,transparent 50%);pointer-events:none;"></div>
+          </div>
+          <!-- Floating badge -->
+          <div style="position:absolute;bottom:-20px;left:-20px;background:#e8a320;color:#fff;padding:16px 22px;border-radius:12px;box-shadow:0 8px 28px rgba(232,163,32,0.4);">
+            <p style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;opacity:0.85;margin:0 0 2px;">Verfügbar in</p>
+            <p style="font-size:16px;font-weight:800;margin:0;white-space:nowrap;">Hannover &amp; Umgebung</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     IN 3 SCHRITTEN
+═══════════════════════════════════════════════ -->
+<section id="drei-schritte" class="bg-[#f7fdf9] py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="text-center mb-12">
+      <span class="section-label">So einfach geht's</span>
+      <h2 class="section-headline mt-1">In 3 Schritten zur Haushaltshilfe</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
+
+      <!-- Steps -->
+      <div>
+        <!-- Step connectors visible only on md+ -->
+        <div class="hidden md:flex items-center mb-2 px-8">
+          <div class="w-12 h-12 rounded-full bg-[#1b4332] flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-900 text-lg">1</span>
+          </div>
+          <div class="step-connector self-center"></div>
+          <div class="w-12 h-12 rounded-full bg-[#1b4332] flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-900 text-lg">2</span>
+          </div>
+          <div class="step-connector self-center"></div>
+          <div class="w-12 h-12 rounded-full bg-[#e8a320] flex items-center justify-center flex-shrink-0">
+            <span class="text-white font-900 text-lg">3</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6 mt-4">
+
+          <!-- Step 1 -->
+          <div class="flex gap-5 items-start bg-white rounded-xl p-5 border border-[#e8f5ec] shadow-sm">
+            <div class="w-11 h-11 rounded-full bg-[#1b4332] flex items-center justify-center flex-shrink-0 md:hidden">
+              <span class="text-white font-900">1</span>
+            </div>
+            <div class="w-11 h-11 rounded-xl bg-[#f0faf2] flex items-center justify-center flex-shrink-0 hidden md:flex">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <h3 class="text-[#1b4332] font-800 text-[17px] mb-1" style="letter-spacing:-0.02em;">Kontaktaufnahme</h3>
+              <p class="text-[#4a7c63] text-[15px] leading-relaxed">Rufen Sie uns an oder schreiben Sie uns – wir prüfen kostenlos und unverbindlich Ihren Anspruch auf Haushaltshilfe & Alltagshilfe.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-5 items-start bg-white rounded-xl p-5 border border-[#e8f5ec] shadow-sm">
+            <div class="w-11 h-11 rounded-full bg-[#1b4332] flex items-center justify-center flex-shrink-0 md:hidden">
+              <span class="text-white font-900">2</span>
+            </div>
+            <div class="w-11 h-11 rounded-xl bg-[#f0faf2] flex items-center justify-center flex-shrink-0 hidden md:flex">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-[#1b4332] font-800 text-[17px] mb-1" style="letter-spacing:-0.02em;">Persönliches Beratungsgespräch</h3>
+              <p class="text-[#4a7c63] text-[15px] leading-relaxed">Wir beraten Sie zu Leistungen und Kosten und kümmern uns um die Abwicklung mit Ihrer Pflegekasse – ganz ohne Bürokratiestress.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex gap-5 items-start bg-white rounded-xl p-5 border border-[#e8a320]/30 shadow-sm" style="border-color:rgba(232,163,32,0.35);">
+            <div class="w-11 h-11 rounded-full bg-[#e8a320] flex items-center justify-center flex-shrink-0 md:hidden">
+              <span class="text-white font-900">3</span>
+            </div>
+            <div class="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0 hidden md:flex" style="background:rgba(232,163,32,0.12);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e8a320" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div>
+              <h3 class="text-[#1b4332] font-800 text-[17px] mb-1" style="letter-spacing:-0.02em;">Haushaltshilfe &amp; Alltagshilfe vor Ort</h3>
+              <p class="text-[#4a7c63] text-[15px] leading-relaxed">Nach der Abwicklung aller Formalitäten beginnt Ihre persönliche Haushaltshilfe – verlässlich, herzlich und genau nach Ihren Wünschen.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <a href="#kontakt" class="btn-gold">Jetzt kostenlosen Erstkontakt anfragen</a>
+        </div>
+      </div>
+
+      <!-- Right: Lifestyle photo -->
+      <div class="hidden lg:block" style="min-height:320px;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(27,67,50,0.15);height:100%;">
+          <img
+            src="Fotos/Haushaltshilfe%20Haushaltspartner%20Alltagshilfe%201.webp"
+            alt="Haushaltshilfe und Alltagshilfe – persönliche Betreuung in Hannover"
+            style="width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block;"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     LEISTUNGEN (Services)
+═══════════════════════════════════════════════ -->
+<section id="leistungen" class="bg-white py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="section-label">Unsere Leistungen</span>
+      <h2 class="section-headline mt-1">Was wir für Sie tun</h2>
+      <p class="text-[#4a7c63] text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
+        Wir bieten umfassende Unterstützung im Alltag – zuverlässig, individuell und mit echtem Engagement für Ihr Wohlbefinden.
+      </p>
+    </div>
+
+    <!-- Lifestyle photo banner -->
+    <div class="mt-4 rounded-2xl overflow-hidden" style="box-shadow:0 12px 40px rgba(27,67,50,0.1);height:300px;">
+      <img
+        src="Fotos/Haushaltshilfe%20Haushaltspartner%20Alltagshilfe%202.webp"
+        alt="Alltagshilfe und Haushaltshilfe – Unterstützung im Alltag in Hannover"
+        style="width:100%;height:100%;object-fit:cover;object-position:38% 35%;display:block;"
+        loading="lazy"
+      >
+    </div>
+
+    <!-- 6 specific services grid -->
+    <div class="mt-10">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
+
+        <div class="bg-[#f7fdf9] rounded-xl p-5 border border-[#e8f5ec] flex gap-4 items-start">
+          <div class="w-10 h-10 rounded-lg bg-[#f0faf2] flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div>
+            <h4 class="text-[#1b4332] font-700 text-[15px] mb-1">Reinigung &amp; Hausarbeit</h4>
+            <p class="text-[#4a7c63] text-[13px] leading-relaxed">Sauberkeit innen und außen, Küche und Bad – während Sie entspannen.</p>
+          </div>
+        </div>
+
+        <div class="bg-[#f7fdf9] rounded-xl p-5 border border-[#e8f5ec] flex gap-4 items-start">
+          <div class="w-10 h-10 rounded-lg bg-[#f0faf2] flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div>
+            <h4 class="text-[#1b4332] font-700 text-[15px] mb-1">Terminbegleitung</h4>
+            <p class="text-[#4a7c63] text-[13px] leading-relaxed">Begleitung zu Arzt, Behörde und Terminen – schnell und reibungslos.</p>
+          </div>
+        </div>
+
+        <div class="bg-[#f7fdf9] rounded-xl p-5 border border-[#e8f5ec] flex gap-4 items-start">
+          <div class="w-10 h-10 rounded-lg bg-[#f0faf2] flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <div>
+            <h4 class="text-[#1b4332] font-700 text-[15px] mb-1">Kochen &amp; Mahlzeiten</h4>
+            <p class="text-[#4a7c63] text-[13px] leading-relaxed">Gesunde Mahlzeiten planen und kochen – nach Ihren Wünschen.</p>
+          </div>
+        </div>
+
+        <div class="bg-[#f7fdf9] rounded-xl p-5 border border-[#e8f5ec] flex gap-4 items-start">
+          <div class="w-10 h-10 rounded-lg bg-[#f0faf2] flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </div>
+          <div>
+            <h4 class="text-[#1b4332] font-700 text-[15px] mb-1">Einkaufen &amp; Besorgungen</h4>
+            <p class="text-[#4a7c63] text-[13px] leading-relaxed">Wir unterstützen bei Einkäufen und alltäglichen Besorgungen.</p>
+          </div>
+        </div>
+
+        <div class="bg-[#f7fdf9] rounded-xl p-5 border border-[#e8f5ec] flex gap-4 items-start">
+          <div class="w-10 h-10 rounded-lg bg-[#f0faf2] flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <h4 class="text-[#1b4332] font-700 text-[15px] mb-1">Gesellschaft &amp; Gespräche</h4>
+            <p class="text-[#4a7c63] text-[13px] leading-relaxed">Wir nehmen uns Zeit für gemeinsame Momente und echte Gespräche.</p>
+          </div>
+        </div>
+
+        <div class="bg-[#f7fdf9] rounded-xl p-5 border border-[#e8f5ec] flex gap-4 items-start">
+          <div class="w-10 h-10 rounded-lg bg-[#f0faf2] flex items-center justify-center flex-shrink-0">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h4 class="text-[#1b4332] font-700 text-[15px] mb-1">Spaziergänge &amp; Aktivitäten</h4>
+            <p class="text-[#4a7c63] text-[13px] leading-relaxed">Bleiben Sie aktiv – wir begleiten Sie bei Spaziergängen in der Region Hannover.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="#kontakt" class="btn-gold">Jetzt kostenlos anfragen</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     PFLEGEGRAD 1–5
+═══════════════════════════════════════════════ -->
+<section id="pflegegrad" class="bg-[#f0faf2] py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      <!-- Left -->
+      <div>
+        <span class="section-label">Pflegekasse &amp; Entlastungsbetrag</span>
+        <h2 class="section-headline mt-1 mb-6">
+          Pflegegrad 1–5?<br>Wir rechnen direkt<br>mit der Pflegekasse ab.
+        </h2>
+        <p class="text-[#4a7c63] leading-relaxed mb-6 text-[16px]">
+          Als anerkannter Anbieter von Entlastungsleistungen nach
+          <strong class="text-[#1b4332]">§&nbsp;45a SGB&nbsp;XI</strong>
+          können Menschen mit Pflegegrad 1–5 unsere Leistungen über den
+          <strong class="text-[#1b4332]">monatlichen Entlastungsbetrag von bis zu 131&nbsp;€</strong>
+          finanzieren. Wir helfen Ihnen bei der Abwicklung mit Ihrer Pflegekasse.
+        </p>
+        <p class="text-[#4a7c63] leading-relaxed mb-8 text-[16px]">
+          Nicht genutzte Beträge können bis zu 12 Monate übertragen werden – sprechen Sie uns an, damit kein Anspruch verloren geht.
+        </p>
+        <a href="#kontakt" class="btn-gold">Jetzt beraten lassen</a>
+      </div>
+
+      <!-- Right: Interactive Pflegegrad badges -->
+      <div>
+        <p class="text-[#2d6a4f] font-700 text-sm mb-5 tracking-widest uppercase">Wählen Sie Ihren Pflegegrad:</p>
+
+        <div class="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-6">
+          <button class="pg-badge pg-active" data-grade="1" aria-pressed="true">
+            <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
+            <span style="font-size:30px;font-weight:900;line-height:1.1;color:#74c69d;">1</span>
+          </button>
+          <button class="pg-badge" data-grade="2" aria-pressed="false">
+            <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
+            <span style="font-size:30px;font-weight:900;line-height:1.1;color:#74c69d;">2</span>
+          </button>
+          <button class="pg-badge" data-grade="3" aria-pressed="false">
+            <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
+            <span style="font-size:30px;font-weight:900;line-height:1.1;color:#74c69d;">3</span>
+          </button>
+          <button class="pg-badge" data-grade="4" aria-pressed="false">
+            <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
+            <span style="font-size:30px;font-weight:900;line-height:1.1;color:#74c69d;">4</span>
+          </button>
+          <button class="pg-badge col-span-3 sm:col-span-1" data-grade="5" aria-pressed="false">
+            <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
+            <span style="font-size:30px;font-weight:900;line-height:1.1;color:#74c69d;">5</span>
+          </button>
+        </div>
+
+        <!-- Dynamic content box -->
+        <div id="pg-content" style="background:#fff;border-radius:12px;padding:24px 28px;border:1px solid #d8f3dc;box-shadow:0 2px 12px rgba(27,67,50,0.06);">
+          <!-- filled by JS on load -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     ZAHLEN / STATS
+═══════════════════════════════════════════════ -->
+<section class="bg-[#2d6a4f] py-16 lg:py-20" aria-label="Unsere Kennzahlen">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 divide-x-0 lg:divide-x divide-white/10">
+      <div class="text-center">
+        <div class="stat-number">100<span style="color:#74c69d;">+</span></div>
+        <p class="text-[#95d5b2] text-sm font-600 mt-2 uppercase tracking-widest">Zufriedene Kunden</p>
+      </div>
+      <div class="text-center">
+        <div class="stat-number">5<span style="color:#74c69d;">★</span></div>
+        <p class="text-[#95d5b2] text-sm font-600 mt-2 uppercase tracking-widest">Kundenbewertung</p>
+      </div>
+      <div class="text-center">
+        <div class="stat-number">3<span style="color:#74c69d;">+</span></div>
+        <p class="text-[#95d5b2] text-sm font-600 mt-2 uppercase tracking-widest">Jahre Erfahrung</p>
+      </div>
+      <div class="text-center">
+        <div class="stat-number">15<span style="color:#74c69d;">+</span></div>
+        <p class="text-[#95d5b2] text-sm font-600 mt-2 uppercase tracking-widest">Orte in der Region</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     VORTEILE (Why us)
+═══════════════════════════════════════════════ -->
+<section id="vorteile" class="bg-white py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="section-label">Warum Haushaltspartner?</span>
+      <h2 class="section-headline mt-1">Was uns auszeichnet</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+    <!-- Left: lifestyle photo -->
+    <div class="hidden lg:block">
+      <div style="border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(27,67,50,0.12);aspect-ratio:4/5;">
+        <img
+          src="Fotos/Haushaltshilfe%20Haushaltspartner%20H%C3%A4nde.webp"
+          alt="Vertrauen und Fürsorge – Haushaltshilfe für Menschen mit Pflegegrad"
+          style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;"
+          loading="lazy"
+        >
+      </div>
+    </div>
+
+    <!-- Right: benefits grid -->
+    <div>
+    <div class="grid md:grid-cols-2 gap-x-10 gap-y-10">
+
+      <div class="benefit-card">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Verlässlich &amp; pünktlich</h3>
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed">
+            Sie können sich auf uns verlassen. Wir kommen wie vereinbart – pünktlich und zuverlässig, damit Ihr Alltag planbar bleibt.
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Persönliche Betreuung</h3>
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed">
+            Kein ständiger Wechsel der Bezugsperson. Sie erhalten eine feste Ansprechpartnerin, die Ihre Bedürfnisse kennt und versteht.
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Transparente Abrechnung</h3>
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed">
+            Klare Preise, keine versteckten Kosten. Wir helfen bei der Abrechnung über die Pflegekasse und erklären Ihnen alle Möglichkeiten.
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Lokal verwurzelt</h3>
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed">
+            Wir sind aus der Region – für die Region. Als lokaler Anbieter in Hannover kennen wir die Gegend und sind schnell bei Ihnen.
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Mit Herz dabei</h3>
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed">
+            Für uns ist es kein Job, sondern Berufung. Wir behandeln jeden Kunden mit Würde, Respekt und echtem Mitgefühl.
+          </p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Qualifiziert &amp; erfahren</h3>
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed">
+            Unser Team ist ausgebildet und erfahren im Umgang mit pflegebedürftigen Menschen. Qualität und Sorgfalt stehen für uns an erster Stelle.
+          </p>
+        </div>
+      </div>
+
+    </div><!-- /benefits grid -->
+    </div><!-- /right -->
+    </div><!-- /lg:grid-cols-2 -->
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     SERVICEGEBIET (Region)
+═══════════════════════════════════════════════ -->
+<section id="region" class="relative bg-[#1b4332] py-20 lg:py-28 overflow-hidden">
+  <!-- BG decor -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div style="position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(ellipse at 80% 50%, rgba(64,145,108,0.12) 0%,transparent 70%);"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <!-- Left -->
+      <div>
+        <span class="section-label section-label-light">Unser Einsatzgebiet</span>
+        <h2 class="section-headline section-headline-light mt-1 mb-6">
+          Ihr Partner in<br>Hannover &amp; der Region
+        </h2>
+        <p class="text-[#b7e4c7] leading-relaxed mb-8 text-[16px]">
+          Wir sind für Sie in Hannover und der gesamten Region Hannover im Einsatz – mit besonderem Schwerpunkt auf
+          <strong class="text-white">Ronnenberg</strong>.
+          Schnelle Erreichbarkeit und kurze Wege garantieren flexiblen und prompten Service.
+        </p>
+
+        <!-- Region list -->
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="region-chip primary">Ronnenberg</span>
+          <span class="region-chip">Hannover Mitte</span>
+          <span class="region-chip">Hannover Südstadt</span>
+          <span class="region-chip">Hannover Linden</span>
+          <span class="region-chip">Hannover Ricklingen</span>
+          <span class="region-chip">Empelde</span>
+          <span class="region-chip">Weetzen</span>
+          <span class="region-chip">Benthe</span>
+          <span class="region-chip">Springe</span>
+          <span class="region-chip">Gehrden</span>
+          <span class="region-chip">Barsinghausen</span>
+          <span class="region-chip">Wennigsen</span>
+          <span class="region-chip">Pattensen</span>
+          <span class="region-chip">& Umgebung</span>
+        </div>
+
+        <a href="#kontakt" class="btn-gold">Verfügbarkeit anfragen</a>
+      </div>
+
+      <!-- Right: Map -->
+      <div class="hidden lg:block">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.1);aspect-ratio:4/3;background:#1b4332;">
+          <img
+            src="Fotos/Haushaltshilfe%20Haushaltspartner%20Alltagshilfe%20Karte%20Region%20Hannover.webp"
+            alt="Einsatzgebiet Haushaltspartner – Haushaltshilfe und Alltagshilfe in der Region Hannover"
+            style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     CEO QUOTE
+═══════════════════════════════════════════════ -->
+<section id="geschaeftsfuehrer" class="bg-[#1b4332] py-20 lg:py-24 overflow-hidden" style="border-top:1px solid rgba(255,255,255,0.08);">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+      <!-- Left: Photo -->
+      <div class="flex justify-center lg:justify-start">
+        <div style="position:relative;display:inline-block;">
+          <div style="width:380px;height:460px;border-radius:20px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.4);border:3px solid rgba(255,255,255,0.1);">
+            <img
+              src="Fotos/Haushaltshilfe%20Alltagshilfe%20Songvi%20Ngo.webp"
+              alt="Songvi Ngo – Gründer und Geschäftsführer von Haushaltspartner"
+              style="width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block;"
+              loading="lazy"
+            >
+          </div>
+          <div style="position:absolute;bottom:-16px;right:-16px;background:#e8a320;color:#fff;padding:12px 18px;border-radius:10px;box-shadow:0 8px 24px rgba(232,163,32,0.4);">
+            <p style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;opacity:0.85;margin:0 0 2px;">Gründer &amp;</p>
+            <p style="font-size:14px;font-weight:800;margin:0;">Geschäftsführer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Quote -->
+      <div>
+        <span class="section-label section-label-light">Unser Antrieb</span>
+        <div style="position:relative;margin-top:12px;margin-bottom:28px;">
+          <svg width="48" height="36" viewBox="0 0 48 36" fill="none" aria-hidden="true" style="position:absolute;top:-8px;left:-4px;opacity:0.2;">
+            <path d="M0 36V22.5C0 10.5 7.5 3 22.5 0L24 3.75C16.5 5.25 12.75 9.75 12 16.5H22.5V36H0ZM25.5 36V22.5C25.5 10.5 33 3 48 0L49.5 3.75C42 5.25 38.25 9.75 37.5 16.5H48V36H25.5Z" fill="#fff"/>
+          </svg>
+          <blockquote class="text-[#d8f3dc] text-[18px] leading-relaxed" style="letter-spacing:-0.01em;padding-left:8px;">
+            „Jeder Mensch verdient würdevolle Unterstützung in den eigenen vier Wänden – unabhängig von Alter oder Pflegegrad. Mit Haushaltspartner möchte ich Familien und pflegenden Angehörigen echte Entlastung bieten. Als junger Unternehmer sehe ich es als meine Aufgabe, mit gutem Beispiel voranzugehen: für eine Haushaltshilfe und Alltagshilfe, die wirklich von Herz kommt."
+          </blockquote>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div style="width:48px;height:2px;background:#e8a320;border-radius:2px;"></div>
+          <div>
+            <p class="text-white font-800 text-[16px]" style="letter-spacing:-0.02em;">Songvi Ngo</p>
+            <p class="text-[#74c69d] text-[13px]">Gründer &amp; Geschäftsführer · Haushaltspartner</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     TESTIMONIALS (Carousel)
+═══════════════════════════════════════════════ -->
+<section id="bewertungen" class="bg-[#f7fdf9] py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="section-label">Kundenstimmen</span>
+      <h2 class="section-headline mt-1">Das sagen unsere Kunden</h2>
+      <p class="text-[#4a7c63] mt-4 text-lg">Echte Erfahrungen von echten Menschen aus der Region</p>
+    </div>
+
+    <!-- Carousel wrapper -->
+    <div class="relative">
+      <div id="testimonial-viewport" style="overflow:hidden;">
+        <div id="testimonial-track">
+
+          <article class="testimonial-card" aria-label="Bewertung von Helga M.">
+            <div class="stars mb-3" aria-label="5 von 5 Sternen">★★★★★</div>
+            <blockquote><p class="text-[#2a5c3f] leading-relaxed mb-5 text-[15px]">"Endlich habe ich jemanden, dem ich wirklich vertrauen kann. Meine Mutter (82) ist begeistert – die Haushaltspartnerin kommt immer pünktlich und macht ihre Arbeit mit so viel Herzlichkeit."</p></blockquote>
+            <footer class="flex items-center gap-3">
+              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#2d6a4f,#52b788);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:16px;">H</div>
+              <div><p class="text-[#1b4332] font-700 text-[14px]">Helga M.</p><p class="text-[#4a7c63] text-[13px]">Hannover-Südstadt</p></div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" style="border-top:3px solid #40916c;" aria-label="Bewertung von Klaus B.">
+            <div class="stars mb-3" aria-label="5 von 5 Sternen">★★★★★</div>
+            <blockquote><p class="text-[#2a5c3f] leading-relaxed mb-5 text-[15px]">"Mit Pflegegrad 2 hatte ich keine Ahnung, dass ich Anspruch auf Unterstützung habe. Haushaltspartner hat mir alles erklärt und die Abrechnung mit der Pflegekasse komplett übernommen."</p></blockquote>
+            <footer class="flex items-center gap-3">
+              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#2d6a4f,#52b788);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:16px;">K</div>
+              <div><p class="text-[#1b4332] font-700 text-[14px]">Klaus B.</p><p class="text-[#4a7c63] text-[13px]">Ronnenberg</p></div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" aria-label="Bewertung von Renate K.">
+            <div class="stars mb-3" aria-label="5 von 5 Sternen">★★★★★</div>
+            <blockquote><p class="text-[#2a5c3f] leading-relaxed mb-5 text-[15px]">"Ich lebe allein und bin auf Hilfe angewiesen. Haushaltspartner ist wie ein Familienersatz für mich geworden. Ehrlich, zuverlässig und immer da, wenn ich sie brauche."</p></blockquote>
+            <footer class="flex items-center gap-3">
+              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#2d6a4f,#52b788);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:16px;">R</div>
+              <div><p class="text-[#1b4332] font-700 text-[14px]">Renate K.</p><p class="text-[#4a7c63] text-[13px]">Hannover-Linden</p></div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" aria-label="Bewertung von Manfred S.">
+            <div class="stars mb-3" aria-label="5 von 5 Sternen">★★★★★</div>
+            <blockquote><p class="text-[#2a5c3f] leading-relaxed mb-5 text-[15px]">"Als mein Vater mit Pflegegrad 3 nach Hause kam, wussten wir nicht wohin. Haushaltspartner hat sofort geholfen und die komplette Haushaltshilfe organisiert. Sehr professionell und menschlich."</p></blockquote>
+            <footer class="flex items-center gap-3">
+              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#2d6a4f,#52b788);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:16px;">M</div>
+              <div><p class="text-[#1b4332] font-700 text-[14px]">Manfred S.</p><p class="text-[#4a7c63] text-[13px]">Empelde</p></div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" style="border-top:3px solid #40916c;" aria-label="Bewertung von Petra L.">
+            <div class="stars mb-3" aria-label="5 von 5 Sternen">★★★★★</div>
+            <blockquote><p class="text-[#2a5c3f] leading-relaxed mb-5 text-[15px]">"Die Alltagshilfe von Haushaltspartner ist ein Segen. Jede Woche Begleitung zum Arzt, Einkaufen und ein offenes Ohr. Ich fühle mich nicht mehr allein – das ist unbezahlbar."</p></blockquote>
+            <footer class="flex items-center gap-3">
+              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#2d6a4f,#52b788);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:16px;">P</div>
+              <div><p class="text-[#1b4332] font-700 text-[14px]">Petra L.</p><p class="text-[#4a7c63] text-[13px]">Hannover-Ricklingen</p></div>
+            </footer>
+          </article>
+
+          <article class="testimonial-card" aria-label="Bewertung von Gisela W.">
+            <div class="stars mb-3" aria-label="5 von 5 Sternen">★★★★★</div>
+            <blockquote><p class="text-[#2a5c3f] leading-relaxed mb-5 text-[15px]">"Nach meinem Sturz war ich auf Unterstützung angewiesen. Die Haushaltshilfe kam sofort, hat alles übernommen und die Abrechnung mit der Pflegekasse war kein Problem. Sehr empfehlenswert!"</p></blockquote>
+            <footer class="flex items-center gap-3">
+              <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#2d6a4f,#52b788);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:16px;">G</div>
+              <div><p class="text-[#1b4332] font-700 text-[14px]">Gisela W.</p><p class="text-[#4a7c63] text-[13px]">Wennigsen</p></div>
+            </footer>
+          </article>
+
+        </div><!-- /track -->
+      </div><!-- /viewport -->
+
+      <!-- Controls -->
+      <div class="flex items-center justify-center gap-4 mt-8">
+        <button id="prev-btn" class="carousel-btn" aria-label="Vorherige Bewertung" disabled>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+
+        <!-- Dots -->
+        <div id="carousel-dots" class="flex gap-2 items-center"></div>
+
+        <button id="next-btn" class="carousel-btn" aria-label="Nächste Bewertung">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     KONTAKT / CTA
+═══════════════════════════════════════════════ -->
+<section id="kontakt" class="relative bg-[#1b4332] py-20 lg:py-28 overflow-hidden">
+  <!-- BG decor -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div style="position:absolute;bottom:-20%;left:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(64,145,108,0.15) 0%,transparent 70%);"></div>
+    <div style="position:absolute;top:-10%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(232,163,32,0.06) 0%,transparent 70%);"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+      <!-- Left: Info -->
+      <div>
+        <span class="section-label section-label-light">Kontakt</span>
+        <h2 class="section-headline section-headline-light mt-1 mb-5">
+          Jetzt kostenlos &amp;<br>unverbindlich anfragen
+        </h2>
+        <p class="text-[#b7e4c7] leading-relaxed mb-8 text-[16px]">
+          Lassen Sie sich persönlich beraten. Wir melden uns innerhalb von <strong class="text-white">24 Stunden</strong> bei Ihnen und besprechen gemeinsam, wie wir Ihnen helfen können.
+        </p>
+
+        <!-- Phone CTA -->
+        <a href="tel:+4951092638603" class="btn-gold text-lg px-8 py-4 mb-8 w-full lg:w-auto justify-center lg:justify-start">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          05109 2638603 &nbsp;– Jetzt anrufen
+        </a>
+
+        <!-- Oder -->
+        <div class="flex items-center gap-4 my-6">
+          <div class="flex-1 h-px bg-white/20"></div>
+          <span class="text-[#95d5b2] text-sm font-600">oder schreiben Sie uns</span>
+          <div class="flex-1 h-px bg-white/20"></div>
+        </div>
+
+        <!-- Trust items -->
+        <ul class="space-y-3 mt-6">
+          <li class="flex items-center gap-3 text-[#b7e4c7] text-[15px]">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#52b788" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            100% kostenlos &amp; unverbindlich
+          </li>
+          <li class="flex items-center gap-3 text-[#b7e4c7] text-[15px]">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#52b788" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Antwort innerhalb von 24 Stunden
+          </li>
+          <li class="flex items-center gap-3 text-[#b7e4c7] text-[15px]">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#52b788" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Persönliche Beratung zu Pflegegrad &amp; Kosten
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div>
+        <form
+          name="kontakt"
+          method="POST"
+          data-netlify="true"
+          action="/danke.html"
+          novalidate
+          style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:clamp(20px,4vw,36px) clamp(16px,4vw,32px);"
+          aria-label="Kontaktformular"
+        >
+          <input type="hidden" name="form-name" value="kontakt">
+
+          <h3 class="text-white font-800 text-xl mb-6" style="letter-spacing:-0.02em;">Ihre Anfrage</h3>
+
+          <div class="grid sm:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="vorname" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Vorname</label>
+              <input type="text" id="vorname" name="vorname" class="form-input" placeholder="Maria" required autocomplete="given-name">
+            </div>
+            <div>
+              <label for="nachname" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Nachname</label>
+              <input type="text" id="nachname" name="nachname" class="form-input" placeholder="Müller" required autocomplete="family-name">
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label for="telefon" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Telefon</label>
+            <input type="tel" id="telefon" name="telefon" class="form-input" placeholder="0511 000 000" autocomplete="tel">
+          </div>
+
+          <div class="mb-4">
+            <label for="email" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">E-Mail</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="maria@email.de" required autocomplete="email">
+          </div>
+
+          <div class="mb-4">
+            <label for="pflegegrad" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Pflegegrad (falls vorhanden)</label>
+            <select id="pflegegrad" name="pflegegrad" class="form-input" style="appearance:none;-webkit-appearance:none;cursor:pointer;">
+              <option value="">Bitte wählen...</option>
+              <option>Kein Pflegegrad</option>
+              <option>Pflegegrad 1</option>
+              <option>Pflegegrad 2</option>
+              <option>Pflegegrad 3</option>
+              <option>Pflegegrad 4</option>
+              <option>Pflegegrad 5</option>
+              <option>Noch nicht beantragt</option>
+            </select>
+          </div>
+
+          <div class="mb-6">
+            <label for="nachricht" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Wie können wir helfen?</label>
+            <textarea id="nachricht" name="nachricht" class="form-input" placeholder="Beschreiben Sie kurz, wobei Sie Unterstützung benötigen..."></textarea>
+          </div>
+
+          <!-- Privacy note -->
+          <p class="text-[#74c69d] text-[13px] mb-5 leading-relaxed">
+            Mit dem Absenden stimmen Sie unserer
+            <a href="#" class="underline hover:text-white transition-colors">Datenschutzerklärung</a> zu.
+          </p>
+
+          <button
+            type="submit"
+            class="w-full btn-gold text-[16px] py-4 justify-center"
+            style="border:none;cursor:pointer;font-family:inherit;"
+          >
+            Jetzt kostenlos anfragen
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════ -->
+<footer class="bg-[#0d2318] text-[#74c69d] py-12">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+
+      <!-- Logo + tagline -->
+      <div>
+        <img
+          src="Brand_Assets/Haushaltspartner%20Logo%20gr%C3%BCn.png"
+          alt="Haushaltspartner Logo"
+          class="h-14 w-auto mb-4"
+        >
+        <p class="text-[14px] leading-relaxed text-[#52b788]">
+          Professionelle Haushaltshilfe &amp; Alltagshilfe<br>
+          in Hannover &amp; Region Hannover.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h4 class="text-white font-700 text-[13px] uppercase tracking-widest mb-4">Menü</h4>
+        <ul class="space-y-2.5 text-[14px]">
+          <li><a href="#leistungen" class="hover:text-white transition-colors">Haushaltshilfe</a></li>
+          <li><a href="#leistungen" class="hover:text-white transition-colors">Alltagshilfe</a></li>
+          <li><a href="#leistungen" class="hover:text-white transition-colors">Seniorenhilfe</a></li>
+          <li><a href="#pflegegrad" class="hover:text-white transition-colors">Pflegegrad 1–5</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-white font-700 text-[13px] uppercase tracking-widest mb-4">Kontakt</h4>
+        <ul class="space-y-2.5 text-[14px]">
+          <li>
+            <a href="tel:+4951092638603" class="hover:text-white transition-colors flex items-center gap-2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              05109 2638603
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@haushaltspartner.de" class="hover:text-white transition-colors flex items-center gap-2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              info@haushaltspartner.de
+            </a>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Stadträr 14, 30952 Ronnenberg
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px]">
+      <p class="text-[#40916c]">&copy; 2025 Haushaltspartner. Alle Rechte vorbehalten.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-white transition-colors">Impressum</a>
+        <a href="#" class="hover:text-white transition-colors">Datenschutz</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════ -->
+<script>
+  // Mobile nav toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen   = document.getElementById('menu-icon-open');
+  const iconClose  = document.getElementById('menu-icon-close');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    iconOpen.classList.toggle('hidden', isOpen);
+    iconClose.classList.toggle('hidden', !isOpen);
+  });
+
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    });
+  });
+
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  }, { passive: true });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80; // navbar height
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Intersection Observer for fade-up animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.service-card, .benefit-card, .testimonial-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)';
+    observer.observe(el);
+  });
+
+  // ── Pflegegrad Interactive ──
+  const pgData = {
+    1: {
+      label: 'Pflegegrad 1 – Geringe Beeinträchtigung',
+      text: 'Bereits mit Pflegegrad 1 haben Sie Anspruch auf unsere Haushaltshilfe & Alltagshilfe. Kleine Unterstützungen im Alltag – beim Einkaufen, Putzen oder Waschen – entlasten Sie spürbar und geben mehr Sicherheit.',
+      services: ['Leichte Haushaltsführung & Reinigung', 'Einkaufen & Besorgungen', 'Alltagsbegleitung']
+    },
+    2: {
+      label: 'Pflegegrad 2 – Erhebliche Beeinträchtigung',
+      text: 'Mit Pflegegrad 2 steigt Ihr Anspruch: Sie haben in der Regel Anspruch auf mehr Stunden Haushaltshilfe & Alltagshilfe. Alltägliche Aufgaben werden zuverlässig übernommen, ohne dass Sie Ihre Kräfte überlasten.',
+      services: ['Umfassende Haushaltshilfe & Reinigung', 'Kochen & Mahlzeiten vorbereiten', 'Alltagshilfe & Begleitung zu Terminen', 'Einkaufen & Besorgungen']
+    },
+    3: {
+      label: 'Pflegegrad 3 – Schwere Beeinträchtigung',
+      text: 'Mit Pflegegrad 3 wird die Unterstützung noch umfangreicher. Unsere Haushaltshilfe & Alltagshilfe sorgt dafür, dass Sie oder Ihre Angehörigen gut versorgt sind und die Lebensqualität erhalten bleibt.',
+      services: ['Vollständige Haushaltsführung', 'Tägliche Haushaltshilfe & Alltagsstruktur', 'Kochen, Waschen & Bügeln', 'Spaziergänge & soziale Aktivitäten']
+    },
+    4: {
+      label: 'Pflegegrad 4 – Schwerste Beeinträchtigung',
+      text: 'Bei Pflegegrad 4 ist der Unterstützungsbedarf sehr hoch. Unsere Haushaltshilfe & Alltagshilfe entlastet pflegende Angehörige und ermöglicht ein würdevolles Leben zu Hause – individuell abgestimmt.',
+      services: ['Intensive tägliche Haushaltshilfe', 'Engmaschige Alltagsbegleitung', 'Entlastung pflegender Angehöriger', 'Koordination & Pflegekasse-Abwicklung']
+    },
+    5: {
+      label: 'Pflegegrad 5 – Schwerste Beeinträchtigung mit besonderem Bedarf',
+      text: 'Menschen mit Pflegegrad 5 sind in fast allen Bereichen auf Haushaltshilfe & Alltagshilfe angewiesen. Wir stellen sicher, dass alle haushaltswirtschaftlichen Tätigkeiten zuverlässig und mit größter Sorgfalt erledigt werden.',
+      services: ['Umfassende tägliche Haushaltshilfe', 'Intensive Alltagsunterstützung', 'Vollständige Entlastung der Angehörigen', 'Direkte Abrechnung mit der Pflegekasse']
+    }
+  };
+
+  function renderPgContent(grade) {
+    const d = pgData[grade];
+    return `
+      <div class="flex gap-3 items-start mb-3">
+        <div style="flex-shrink:0;width:40px;height:40px;border-radius:10px;background:#f0faf2;display:flex;align-items:center;justify-content:center;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <p style="color:#1b4332;font-weight:800;font-size:16px;letter-spacing:-0.02em;margin:0 0 6px;">${d.label}</p>
+          <p style="color:#4a7c63;font-size:14px;line-height:1.65;margin:0 0 12px;">${d.text}</p>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;">
+            ${d.services.map(s => `<li style="display:flex;align-items:center;gap:8px;font-size:13px;color:#4a7c63;font-weight:500;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>${s}</li>`).join('')}
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid #e8f5ec;">
+        <p style="font-size:13px;color:#4a7c63;">
+          <strong style="color:#1b4332;">Bis zu 131&nbsp;€ monatlich</strong> – Der Entlastungsbetrag (§&nbsp;45b SGB&nbsp;XI) steht allen Personen mit anerkanntem Pflegegrad zu.
+        </p>
+      </div>`;
+  }
+
+  const pgContent = document.getElementById('pg-content');
+  const pgBadges = document.querySelectorAll('.pg-badge[data-grade]');
+
+  function activatePg(grade) {
+    pgBadges.forEach(b => {
+      const isActive = b.dataset.grade === String(grade);
+      b.classList.toggle('pg-active', isActive);
+      b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      // Update number color
+      const numEl = b.querySelector('span:last-child');
+      if (numEl) numEl.style.color = isActive ? '#fff' : '#74c69d';
+    });
+    pgContent.classList.add('fading');
+    setTimeout(() => {
+      pgContent.innerHTML = renderPgContent(grade);
+      pgContent.classList.remove('fading');
+    }, 150);
+  }
+
+  pgBadges.forEach(badge => {
+    badge.addEventListener('click', () => activatePg(parseInt(badge.dataset.grade)));
+  });
+  // Init with grade 1
+  activatePg(1);
+
+  // ── Testimonials Carousel ──
+  (function() {
+    const track = document.getElementById('testimonial-track');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const dotsContainer = document.getElementById('carousel-dots');
+    const cards = Array.from(track.children);
+    const total = cards.length;
+    let current = 0;
+
+    function getVisible() { return window.innerWidth >= 768 ? 3 : 1; }
+    function getMax() { return Math.max(0, total - getVisible()); }
+
+    function sizeCards() {
+      const visible = getVisible();
+      const gap = 24;
+      cards.forEach(card => {
+        card.style.width = `calc((100% - ${gap * (visible - 1)}px) / ${visible})`;
+        card.style.flexShrink = '0';
+      });
+    }
+
+    function buildDots() {
+      dotsContainer.innerHTML = '';
+      const max = getMax();
+      for (let i = 0; i <= max; i++) {
+        const dot = document.createElement('button');
+        dot.setAttribute('aria-label', `Bewertung ${i + 1}`);
+        dot.style.cssText = 'width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;transition:background 0.2s,width 0.2s;padding:0;';
+        dot.addEventListener('click', () => { current = i; update(); });
+        dotsContainer.appendChild(dot);
+      }
+    }
+
+    function update() {
+      const max = getMax();
+      if (current > max) current = max;
+      const gap = 24;
+      const cardW = cards[0].offsetWidth;
+      track.style.transform = `translateX(-${current * (cardW + gap)}px)`;
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current >= max;
+      Array.from(dotsContainer.children).forEach((dot, i) => {
+        dot.style.background = i === current ? '#1b4332' : '#d8f3dc';
+        dot.style.width = i === current ? '20px' : '8px';
+        dot.style.borderRadius = '4px';
+      });
+    }
+
+    prevBtn.addEventListener('click', () => { if (current > 0) { current--; update(); } });
+    nextBtn.addEventListener('click', () => { if (current < getMax()) { current++; update(); } });
+
+    function init() { sizeCards(); buildDots(); update(); }
+
+    window.addEventListener('resize', () => { sizeCards(); init(); });
+    // Wait for layout
+    requestAnimationFrame(() => { requestAnimationFrame(init); });
+  })();
+</script>
+
+<!-- ═══════════════════════════════════════════════
+     MOBILE FLOATING CTA (only visible on mobile)
+═══════════════════════════════════════════════ -->
+<div
+  id="mobile-cta"
+  class="fixed bottom-0 left-0 right-0 z-40 lg:hidden"
+  style="padding:12px 16px 20px;background:linear-gradient(to top,rgba(13,35,24,0.98) 0%,rgba(13,35,24,0.92) 100%);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,0.08);"
+>
+  <div class="flex gap-3 max-w-lg mx-auto">
+    <a
+      href="tel:+4951092638603"
+      class="btn-gold flex-1 justify-center py-3.5"
+      style="font-size:15px;"
+    >
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+      Jetzt anrufen
+    </a>
+    <a
+      href="#kontakt"
+      class="btn-outline-white flex-1 justify-center py-3.5"
+      style="font-size:15px;"
+    >
+      Anfragen
+    </a>
+  </div>
+</div>
+
+<!-- Spacer so content isn't hidden behind mobile CTA bar -->
+<div class="lg:hidden" style="height:76px;"></div>
+
+</body>
+</html>
