@@ -1272,15 +1272,17 @@
       <!-- Right: Contact Form -->
       <div>
         <form
-          name="kontakt"
           method="POST"
-          data-netlify="true"
-          action="/danke.html"
+          action="https://api.web3forms.com/submit"
           novalidate
           style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:16px;padding:clamp(20px,4vw,36px) clamp(16px,4vw,32px);"
           aria-label="Kontaktformular"
         >
-          <input type="hidden" name="form-name" value="kontakt">
+          <input type="hidden" name="access_key" value="772dbae4-50a9-4d2f-9bd0-a1497bd5879a">
+          <input type="hidden" name="subject" value="Neue Anfrage – Haushaltspartner Website">
+          <input type="hidden" name="from_name" value="Haushaltspartner Website">
+          <input type="hidden" name="redirect" value="https://haushaltspartner.de/danke.html">
+          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
 
           <h3 class="text-white font-800 text-xl mb-6" style="letter-spacing:-0.02em;">Ihre Anfrage</h3>
 
@@ -1327,7 +1329,7 @@
           <!-- Privacy note -->
           <p class="text-[#74c69d] text-[13px] mb-5 leading-relaxed">
             Mit dem Absenden stimmen Sie unserer
-            <a href="#" class="underline hover:text-white transition-colors">Datenschutzerklärung</a> zu.
+            <a href="datenschutz.html" class="underline hover:text-white transition-colors">Datenschutzerklärung</a> zu.
           </p>
 
           <button
