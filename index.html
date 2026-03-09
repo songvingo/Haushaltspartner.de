@@ -265,7 +265,7 @@
       background: #1b4332;
       color: #fff;
       border-radius: 8px;
-      padding: 14px 20px;
+      padding: 12px 8px;
       text-align: center;
       font-weight: 700;
       font-size: 14px;
@@ -276,6 +276,9 @@
       justify-content: center;
     }
     .pg-badge:hover { background: #2d6a4f; }
+    @media (min-width: 640px) {
+      .pg-badge { padding: 14px 20px; }
+    }
 
     /* ── Stats ── */
     .stat-number {
@@ -581,7 +584,7 @@
       </div>
 
       <!-- Right: Image -->
-      <div class="fade-up fade-up-delay-2 hidden lg:block">
+      <div class="fade-up fade-up-delay-2 mt-8 lg:mt-0">
         <div class="relative">
           <div style="border-radius:16px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.4);aspect-ratio:4/3;transform:translateZ(0);">
             <img
@@ -727,7 +730,7 @@
 
     <!-- 6 specific services grid -->
     <div class="mt-10">
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
 
         <div class="bg-[#f7fdf9] rounded-xl p-5 border border-[#e8f5ec] flex gap-4 items-start">
           <div class="w-10 h-10 rounded-lg bg-[#f0faf2] flex items-center justify-center flex-shrink-0">
@@ -830,26 +833,26 @@
       <div>
         <p class="text-[#2d6a4f] font-700 text-sm mb-5 tracking-widest uppercase">Wählen Sie Ihren Pflegegrad:</p>
 
-        <div class="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-6">
+        <div class="grid grid-cols-5 gap-2 mb-6">
           <button class="pg-badge pg-active" data-grade="1" aria-pressed="true">
-            <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
-            <span style="font-size:30px;font-weight:900;line-height:1.1;color:#74c69d;">1</span>
+            <span style="font-size:clamp(8px,1.8vw,11px);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
+            <span style="font-size:clamp(20px,5vw,30px);font-weight:900;line-height:1.1;color:#74c69d;">1</span>
           </button>
           <button class="pg-badge" data-grade="2" aria-pressed="false">
-            <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
-            <span style="font-size:30px;font-weight:900;line-height:1.1;color:#74c69d;">2</span>
+            <span style="font-size:clamp(8px,1.8vw,11px);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
+            <span style="font-size:clamp(20px,5vw,30px);font-weight:900;line-height:1.1;color:#74c69d;">2</span>
           </button>
           <button class="pg-badge" data-grade="3" aria-pressed="false">
-            <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
-            <span style="font-size:30px;font-weight:900;line-height:1.1;color:#74c69d;">3</span>
+            <span style="font-size:clamp(8px,1.8vw,11px);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
+            <span style="font-size:clamp(20px,5vw,30px);font-weight:900;line-height:1.1;color:#74c69d;">3</span>
           </button>
           <button class="pg-badge" data-grade="4" aria-pressed="false">
-            <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
-            <span style="font-size:30px;font-weight:900;line-height:1.1;color:#74c69d;">4</span>
+            <span style="font-size:clamp(8px,1.8vw,11px);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
+            <span style="font-size:clamp(20px,5vw,30px);font-weight:900;line-height:1.1;color:#74c69d;">4</span>
           </button>
-          <button class="pg-badge col-span-3 sm:col-span-1" data-grade="5" aria-pressed="false">
-            <span style="font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
-            <span style="font-size:30px;font-weight:900;line-height:1.1;color:#74c69d;">5</span>
+          <button class="pg-badge" data-grade="5" aria-pressed="false">
+            <span style="font-size:clamp(8px,1.8vw,11px);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;opacity:0.75;">Pflege-<br>grad</span>
+            <span style="font-size:clamp(20px,5vw,30px);font-weight:900;line-height:1.1;color:#74c69d;">5</span>
           </button>
         </div>
 
@@ -1632,7 +1635,7 @@
       <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
       </svg>
-      Jetzt anrufen
+      Anrufen
     </a>
     <a
       href="#kontakt"
