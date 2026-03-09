@@ -48,11 +48,6 @@
   <link rel="icon" type="image/png" href="Brand_Assets/Haushaltspartner%20Logo%20gr%C3%BCn.png">
   <link rel="apple-touch-icon" href="Brand_Assets/Haushaltspartner%20Logo%20gr%C3%BCn.png">
 
-  <!-- Fonts: SF Pro on Apple, Inter as fallback -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -85,7 +80,8 @@
               'BlinkMacSystemFont',
               '"SF Pro Display"',
               '"SF Pro Text"',
-              'Inter',
+              '"Segoe UI"',
+              'Roboto',
               'sans-serif'
             ],
           },
@@ -100,7 +96,7 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
       background: #fff;
       color: #1a2e23;
       -webkit-font-smoothing: antialiased;
@@ -1649,6 +1645,73 @@
 
 <!-- Spacer so content isn't hidden behind mobile CTA bar -->
 <div class="lg:hidden" style="height:76px;"></div>
+
+
+<!-- ═══════════════════════════════════════════════
+     COOKIE BANNER
+═══════════════════════════════════════════════ -->
+<div
+  id="cookie-banner"
+  style="
+    position:fixed;bottom:0;left:0;right:0;z-index:100;
+    background:rgba(13,35,24,0.97);
+    backdrop-filter:blur(10px);
+    border-top:1px solid rgba(255,255,255,0.1);
+    padding:16px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+    transform:translateY(100%);
+    transition:transform 0.4s cubic-bezier(0.22,1,0.36,1);
+  "
+  role="dialog"
+  aria-label="Cookie-Hinweis"
+>
+  <p style="color:#b7e4c7;font-size:14px;line-height:1.5;margin:0;flex:1;min-width:200px;">
+    Diese Website verwendet <strong style="color:#fff;">keine Tracking-Cookies</strong>.
+    Technisch notwendige Daten (z.&nbsp;B. Server-Logs) werden zur Bereitstellung des Dienstes verarbeitet.
+    <a href="datenschutz.html" style="color:#74c69d;text-decoration:underline;margin-left:4px;">Datenschutzerklärung</a>
+  </p>
+  <button
+    id="cookie-accept"
+    style="
+      flex-shrink:0;
+      background:#e8a320;
+      color:#fff;
+      font-weight:700;
+      font-size:14px;
+      padding:10px 22px;
+      border-radius:6px;
+      border:none;
+      cursor:pointer;
+      font-family:inherit;
+      transition:background 0.2s;
+      white-space:nowrap;
+    "
+    onmouseover="this.style.background='#f0b429'"
+    onmouseout="this.style.background='#e8a320'"
+  >
+    Verstanden
+  </button>
+</div>
+
+<script>
+  (function() {
+    var banner = document.getElementById('cookie-banner');
+    var btn    = document.getElementById('cookie-accept');
+    if (!localStorage.getItem('cookie-ok')) {
+      setTimeout(function() {
+        banner.style.transform = 'translateY(0)';
+      }, 800);
+    }
+    btn.addEventListener('click', function() {
+      banner.style.transform = 'translateY(100%)';
+      localStorage.setItem('cookie-ok', '1');
+    });
+  })();
+</script>
 
 </body>
 </html>
