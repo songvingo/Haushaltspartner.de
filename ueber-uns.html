@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Über uns – Haushaltspartner | Haushaltshilfe & Alltagshilfe Hannover</title>
+  <meta name="description" content="Wer steckt hinter Haushaltspartner? Erfahren Sie mehr über unser Team, unsere Mission und unsere Partner für Haushaltshilfe & Alltagshilfe in Hannover.">
+  <link rel="canonical" href="https://www.haushaltspartner.de/ueber-uns.html">
+  <link rel="icon" type="image/png" href="Brand_Assets/Haushaltspartner%20Logo%20gr%C3%BCn.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              950: '#0d2318', 900: '#1b4332', 800: '#2d6a4f', 700: '#40916c',
+              600: '#52b788', 500: '#74c69d', 400: '#95d5b2', 300: '#b7e4c7',
+              200: '#d8f3dc', 100: '#f0faf2', 50: '#f7fdf9',
+            },
+            gold: { 500: '#e8a320', 400: '#f0b429' }
+          },
+          fontFamily: {
+            sans: ['-apple-system','BlinkMacSystemFont','"SF Pro Display"','"SF Pro Text"','"Segoe UI"','Roboto','sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif; background: #fff; color: #1a2e23; -webkit-font-smoothing: antialiased; }
+    #navbar { transition: background 0.3s ease, box-shadow 0.3s ease; }
+    #navbar.scrolled { background: #1b4332 !important; box-shadow: 0 2px 24px rgba(0,0,0,0.25); }
+    .btn-gold { display:inline-flex;align-items:center;gap:8px;background:#e8a320;color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;transition:background 0.2s ease,transform 0.15s ease;letter-spacing:-0.01em; }
+    .btn-gold:hover { background:#f0b429;transform:translateY(-1px); }
+    .section-label { display:inline-block;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#40916c;margin-bottom:12px; }
+    .section-headline { font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:#1b4332; }
+    .benefit-card { display:flex;gap:20px;align-items:flex-start; }
+    .icon-circle { flex-shrink:0;width:52px;height:52px;border-radius:12px;background:#f0faf2;display:flex;align-items:center;justify-content:center; }
+    footer a { transition: color 0.2s; }
+    footer a:hover { color: #95d5b2; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f0faf2; }
+    ::-webkit-scrollbar-thumb { background: #40916c; border-radius: 3px; }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#1b4332]" role="navigation" aria-label="Hauptnavigation">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between h-[70px]">
+      <a href="index.html" aria-label="Haushaltspartner – Startseite">
+        <img src="Brand_Assets/Haushaltshilfe%20%26%20Alltagshilfe%20Hannover%20Haushaltspartner%20Logo.webp" alt="Haushaltspartner" class="w-auto" style="height:44px;">
+      </a>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="leistungen.html" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Leistungen</a>
+        <a href="index.html#pflegegrad" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Pflegegrad 1–5</a>
+        <a href="ueber-uns.html" class="text-white text-sm font-700 transition-colors">Über uns</a>
+        <a href="einsatzgebiet.html" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Einsatzgebiet</a>
+        <a href="index.html#kontakt" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Kontakt</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:+4951092638603" class="flex items-center gap-2 text-white font-700 text-sm hover:text-[#95d5b2] transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          05109 2638603
+        </a>
+        <a href="index.html#kontakt" class="btn-gold text-sm py-2.5 px-5">Kostenlos anfragen</a>
+      </div>
+      <button id="menu-toggle" class="lg:hidden text-white p-2 -mr-2 rounded-md hover:bg-white/10" aria-label="Menü öffnen" aria-expanded="false">
+        <svg id="menu-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="menu-icon-close" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="lg:hidden border-t border-white/10 py-4">
+      <div class="flex flex-col gap-1">
+        <a href="leistungen.html" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md">Leistungen</a>
+        <a href="index.html#pflegegrad" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md">Pflegegrad 1–5</a>
+        <a href="ueber-uns.html" class="text-white hover:bg-white/5 text-sm font-700 py-3 px-3 rounded-md">Über uns</a>
+        <a href="einsatzgebiet.html" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md">Einsatzgebiet</a>
+        <a href="index.html#kontakt" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md">Kontakt</a>
+        <div class="pt-3 border-t border-white/10 mt-1">
+          <a href="index.html#kontakt" class="btn-gold text-sm py-3 text-center w-full justify-center">Kostenlos anfragen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- PAGE HERO -->
+<section class="bg-[#1b4332] pt-[70px] pb-16 lg:pb-20 overflow-hidden" style="position:relative;">
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div style="position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(ellipse at 80% 50%,rgba(64,145,108,0.15) 0%,transparent 70%);"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-10">
+    <a href="index.html" class="inline-flex items-center gap-2 text-[#95d5b2] hover:text-white text-sm font-600 transition-colors mb-8">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Zurück zur Startseite
+    </a>
+    <span class="section-label" style="color:#95d5b2;">Über Haushaltspartner</span>
+    <h1 style="font-size:clamp(30px,5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-0.04em;color:#fff;" class="mt-2 mb-5 max-w-2xl">
+      Haushaltshilfe &amp; Alltagshilfe<br>in Hannover –<br><span style="color:#74c69d;">mit Herz dabei</span>
+    </h1>
+    <p class="text-[#b7e4c7] text-lg leading-relaxed max-w-xl">
+      Wir sind Haushaltspartner – ein lokales Unternehmen aus Ronnenberg für Hannover und die Region. Unser Antrieb ist die echte Unterstützung von Menschen, die Haushaltshilfe oder Alltagshilfe benötigen.
+    </p>
+  </div>
+</section>
+
+
+<!-- UNSERE GESCHICHTE -->
+<section class="bg-white py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div>
+        <span class="section-label">Unsere Geschichte</span>
+        <h2 class="section-headline mt-1 mb-6">Warum wir Haushaltspartner gegründet haben</h2>
+        <p class="text-[#4a7c63] text-[16px] leading-relaxed mb-4">
+          Haushaltspartner entstand aus einem einfachen Gedanken: In Hannover und der Region fehlte ein verlässlicher, menschlicher Anbieter für <strong class="text-[#1b4332]">Haushaltshilfe und Alltagshilfe</strong>, der nicht nur Aufgaben erledigt, sondern wirklich für Menschen da ist.
+        </p>
+        <p class="text-[#4a7c63] text-[16px] leading-relaxed mb-4">
+          Als junges Unternehmen aus Ronnenberg bei Hannover haben wir uns auf Seniorenhilfe und die Unterstützung von Menschen mit Pflegegrad 1–5 spezialisiert. Wir glauben daran, dass <strong class="text-[#1b4332]">würdevolle Unterstützung im eigenen Zuhause</strong> keine Frage des Alters ist – sondern ein Grundrecht.
+        </p>
+        <p class="text-[#4a7c63] text-[16px] leading-relaxed mb-8">
+          Heute helfen wir über 100 Kunden in Hannover, Ronnenberg und der Region – mit Haushaltshilfe, Alltagshilfe und echter menschlicher Begleitung.
+        </p>
+        <div class="flex flex-wrap gap-6">
+          <div>
+            <p style="font-size:36px;font-weight:900;color:#1b4332;letter-spacing:-0.04em;line-height:1;">100<span style="color:#40916c;">+</span></p>
+            <p class="text-[#4a7c63] text-sm font-600 uppercase tracking-widest mt-1">Zufriedene Kunden</p>
+          </div>
+          <div>
+            <p style="font-size:36px;font-weight:900;color:#1b4332;letter-spacing:-0.04em;line-height:1;">3<span style="color:#40916c;">+</span></p>
+            <p class="text-[#4a7c63] text-sm font-600 uppercase tracking-widest mt-1">Jahre in Hannover</p>
+          </div>
+          <div>
+            <p style="font-size:36px;font-weight:900;color:#1b4332;letter-spacing:-0.04em;line-height:1;">15<span style="color:#40916c;">+</span></p>
+            <p class="text-[#4a7c63] text-sm font-600 uppercase tracking-widest mt-1">Orte in der Region</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(27,67,50,0.12);aspect-ratio:4/3;">
+          <img src="Fotos/Haushaltshilfe%20Haushaltspartner%20H%C3%A4nde.webp" alt="Haushaltspartner – Haushaltshilfe und Alltagshilfe in Hannover mit Herz" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CEO QUOTE -->
+<section class="bg-[#1b4332] py-20 lg:py-24 overflow-hidden" style="border-top:1px solid rgba(255,255,255,0.08);">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+      <!-- Photo -->
+      <div class="flex justify-center lg:justify-end">
+        <div style="position:relative;max-width:300px;width:100%;">
+          <div style="width:100%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.4);border:4px solid rgba(255,255,255,0.15);">
+            <img src="Fotos/Haushaltshilfe%20Alltagshilfe%20Songvi%20Ngo.webp" alt="Songvi Ngo – Gründer und Geschäftsführer von Haushaltspartner" style="width:100%;height:100%;object-fit:cover;object-position:50% 15%;display:block;" loading="lazy">
+          </div>
+          <div style="position:absolute;bottom:-10px;right:10px;background:#e8a320;color:#fff;padding:8px 14px;border-radius:10px;box-shadow:0 8px 24px rgba(232,163,32,0.4);">
+            <p style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;opacity:0.85;margin:0 0 2px;">Gründer &amp;</p>
+            <p style="font-size:14px;font-weight:800;margin:0;">Geschäftsführer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quote -->
+      <div>
+        <span class="section-label" style="color:#95d5b2;">Unser Antrieb</span>
+        <div style="position:relative;margin-top:12px;margin-bottom:28px;">
+          <svg width="48" height="36" viewBox="0 0 48 36" fill="none" aria-hidden="true" style="position:absolute;top:-8px;left:-4px;opacity:0.2;">
+            <path d="M0 36V22.5C0 10.5 7.5 3 22.5 0L24 3.75C16.5 5.25 12.75 9.75 12 16.5H22.5V36H0ZM25.5 36V22.5C25.5 10.5 33 3 48 0L49.5 3.75C42 5.25 38.25 9.75 37.5 16.5H48V36H25.5Z" fill="#fff"/>
+          </svg>
+          <blockquote class="text-[#d8f3dc] text-[15px] lg:text-[18px] leading-relaxed" style="letter-spacing:-0.01em;padding-left:8px;">
+            „Jeder Mensch verdient würdevolle Unterstützung in den eigenen vier Wänden – unabhängig von Alter oder Pflegegrad. Mit Haushaltspartner möchte ich Familien und pflegenden Angehörigen in Hannover echte Entlastung bieten. Als junger Mensch sehe ich es als meine Aufgabe, mit gutem Beispiel voranzugehen: für eine Haushaltshilfe und Alltagshilfe, die wirklich von Herz kommt."
+          </blockquote>
+        </div>
+        <div class="flex items-center gap-4">
+          <div style="width:48px;height:2px;background:#e8a320;border-radius:2px;"></div>
+          <div>
+            <p class="text-white font-800 text-[16px]" style="letter-spacing:-0.02em;">Songvi Ngo</p>
+            <p class="text-[#74c69d] text-[13px]">Gründer &amp; Geschäftsführer · Haushaltspartner</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- UNSERE WERTE -->
+<section class="bg-[#f7fdf9] py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center mb-14">
+      <span class="section-label">Was uns ausmacht</span>
+      <h2 class="section-headline mt-1">Unsere Werte für Haushaltshilfe &amp; Alltagshilfe in Hannover</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="benefit-card">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div>
+          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Verlässlichkeit</h3>
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Pünktlichkeit und Zuverlässigkeit sind keine Extras – sie sind der Standard bei Haushaltspartner in Hannover.</p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div>
+          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Mit Herz dabei</h3>
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Haushaltshilfe ist für uns Berufung, nicht nur Job. Wir behandeln jeden Kunden mit Würde, Respekt und echtem Mitgefühl.</p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div>
+          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Lokal verwurzelt</h3>
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Wir sind aus Ronnenberg – für Hannover und die Region. Kurze Wege bedeuten schnelle Hilfe wenn sie gebraucht wird.</p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div>
+          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Transparenz</h3>
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Klare Preise, ehrliche Kommunikation, keine versteckten Kosten. Wir erklären alles verständlich – auch die Abrechnung mit der Pflegekasse.</p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        </div>
+        <div>
+          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Feste Bezugsperson</h3>
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Kein ständiger Personalwechsel. Ihre persönliche Haushaltshilfe in Hannover kennt Ihre Gewohnheiten und Bedürfnisse.</p>
+        </div>
+      </div>
+
+      <div class="benefit-card">
+        <div class="icon-circle">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Qualifiziert &amp; erfahren</h3>
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Unser Team ist im Umgang mit pflegebedürftigen Menschen ausgebildet. Qualität und Sorgfalt haben bei Haushaltspartner höchste Priorität.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PARTNER -->
+<section class="bg-white py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center mb-14">
+      <span class="section-label">Netzwerk</span>
+      <h2 class="section-headline mt-1">Unsere Partner für Haushaltshilfe in Hannover</h2>
+      <p class="text-[#4a7c63] text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
+        Gemeinsam sind wir stärker. Durch unser lokales Netzwerk in Hannover können wir noch umfassender helfen.
+      </p>
+    </div>
+
+    <div class="flex justify-center">
+      <a href="https://www.hannoverhilfe.de/" target="_blank" rel="noopener noreferrer" style="display:flex;flex-direction:column;align-items:center;gap:16px;background:#f7fdf9;border:1px solid #e8f5ec;border-radius:16px;padding:36px 48px;text-decoration:none;transition:box-shadow 0.2s,transform 0.15s;box-shadow:0 2px 12px rgba(27,67,50,0.06);" class="hover:shadow-lg hover:-translate-y-1 max-w-sm w-full">
+        <img src="Inspo/Logo%20hannoverhilfe.avif" alt="Hannover Hilfe – Partner für Haushaltshilfe und Alltagshilfe Hannover" style="height:64px;width:auto;object-fit:contain;" loading="lazy">
+        <div class="text-center">
+          <p class="text-[#1b4332] font-700 text-[16px]" style="letter-spacing:-0.01em;">Hannover Hilfe</p>
+          <p class="text-[#4a7c63] text-[14px] mt-1">Lokaler Partner für Alltagsbegleitung &amp; Haushaltshilfe in Hannover</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="bg-[#1b4332] py-16 lg:py-20">
+  <div class="max-w-3xl mx-auto px-5 lg:px-8 text-center">
+    <span class="section-label" style="color:#95d5b2;">Jetzt anfragen</span>
+    <h2 style="font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:#fff;" class="mt-2 mb-4">
+      Lernen Sie Haushaltspartner<br>persönlich kennen
+    </h2>
+    <p class="text-[#b7e4c7] text-lg leading-relaxed mb-8">
+      Kostenlose Erstberatung für Haushaltshilfe &amp; Alltagshilfe in Hannover – unverbindlich und persönlich.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="index.html#kontakt" class="btn-gold justify-center">Jetzt kostenlos anfragen</a>
+      <a href="tel:+4951092638603" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,0.2);justify-content:center;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        05109 2638603
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-[#0d2318] text-[#74c69d] py-10">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px]">
+    <p class="text-[#40916c]">&copy; 2025 Haushaltspartner. Alle Rechte vorbehalten.</p>
+    <div class="flex gap-6">
+      <a href="impressum.html" class="text-white hover:text-[#95d5b2] transition-colors">Impressum</a>
+      <a href="datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); });
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    iconOpen.classList.toggle('hidden', isOpen);
+    iconClose.classList.toggle('hidden', !isOpen);
+  });
+</script>
+</body>
+</html>
