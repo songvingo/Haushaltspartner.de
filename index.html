@@ -1746,6 +1746,38 @@
     });
   })();
 
+  // WhatsApp hover expand (activates after intro animation)
+  setTimeout(function() {
+    var el  = document.getElementById('wa-float');
+    var txt = el ? el.querySelector('.wa-float-text') : null;
+    if (!el || !txt) return;
+    el.style.width = '56px';
+    el.style.borderRadius = '50%';
+    el.style.transition = 'width 0.35s ease, border-radius 0.35s ease';
+    el.style.animation = 'wa-wiggle 5s ease-in-out infinite';
+    txt.style.opacity = '0';
+    txt.style.maxWidth = '0';
+    txt.style.marginLeft = '0';
+    txt.style.animation = 'none';
+    txt.style.transition = 'opacity 0.25s ease, max-width 0.35s ease, margin-left 0.35s ease';
+    el.addEventListener('mouseenter', function() {
+      el.style.width = '155px';
+      el.style.borderRadius = '28px';
+      el.style.animationPlayState = 'paused';
+      txt.style.opacity = '1';
+      txt.style.maxWidth = '90px';
+      txt.style.marginLeft = '6px';
+    });
+    el.addEventListener('mouseleave', function() {
+      el.style.width = '56px';
+      el.style.borderRadius = '50%';
+      el.style.animationPlayState = 'running';
+      txt.style.opacity = '0';
+      txt.style.maxWidth = '0';
+      txt.style.marginLeft = '0';
+    });
+  }, 2600);
+
 </script>
 
 <!-- WhatsApp Floating Button (desktop only) -->
