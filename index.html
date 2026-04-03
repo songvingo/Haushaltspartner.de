@@ -399,6 +399,17 @@
       pointer-events: none;
       z-index: 0;
     }
+  @keyframes wa-wiggle {
+    0%,100% { transform: rotate(0deg); }
+    15%      { transform: rotate(-15deg); }
+    30%      { transform: rotate(15deg); }
+    45%      { transform: rotate(-10deg); }
+    60%      { transform: rotate(10deg); }
+    75%      { transform: rotate(-5deg); }
+    90%      { transform: rotate(5deg); }
+  }
+  .wa-float { animation: wa-wiggle 0.6s ease-in-out 2s 1; animation-iteration-count: 1; }
+  .wa-float:hover { animation: none; }
   </style>
 </head>
 <body>
@@ -1718,13 +1729,25 @@
       localStorage.setItem('cookie-ok', '1');
     });
   })();
+
+  // WhatsApp floating button wiggle – repeats every 5 seconds
+  (function() {
+    var el = document.getElementById('wa-float');
+    if (!el) return;
+    setInterval(function() {
+      el.classList.remove('wa-float');
+      void el.offsetWidth; // reflow to restart animation
+      el.classList.add('wa-float');
+    }, 5000);
+  })();
 </script>
 
 <!-- WhatsApp Floating Button (desktop only) -->
 <a href="https://wa.me/4915569451192" target="_blank" rel="noopener noreferrer"
    aria-label="Kontakt via WhatsApp"
    style="position:fixed;bottom:24px;right:24px;z-index:9999;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#25D366;box-shadow:0 4px 16px rgba(0,0,0,0.25);transition:transform 0.2s,box-shadow 0.2s;"
-   class="hidden lg:flex"
+   id="wa-float"
+   class="hidden lg:flex wa-float"
    onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(0,0,0,0.35)';"
    onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.25)';">
   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
