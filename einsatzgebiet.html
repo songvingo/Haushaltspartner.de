@@ -341,16 +341,17 @@
 <!-- WhatsApp Floating Button (desktop only) -->
 <style>
   @keyframes wa-wiggle {
-    0%,100% { transform: rotate(0deg); }
-    15%      { transform: rotate(-15deg); }
-    30%      { transform: rotate(15deg); }
-    45%      { transform: rotate(-10deg); }
-    60%      { transform: rotate(10deg); }
-    75%      { transform: rotate(-5deg); }
-    90%      { transform: rotate(5deg); }
+    0%       { transform: rotate(0deg); }
+    2%       { transform: rotate(-15deg); }
+    4%       { transform: rotate(15deg); }
+    6%       { transform: rotate(-10deg); }
+    8%       { transform: rotate(10deg); }
+    10%      { transform: rotate(-5deg); }
+    12%      { transform: rotate(5deg); }
+    14%,100% { transform: rotate(0deg); }
   }
-  .wa-float { animation: wa-wiggle 0.6s ease-in-out 2s 1; }
-  .wa-float:hover { animation: none; }
+  .wa-float { animation: wa-wiggle 5s ease-in-out 2s infinite; }
+  .wa-float:hover { animation-play-state: paused; }
 </style>
 <a href="https://wa.me/4915569451192" target="_blank" rel="noopener noreferrer"
    aria-label="Kontakt via WhatsApp"
