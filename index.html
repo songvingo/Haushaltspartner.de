@@ -75,16 +75,19 @@
       width: calc(100% - 32px);
       max-width: 1200px;
       border-radius: 16px;
-      background: #1b4332;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      background: #ffffff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
       z-index: 50;
       transition: box-shadow 0.3s ease;
     }
     #navbar.scrolled {
-      box-shadow: 0 8px 32px rgba(0,0,0,0.30);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
     }
     #mobile-menu {
       border-radius: 0 0 16px 16px;
+    }
+    @media (max-width: 1023px) {
+      .pt-\[110px\] { padding-top: 130px !important; }
     }
 
     /* ── Buttons ── */
@@ -461,17 +464,17 @@
 
       <!-- Desktop Nav Links -->
       <div class="hidden lg:flex items-center gap-8">
-        <a href="#leistungen" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Leistungen</a>
-        <a href="#pflegegrad" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Pflegegrad 1–5</a>
-        <a href="#vorteile" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Über uns</a>
-        <a href="#region" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Einsatzgebiet</a>
-        <a href="#kontakt" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Kontakt</a>
-        <a href="karriere.html" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Karriere</a>
+        <a href="#leistungen" class="text-[#1b4332] hover:text-[#e8a320] text-sm font-600 transition-colors">Leistungen</a>
+        <a href="#pflegegrad" class="text-[#1b4332] hover:text-[#e8a320] text-sm font-600 transition-colors">Pflegegrad 1–5</a>
+        <a href="#vorteile" class="text-[#1b4332] hover:text-[#e8a320] text-sm font-600 transition-colors">Über uns</a>
+        <a href="#region" class="text-[#1b4332] hover:text-[#e8a320] text-sm font-600 transition-colors">Einsatzgebiet</a>
+        <a href="#kontakt" class="text-[#1b4332] hover:text-[#e8a320] text-sm font-600 transition-colors">Kontakt</a>
+        <a href="karriere.html" class="text-[#1b4332] hover:text-[#e8a320] text-sm font-600 transition-colors">Karriere</a>
       </div>
 
       <!-- Desktop CTA -->
       <div class="hidden lg:flex items-center gap-4">
-        <a href="tel:+4951092638603" class="flex items-center gap-2 text-white font-700 text-sm hover:text-[#95d5b2] transition-colors">
+        <a href="tel:+4951092638603" class="flex items-center gap-2 text-[#1b4332] font-700 text-sm hover:text-[#e8a320] transition-colors">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
           </svg>
@@ -483,7 +486,7 @@
       <!-- Mobile hamburger -->
       <button
         id="menu-toggle"
-        class="lg:hidden text-white p-2 -mr-2 rounded-md hover:bg-white/10 transition-colors"
+        class="lg:hidden text-[#1b4332] p-2 -mr-2 rounded-md hover:bg-[#1b4332]/10 transition-colors"
         aria-label="Menü öffnen"
         aria-expanded="false"
       >
@@ -497,16 +500,16 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="lg:hidden border-t border-white/10 py-4">
+    <div id="mobile-menu" class="lg:hidden border-t border-[#1b4332]/10 py-4">
       <div class="flex flex-col gap-1">
-        <a href="#leistungen" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Leistungen</a>
-        <a href="#pflegegrad" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Pflegegrad 1–5</a>
-        <a href="#vorteile" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Über uns</a>
-        <a href="#region" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Einsatzgebiet</a>
-        <a href="#kontakt" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Kontakt</a>
-        <a href="karriere.html" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Karriere</a>
-        <div class="pt-3 border-t border-white/10 mt-1 flex flex-col gap-3">
-          <a href="tel:+4951092638603" class="flex items-center gap-2 text-white font-700 text-sm">
+        <a href="#leistungen" class="text-[#95d5b2] hover:text-white hover:bg-[#1b4332]/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Leistungen</a>
+        <a href="#pflegegrad" class="text-[#95d5b2] hover:text-white hover:bg-[#1b4332]/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Pflegegrad 1–5</a>
+        <a href="#vorteile" class="text-[#95d5b2] hover:text-white hover:bg-[#1b4332]/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Über uns</a>
+        <a href="#region" class="text-[#95d5b2] hover:text-white hover:bg-[#1b4332]/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Einsatzgebiet</a>
+        <a href="#kontakt" class="text-[#95d5b2] hover:text-white hover:bg-[#1b4332]/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Kontakt</a>
+        <a href="karriere.html" class="text-[#95d5b2] hover:text-white hover:bg-[#1b4332]/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Karriere</a>
+        <div class="pt-3 border-t border-[#1b4332]/10 mt-1 flex flex-col gap-3">
+          <a href="tel:+4951092638603" class="flex items-center gap-2 text-[#1b4332] font-700 text-sm">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
             </svg>
