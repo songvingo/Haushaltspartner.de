@@ -827,9 +827,43 @@
           <strong class="text-[#1b4332]">monatlichen Entlastungsbetrag von bis zu 131&nbsp;€</strong>
           finanzieren. Wir helfen Ihnen bei der Abwicklung mit Ihrer Pflegekasse.
         </p>
-        <p class="text-[#4a7c63] leading-relaxed mb-8 text-[16px]">
+        <p class="text-[#4a7c63] leading-relaxed mb-5 text-[16px]">
           Nicht genutzte Beträge können bis zu 12 Monate übertragen werden – sprechen Sie uns an, damit kein Anspruch verloren geht.
         </p>
+
+        <!-- Überblick-Box -->
+        <div style="background:#f0faf2;border-radius:12px;padding:18px 22px;margin-bottom:24px;border:1px solid #d8f3dc;">
+          <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#40916c;margin-bottom:14px;">Entlastungsbetrag im Überblick · Stand 2026</p>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center;margin-bottom:14px;">
+            <div style="background:#fff;border-radius:8px;padding:12px 6px;border:1px solid #d8f3dc;">
+              <p style="font-size:20px;font-weight:900;color:#1b4332;line-height:1;">131&nbsp;€</p>
+              <p style="font-size:10px;color:#4a7c63;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-top:5px;">pro Monat</p>
+            </div>
+            <div style="background:#fff;border-radius:8px;padding:12px 6px;border:1px solid #d8f3dc;">
+              <p style="font-size:20px;font-weight:900;color:#1b4332;line-height:1;">1.572&nbsp;€</p>
+              <p style="font-size:10px;color:#4a7c63;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-top:5px;">pro Jahr</p>
+            </div>
+            <div style="background:#fff;border-radius:8px;padding:12px 6px;border:1px solid #d8f3dc;">
+              <p style="font-size:20px;font-weight:900;color:#1b4332;line-height:1;">PG&nbsp;1–5</p>
+              <p style="font-size:10px;color:#4a7c63;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-top:5px;">alle Grade</p>
+            </div>
+          </div>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;">
+            <li style="font-size:13px;color:#4a7c63;display:flex;align-items:flex-start;gap:8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Nicht genutzte Beträge bis zu 12 Monate übertragbar (§&nbsp;45b SGB&nbsp;XI)
+            </li>
+            <li style="font-size:13px;color:#4a7c63;display:flex;align-items:flex-start;gap:8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Gilt für Haushalts-, Alltags- und Seniorenhilfe
+            </li>
+            <li style="font-size:13px;color:#4a7c63;display:flex;align-items:flex-start;gap:8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Wir übernehmen die komplette Abwicklung mit Ihrer Pflegekasse
+            </li>
+          </ul>
+        </div>
+
         <a href="#kontakt" class="btn-gold">Jetzt beraten lassen</a>
       </div>
 
@@ -1504,27 +1538,32 @@
     1: {
       label: 'Pflegegrad 1 – Geringe Beeinträchtigung',
       text: 'Bereits mit Pflegegrad 1 haben Sie Anspruch auf unsere Haushaltshilfe & Alltagshilfe. Kleine Unterstützungen im Alltag – beim Einkaufen, Putzen oder Waschen – entlasten Sie spürbar und geben mehr Sicherheit.',
-      services: ['Leichte Haushaltsführung & Reinigung', 'Einkaufen & Besorgungen', 'Alltagsbegleitung']
+      services: ['Leichte Haushaltsführung & Reinigung', 'Einkaufen & Besorgungen', 'Alltagsbegleitung'],
+      beispiel: 'Mit den 131 € lassen sich z.B. 2 Reinigungseinsätze pro Monat oder regelmäßige Einkaufsbegleitungen vollständig finanzieren – ohne Eigenkosten.'
     },
     2: {
       label: 'Pflegegrad 2 – Erhebliche Beeinträchtigung',
-      text: 'Mit Pflegegrad 2 steigt Ihr Anspruch: Sie haben in der Regel Anspruch auf mehr Stunden Haushaltshilfe & Alltagshilfe. Alltägliche Aufgaben werden zuverlässig übernommen, ohne dass Sie Ihre Kräfte überlasten.',
-      services: ['Umfassende Haushaltshilfe & Reinigung', 'Kochen & Mahlzeiten vorbereiten', 'Alltagshilfe & Begleitung zu Terminen', 'Einkaufen & Besorgungen']
+      text: 'Mit Pflegegrad 2 haben Sie Anspruch auf umfangreichere Unterstützung. Alltägliche Aufgaben werden zuverlässig übernommen, ohne dass Sie Ihre Kräfte überlasten.',
+      services: ['Umfassende Haushaltshilfe & Reinigung', 'Kochen & Mahlzeiten vorbereiten', 'Alltagshilfe & Begleitung zu Terminen', 'Einkaufen & Besorgungen'],
+      beispiel: 'Mit 131 € monatlich lassen sich z.B. wöchentliche Haushaltsreinigung plus gelegentliche Arztbegleitungen finanzieren – kombiniert mit Ihrem Pflegegeld (347 €/Monat, §37 SGB XI).'
     },
     3: {
       label: 'Pflegegrad 3 – Schwere Beeinträchtigung',
       text: 'Mit Pflegegrad 3 wird die Unterstützung noch umfangreicher. Unsere Haushaltshilfe & Alltagshilfe sorgt dafür, dass Sie oder Ihre Angehörigen gut versorgt sind und die Lebensqualität erhalten bleibt.',
-      services: ['Vollständige Haushaltsführung', 'Tägliche Haushaltshilfe & Alltagsstruktur', 'Kochen, Waschen & Bügeln', 'Spaziergänge & soziale Aktivitäten']
+      services: ['Vollständige Haushaltsführung', 'Tägliche Haushaltshilfe & Alltagsstruktur', 'Kochen, Waschen & Bügeln', 'Spaziergänge & soziale Aktivitäten'],
+      beispiel: 'Der Entlastungsbetrag (131 €/Monat) deckt regelmäßige Haushaltshilfe ab – ergänzend steht Ihnen Pflegegeld (599 €/Monat, §37 SGB XI) für weitere Unterstützung zu.'
     },
     4: {
       label: 'Pflegegrad 4 – Schwerste Beeinträchtigung',
       text: 'Bei Pflegegrad 4 ist der Unterstützungsbedarf sehr hoch. Unsere Haushaltshilfe & Alltagshilfe entlastet pflegende Angehörige und ermöglicht ein würdevolles Leben zu Hause – individuell abgestimmt.',
-      services: ['Intensive tägliche Haushaltshilfe', 'Engmaschige Alltagsbegleitung', 'Entlastung pflegender Angehöriger', 'Koordination & Pflegekasse-Abwicklung']
+      services: ['Intensive tägliche Haushaltshilfe', 'Engmaschige Alltagsbegleitung', 'Entlastung pflegender Angehöriger', 'Koordination & Pflegekasse-Abwicklung'],
+      beispiel: 'Neben dem Entlastungsbetrag (131 €/Monat) steht Ihnen Pflegegeld von 800 €/Monat (§37 SGB XI) zu – zusammen ermöglicht das eine umfassende Versorgung zu Hause.'
     },
     5: {
       label: 'Pflegegrad 5 – Schwerste Beeinträchtigung mit besonderem Bedarf',
       text: 'Menschen mit Pflegegrad 5 sind in fast allen Bereichen auf Haushaltshilfe & Alltagshilfe angewiesen. Wir stellen sicher, dass alle haushaltswirtschaftlichen Tätigkeiten zuverlässig und mit größter Sorgfalt erledigt werden.',
-      services: ['Umfassende tägliche Haushaltshilfe', 'Intensive Alltagsunterstützung', 'Vollständige Entlastung der Angehörigen', 'Direkte Abrechnung mit der Pflegekasse']
+      services: ['Umfassende tägliche Haushaltshilfe', 'Intensive Alltagsunterstützung', 'Vollständige Entlastung der Angehörigen', 'Direkte Abrechnung mit der Pflegekasse'],
+      beispiel: 'Mit dem Entlastungsbetrag (131 €/Monat) und Pflegegeld (990 €/Monat, §37 SGB XI) steht ein erhebliches Budget für tägliche Haushaltshilfe & Alltagsbegleitung zur Verfügung.'
     }
   };
 
@@ -1545,8 +1584,15 @@
         </div>
       </div>
       <div style="margin-top:12px;padding-top:12px;border-top:1px solid #e8f5ec;">
-        <p style="font-size:13px;color:#4a7c63;">
-          <strong style="color:#1b4332;">Bis zu 131&nbsp;€ monatlich</strong> – Der Entlastungsbetrag (§&nbsp;45b SGB&nbsp;XI) steht allen Personen mit anerkanntem Pflegegrad zu.
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <p style="font-size:22px;font-weight:900;color:#1b4332;line-height:1;margin:0;">131&nbsp;€</p>
+          <div>
+            <p style="font-size:12px;font-weight:700;color:#1b4332;margin:0;">monatlicher Entlastungsbetrag</p>
+            <p style="font-size:11px;color:#4a7c63;margin:0;">§&nbsp;45b SGB&nbsp;XI · für alle Pflegegrade 1–5</p>
+          </div>
+        </div>
+        <p style="font-size:13px;color:#4a7c63;line-height:1.6;margin:0;padding:10px 12px;background:#f7fdf9;border-radius:8px;border-left:3px solid #40916c;">
+          ${d.beispiel}
         </p>
       </div>`;
   }
