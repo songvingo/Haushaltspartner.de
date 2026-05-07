@@ -6,8 +6,26 @@
   <title>Impressum – Haushaltspartner</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" type="image/png" href="Brand_Assets/Haushaltspartner%20Logo%20gr%C3%BCn.png">
-  <!-- Tailwind CSS (compiled) -->
-  <link rel="stylesheet" href="tailwind.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              900: '#1b4332', 800: '#2d6a4f', 700: '#40916c',
+              600: '#52b788', 500: '#74c69d', 200: '#d8f3dc',
+              100: '#f0faf2', 50: '#f7fdf9',
+            },
+            gold: { 500: '#e8a320' }
+          },
+          fontFamily: {
+            sans: ['-apple-system','BlinkMacSystemFont','"SF Pro Display"','"SF Pro Text"','"Segoe UI"','Roboto','sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -16,7 +34,6 @@
     #navbar.scrolled { background: #1b4332 !important; box-shadow: 0 2px 24px rgba(0,0,0,0.25); }
     .btn-gold { display:inline-flex;align-items:center;gap:8px;background:#e8a320;color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;transition:background 0.2s ease,transform 0.15s ease;letter-spacing:-0.01em; }
     .btn-gold:hover { background:#f0b429;transform:translateY(-1px); }
-    footer { font-weight: 500; }
     footer a { transition: color 0.2s; }
     footer a:hover { color: #95d5b2; }
     ::-webkit-scrollbar { width: 6px; }
@@ -202,7 +219,6 @@
     <div class="flex gap-6">
       <a href="impressum.html" class="text-white hover:text-[#95d5b2] transition-colors">Impressum</a>
       <a href="datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
-        <a href="agb.html" class="hover:text-white transition-colors">AGB</a>
     </div>
   </div>
 </footer>
@@ -223,82 +239,5 @@
     navbar.classList.toggle('scrolled', window.scrollY > 10);
   }, { passive: true });
 </script>
-<!-- WhatsApp Floating Button (desktop only) -->
-<style>
-  @keyframes wa-wiggle {
-    0%       { transform: rotate(0deg); }
-    2%       { transform: rotate(-15deg); }
-    4%       { transform: rotate(15deg); }
-    6%       { transform: rotate(-10deg); }
-    8%       { transform: rotate(10deg); }
-    10%      { transform: rotate(-5deg); }
-    12%      { transform: rotate(5deg); }
-    14%,100% { transform: rotate(0deg); }
-  }
-  @keyframes wa-intro {
-    0%, 55% { width: 155px; border-radius: 28px; }
-    100%    { width: 56px;  border-radius: 50%; }
-  }
-  @keyframes wa-text-out {
-    0%, 40%   { opacity: 1; max-width: 90px; margin-left: 6px; }
-    90%, 100% { opacity: 0; max-width: 0;    margin-left: 0; }
-  }
-  .wa-float {
-    width: 56px; height: 56px; border-radius: 50%; overflow: hidden;
-    animation: wa-intro 2.5s ease-in-out both, wa-wiggle 5s ease-in-out 6s infinite;
-  }
-  .wa-float:hover { animation-play-state: paused; }
-  .wa-float-text {
-    color: white; font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden;
-    animation: wa-text-out 2.5s ease-in-out forwards;
-  }
-</style>
-<a href="https://wa.me/4915569451192" target="_blank" rel="noopener noreferrer"
-   aria-label="Kontakt via WhatsApp"
-   id="wa-float"
-   style="position:fixed;bottom:24px;right:24px;z-index:9999;align-items:center;justify-content:center;background:#25D366;box-shadow:0 4px 16px rgba(0,0,0,0.25);transition:transform 0.2s,box-shadow 0.2s;"
-   class="hidden lg:flex wa-float"
-   onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(0,0,0,0.35)';"
-   onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.25)';">
-  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" style="flex-shrink:0;">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-  <span class="wa-float-text">WhatsApp</span>
-</a>
-
-
-<script>
-  setTimeout(function() {
-    var el  = document.getElementById("wa-float");
-    var txt = el ? el.querySelector(".wa-float-text") : null;
-    if (!el || !txt) return;
-    el.style.width = "56px";
-    el.style.borderRadius = "50%";
-    el.style.transition = "width 0.35s ease, border-radius 0.35s ease";
-    el.style.animation = "wa-wiggle 5s ease-in-out infinite";
-    txt.style.opacity = "0";
-    txt.style.maxWidth = "0";
-    txt.style.marginLeft = "0";
-    txt.style.animation = "none";
-    txt.style.transition = "opacity 0.25s ease, max-width 0.35s ease, margin-left 0.35s ease";
-    el.addEventListener("mouseenter", function() {
-      el.style.width = "155px";
-      el.style.borderRadius = "28px";
-      el.style.animationPlayState = "paused";
-      txt.style.opacity = "1";
-      txt.style.maxWidth = "90px";
-      txt.style.marginLeft = "6px";
-    });
-    el.addEventListener("mouseleave", function() {
-      el.style.width = "56px";
-      el.style.borderRadius = "50%";
-      el.style.animationPlayState = "running";
-      txt.style.opacity = "0";
-      txt.style.maxWidth = "0";
-      txt.style.marginLeft = "0";
-    });
-  }, 2600);
-</script>
-
 </body>
 </html>
