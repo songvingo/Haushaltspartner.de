@@ -48,11 +48,47 @@
   <link rel="icon" type="image/png" href="Brand_Assets/Haushaltspartner%20Logo%20gr%C3%BCn.png">
   <link rel="apple-touch-icon" href="Brand_Assets/Haushaltspartner%20Logo%20gr%C3%BCn.png">
 
-  <!-- Preload hero image -->
-  <link rel="preload" as="image" href="Fotos/Haushaltshilfe-Haushaltspartner-Alltagshilfe-Hannover-Mitarbeiter%20Kunde.webp">
-
-  <!-- Tailwind CSS (compiled) -->
-  <link rel="stylesheet" href="tailwind.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              950: '#0d2318',
+              900: '#1b4332',
+              800: '#2d6a4f',
+              700: '#40916c',
+              600: '#52b788',
+              500: '#74c69d',
+              400: '#95d5b2',
+              300: '#b7e4c7',
+              200: '#d8f3dc',
+              100: '#f0faf2',
+              50:  '#f7fdf9',
+            },
+            gold: {
+              500: '#e8a320',
+              400: '#f0b429',
+              300: '#fcd05a',
+            }
+          },
+          fontFamily: {
+            sans: [
+              '-apple-system',
+              'BlinkMacSystemFont',
+              '"SF Pro Display"',
+              '"SF Pro Text"',
+              '"Segoe UI"',
+              'Roboto',
+              'sans-serif'
+            ],
+          },
+        }
+      }
+    }
+  </script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; }
@@ -341,7 +377,6 @@
     textarea.form-input { resize: vertical; min-height: 110px; }
 
     /* ── Footer ── */
-    footer { font-weight: 500; }
     footer a {
       transition: color 0.2s;
     }
@@ -400,33 +435,6 @@
       pointer-events: none;
       z-index: 0;
     }
-  @keyframes wa-wiggle {
-    0%       { transform: rotate(0deg); }
-    2%       { transform: rotate(-15deg); }
-    4%       { transform: rotate(15deg); }
-    6%       { transform: rotate(-10deg); }
-    8%       { transform: rotate(10deg); }
-    10%      { transform: rotate(-5deg); }
-    12%      { transform: rotate(5deg); }
-    14%,100% { transform: rotate(0deg); }
-  }
-  @keyframes wa-intro {
-    0%, 55% { width: 155px; border-radius: 28px; }
-    100%    { width: 56px;  border-radius: 50%; }
-  }
-  @keyframes wa-text-out {
-    0%, 40%   { opacity: 1; max-width: 90px; margin-left: 6px; }
-    90%, 100% { opacity: 0; max-width: 0;    margin-left: 0; }
-  }
-  .wa-float {
-    width: 56px; height: 56px; border-radius: 50%; overflow: hidden;
-    animation: wa-intro 2.5s ease-in-out both, wa-wiggle 5s ease-in-out 6s infinite;
-  }
-  .wa-float:hover { animation-play-state: paused; }
-  .wa-float-text {
-    color: white; font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden;
-    animation: wa-text-out 2.5s ease-in-out forwards;
-  }
   </style>
 </head>
 <body>
@@ -571,18 +579,6 @@
             Aus Hannover – für Hannover
           </div>
         </div>
-
-        <!-- Partner Badge -->
-        <div class="mt-6">
-          <p class="text-[#4a7c63] text-xs font-600 uppercase tracking-widest mb-3">Unser Partner</p>
-          <a href="https://www.hannoverhilfe.de/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid #d8eee3;border-radius:12px;padding:10px 18px;text-decoration:none;transition:box-shadow 0.2s,transform 0.15s;box-shadow:0 2px 8px rgba(27,67,50,0.06);" class="hover:shadow-md hover:-translate-y-0.5">
-            <img src="Brand_Assets/Logo-hannoverhilfe.webp" alt="Hannover Hilfe" style="height:36px;width:auto;object-fit:contain;" loading="lazy">
-            <div>
-              <p class="text-[#1b4332] font-700 text-[13px]" style="letter-spacing:-0.01em;">Hannover Hilfe</p>
-              <p class="text-[#4a7c63] text-[11px]">Zertifizierter Kooperationspartner</p>
-            </div>
-          </a>
-        </div>
       </div>
 
       <!-- Right: Image -->
@@ -594,7 +590,6 @@
               alt="Professionelle Haushaltshilfe und Alltagshilfe in Hannover"
               style="width:100%;height:100%;object-fit:cover;object-position:center center;display:block;border-radius:16px;"
               loading="eager"
-              fetchpriority="high"
             >
             <!-- Overlay -->
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(27,67,50,0.5) 0%,transparent 50%);pointer-events:none;border-radius:16px;"></div>
@@ -820,8 +815,15 @@
         <h2 class="section-headline mt-1 mb-6">
           Pflegegrad 1–5?<br>Wir rechnen direkt<br>mit der Pflegekasse ab.
         </h2>
+        <p class="text-[#4a7c63] leading-relaxed mb-6 text-[16px]">
+          Als anerkannter Anbieter von Entlastungsleistungen nach
+          <strong class="text-[#1b4332]">§&nbsp;45a SGB&nbsp;XI</strong>
+          können Menschen mit Pflegegrad 1–5 unsere Leistungen über den
+          <strong class="text-[#1b4332]">monatlichen Entlastungsbetrag von bis zu 131&nbsp;€</strong>
+          finanzieren. Wir helfen Ihnen bei der Abwicklung mit Ihrer Pflegekasse.
+        </p>
         <p class="text-[#4a7c63] leading-relaxed mb-8 text-[16px]">
-          Menschen mit Pflegegrad 1–5 können unsere Leistungen über Pflegekassenleistungen finanzieren – darunter der <strong class="text-[#1b4332]">Entlastungsbetrag (131&nbsp;€/Monat)</strong>, Pflegegeld und Verhinderungspflege. Nicht genutzte Beträge können bis zu 12 Monate übertragen werden. Wir übernehmen die komplette Abwicklung für Sie.
+          Nicht genutzte Beträge können bis zu 12 Monate übertragen werden – sprechen Sie uns an, damit kein Anspruch verloren geht.
         </p>
         <a href="#kontakt" class="btn-gold">Jetzt beraten lassen</a>
       </div>
@@ -860,66 +862,6 @@
 
       </div>
     </div>
-
-    <!-- Leistungsübersicht Tabelle -->
-    <div style="margin-top:48px;">
-      <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#40916c;margin-bottom:16px;text-align:center;">Pflegekassenleistungen im Überblick · Stand Mai 2026</p>
-      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;">
-        <table style="width:100%;border-collapse:collapse;font-size:14px;min-width:520px;">
-          <thead>
-            <tr style="background:#1b4332;color:#fff;">
-              <th style="padding:13px 16px;text-align:left;font-weight:700;border-radius:8px 0 0 0;white-space:nowrap;">Leistung</th>
-              <th style="padding:13px 10px;text-align:center;font-weight:700;">PG 1</th>
-              <th style="padding:13px 10px;text-align:center;font-weight:700;">PG 2</th>
-              <th style="padding:13px 10px;text-align:center;font-weight:700;">PG 3</th>
-              <th style="padding:13px 10px;text-align:center;font-weight:700;">PG 4</th>
-              <th style="padding:13px 10px;text-align:center;font-weight:700;border-radius:0 8px 0 0;">PG 5</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="background:#fff;">
-              <td style="padding:12px 16px;font-weight:600;color:#1b4332;border-bottom:1px solid #e8f5ec;">
-                Entlastungsbetrag<br><span style="font-size:11px;color:#40916c;font-weight:500;">§ 45b SGB XI</span>
-              </td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;border-bottom:1px solid #e8f5ec;">131 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;border-bottom:1px solid #e8f5ec;">131 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;border-bottom:1px solid #e8f5ec;">131 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;border-bottom:1px solid #e8f5ec;">131 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;border-bottom:1px solid #e8f5ec;">131 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-            </tr>
-            <tr style="background:#f7fdf9;">
-              <td style="padding:12px 16px;font-weight:600;color:#1b4332;border-bottom:1px solid #e8f5ec;">
-                Pflegegeld<br><span style="font-size:11px;color:#40916c;font-weight:500;">§ 37 SGB XI</span>
-              </td>
-              <td style="padding:12px 10px;text-align:center;color:#b0c9bb;border-bottom:1px solid #e8f5ec;font-size:18px;">–</td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;border-bottom:1px solid #e8f5ec;">347 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;border-bottom:1px solid #e8f5ec;">599 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;border-bottom:1px solid #e8f5ec;">800 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;border-bottom:1px solid #e8f5ec;">990 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-            </tr>
-            <tr style="background:#fff;">
-              <td style="padding:12px 16px;font-weight:600;color:#1b4332;border-bottom:1px solid #e8f5ec;">
-                Verhinderungspflege<br><span style="font-size:11px;color:#40916c;font-weight:500;">§ 39 SGB XI</span>
-              </td>
-              <td style="padding:12px 10px;text-align:center;color:#b0c9bb;border-bottom:1px solid #e8f5ec;font-size:18px;">–</td>
-              <td colspan="4" style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;border-bottom:1px solid #e8f5ec;">1.612 €/Jahr<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">bis zu 6 Wochen · PG 2–5</span></td>
-            </tr>
-            <tr style="background:#f7fdf9;">
-              <td style="padding:12px 16px;font-weight:600;color:#1b4332;border-radius:0 0 0 8px;">
-                Pflegehilfsmittel<br><span style="font-size:11px;color:#40916c;font-weight:500;">§ 40 Abs. 2 SGB XI</span>
-              </td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;">40 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;">40 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;">40 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;">40 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-              <td style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;border-radius:0 0 8px 0;">40 €<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">/Monat</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="font-size:12px;color:#4a7c63;margin-top:12px;text-align:center;line-height:1.6;">Alle Beträge gemäß SGB XI, Stand Mai 2026. Pflegegeld (§ 37) kann frei eingesetzt werden – auch für unsere Leistungen.<br>Wir helfen Ihnen kostenlos bei der Beantragung und Abwicklung aller Pflegekassenleistungen.</p>
-    </div>
-
   </div>
 </section>
 
@@ -929,9 +871,9 @@
 ═══════════════════════════════════════════════ -->
 <section class="bg-[#2d6a4f] py-16 lg:py-20" aria-label="Unsere Kennzahlen">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid grid-cols-3 gap-8 lg:gap-12 divide-x-0 lg:divide-x divide-white/10">
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 divide-x-0 lg:divide-x divide-white/10">
       <div class="text-center">
-        <div class="stat-number">300<span style="color:#74c69d;">+</span></div>
+        <div class="stat-number">100<span style="color:#74c69d;">+</span></div>
         <p class="text-[#95d5b2] text-sm font-600 mt-2 uppercase tracking-widest">Zufriedene Kunden</p>
       </div>
       <div class="text-center">
@@ -941,6 +883,10 @@
       <div class="text-center">
         <div class="stat-number">3<span style="color:#74c69d;">+</span></div>
         <p class="text-[#95d5b2] text-sm font-600 mt-2 uppercase tracking-widest">Jahre Erfahrung</p>
+      </div>
+      <div class="text-center">
+        <div class="stat-number">15<span style="color:#74c69d;">+</span></div>
+        <p class="text-[#95d5b2] text-sm font-600 mt-2 uppercase tracking-widest">Orte in der Region</p>
       </div>
     </div>
   </div>
@@ -1141,14 +1087,15 @@
         <div style="position:relative;max-width:300px;width:100%;">
           <div style="width:100%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.4);border:4px solid rgba(255,255,255,0.15);">
             <img
-              src="Fotos/Haushaltshilfe-Alltagshilfe-Hannover-Haushaltspartner-Gesch%C3%A4ftsf%C3%BChrer-Songvi-Ngo%20(1).webp"
-              alt="Songvi Ngo – Kundenberater bei Haushaltspartner"
+              src="Fotos/Haushaltshilfe%20Alltagshilfe%20Songvi%20Ngo.webp"
+              alt="Songvi Ngo – Gründer und Geschäftsführer von Haushaltspartner"
               style="width:100%;height:100%;object-fit:cover;object-position:50% 15%;display:block;"
               loading="lazy"
             >
           </div>
           <div style="position:absolute;bottom:-10px;right:10px;background:#e8a320;color:#fff;padding:8px 14px;border-radius:10px;box-shadow:0 8px 24px rgba(232,163,32,0.4);">
-            <p style="font-size:14px;font-weight:800;margin:0;">Kundenberater</p>
+            <p style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;opacity:0.85;margin:0 0 2px;">Gründer &amp;</p>
+            <p style="font-size:14px;font-weight:800;margin:0;">Geschäftsführer</p>
           </div>
         </div>
       </div>
@@ -1169,7 +1116,7 @@
           <div style="width:48px;height:2px;background:#e8a320;border-radius:2px;"></div>
           <div>
             <p class="text-white font-800 text-[16px]" style="letter-spacing:-0.02em;">Songvi Ngo</p>
-            <p class="text-[#74c69d] text-[13px]">Kundenberater · Haushaltspartner</p>
+            <p class="text-[#74c69d] text-[13px]">Gründer &amp; Geschäftsführer · Haushaltspartner</p>
           </div>
         </div>
       </div>
@@ -1337,9 +1284,8 @@
         >
           <input type="hidden" name="access_key" value="772dbae4-50a9-4d2f-9bd0-a1497bd5879a">
           <input type="hidden" name="subject" value="Neue Anfrage – Haushaltspartner Website">
-          <input type="hidden" name="from_name" value="Haushaltspartner">
-          <input type="hidden" name="redirect" value="https://haushaltspartner.de/danke">
-
+          <input type="hidden" name="from_name" value="Haushaltspartner Website">
+          <input type="hidden" name="redirect" value="https://haushaltspartner.de/danke.html">
           <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
 
           <h3 class="text-white font-800 text-xl mb-6" style="letter-spacing:-0.02em;">Ihre Anfrage</h3>
@@ -1363,11 +1309,6 @@
           <div class="mb-4">
             <label for="email" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">E-Mail</label>
             <input type="email" id="email" name="email" class="form-input" placeholder="maria@email.de" required autocomplete="email">
-          </div>
-
-          <div class="mb-4">
-            <label for="ort" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Ort</label>
-            <input type="text" id="ort" name="ort" class="form-input" placeholder="z.B. Hannover, Ronnenberg..." autocomplete="address-level2">
           </div>
 
           <div class="mb-4">
@@ -1424,7 +1365,6 @@
           alt="Haushaltspartner Logo"
           class="w-auto mb-4"
           style="height:60px;"
-          loading="lazy"
         >
         <p class="text-[14px] leading-relaxed text-[#52b788]">
           Professionelle Haushaltshilfe &amp; Alltagshilfe<br>
@@ -1473,7 +1413,6 @@
       <div class="flex gap-6">
         <a href="impressum.html" class="hover:text-white transition-colors">Impressum</a>
         <a href="datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
-        <a href="agb.html" class="hover:text-white transition-colors">AGB</a>
       </div>
     </div>
   </div>
@@ -1553,32 +1492,27 @@
     1: {
       label: 'Pflegegrad 1 – Geringe Beeinträchtigung',
       text: 'Bereits mit Pflegegrad 1 haben Sie Anspruch auf unsere Haushaltshilfe & Alltagshilfe. Kleine Unterstützungen im Alltag – beim Einkaufen, Putzen oder Waschen – entlasten Sie spürbar und geben mehr Sicherheit.',
-      services: ['Leichte Haushaltsführung & Reinigung', 'Einkaufen & Besorgungen', 'Alltagsbegleitung'],
-      beispiel: 'Mit den 131 € lassen sich z.B. 2 Reinigungseinsätze pro Monat oder regelmäßige Einkaufsbegleitungen vollständig finanzieren – ohne Eigenkosten.'
+      services: ['Leichte Haushaltsführung & Reinigung', 'Einkaufen & Besorgungen', 'Alltagsbegleitung']
     },
     2: {
       label: 'Pflegegrad 2 – Erhebliche Beeinträchtigung',
-      text: 'Mit Pflegegrad 2 haben Sie Anspruch auf umfangreichere Unterstützung. Alltägliche Aufgaben werden zuverlässig übernommen, ohne dass Sie Ihre Kräfte überlasten.',
-      services: ['Umfassende Haushaltshilfe & Reinigung', 'Kochen & Mahlzeiten vorbereiten', 'Alltagshilfe & Begleitung zu Terminen', 'Einkaufen & Besorgungen'],
-      beispiel: 'Mit 131 € monatlich lassen sich z.B. wöchentliche Haushaltsreinigung plus gelegentliche Arztbegleitungen finanzieren – kombiniert mit Ihrem Pflegegeld (347 €/Monat, §37 SGB XI).'
+      text: 'Mit Pflegegrad 2 steigt Ihr Anspruch: Sie haben in der Regel Anspruch auf mehr Stunden Haushaltshilfe & Alltagshilfe. Alltägliche Aufgaben werden zuverlässig übernommen, ohne dass Sie Ihre Kräfte überlasten.',
+      services: ['Umfassende Haushaltshilfe & Reinigung', 'Kochen & Mahlzeiten vorbereiten', 'Alltagshilfe & Begleitung zu Terminen', 'Einkaufen & Besorgungen']
     },
     3: {
       label: 'Pflegegrad 3 – Schwere Beeinträchtigung',
       text: 'Mit Pflegegrad 3 wird die Unterstützung noch umfangreicher. Unsere Haushaltshilfe & Alltagshilfe sorgt dafür, dass Sie oder Ihre Angehörigen gut versorgt sind und die Lebensqualität erhalten bleibt.',
-      services: ['Vollständige Haushaltsführung', 'Tägliche Haushaltshilfe & Alltagsstruktur', 'Kochen, Waschen & Bügeln', 'Spaziergänge & soziale Aktivitäten'],
-      beispiel: 'Der Entlastungsbetrag (131 €/Monat) deckt regelmäßige Haushaltshilfe ab – ergänzend steht Ihnen Pflegegeld (599 €/Monat, §37 SGB XI) für weitere Unterstützung zu.'
+      services: ['Vollständige Haushaltsführung', 'Tägliche Haushaltshilfe & Alltagsstruktur', 'Kochen, Waschen & Bügeln', 'Spaziergänge & soziale Aktivitäten']
     },
     4: {
       label: 'Pflegegrad 4 – Schwerste Beeinträchtigung',
       text: 'Bei Pflegegrad 4 ist der Unterstützungsbedarf sehr hoch. Unsere Haushaltshilfe & Alltagshilfe entlastet pflegende Angehörige und ermöglicht ein würdevolles Leben zu Hause – individuell abgestimmt.',
-      services: ['Intensive tägliche Haushaltshilfe', 'Engmaschige Alltagsbegleitung', 'Entlastung pflegender Angehöriger', 'Koordination & Pflegekasse-Abwicklung'],
-      beispiel: 'Neben dem Entlastungsbetrag (131 €/Monat) steht Ihnen Pflegegeld von 800 €/Monat (§37 SGB XI) zu – zusammen ermöglicht das eine umfassende Versorgung zu Hause.'
+      services: ['Intensive tägliche Haushaltshilfe', 'Engmaschige Alltagsbegleitung', 'Entlastung pflegender Angehöriger', 'Koordination & Pflegekasse-Abwicklung']
     },
     5: {
       label: 'Pflegegrad 5 – Schwerste Beeinträchtigung mit besonderem Bedarf',
       text: 'Menschen mit Pflegegrad 5 sind in fast allen Bereichen auf Haushaltshilfe & Alltagshilfe angewiesen. Wir stellen sicher, dass alle haushaltswirtschaftlichen Tätigkeiten zuverlässig und mit größter Sorgfalt erledigt werden.',
-      services: ['Umfassende tägliche Haushaltshilfe', 'Intensive Alltagsunterstützung', 'Vollständige Entlastung der Angehörigen', 'Direkte Abrechnung mit der Pflegekasse'],
-      beispiel: 'Mit dem Entlastungsbetrag (131 €/Monat) und Pflegegeld (990 €/Monat, §37 SGB XI) steht ein erhebliches Budget für tägliche Haushaltshilfe & Alltagsbegleitung zur Verfügung.'
+      services: ['Umfassende tägliche Haushaltshilfe', 'Intensive Alltagsunterstützung', 'Vollständige Entlastung der Angehörigen', 'Direkte Abrechnung mit der Pflegekasse']
     }
   };
 
@@ -1599,8 +1533,8 @@
         </div>
       </div>
       <div style="margin-top:12px;padding-top:12px;border-top:1px solid #e8f5ec;">
-        <p style="font-size:13px;color:#4a7c63;margin:0;">
-          <strong style="color:#1b4332;">131&nbsp;€/Monat</strong> Entlastungsbetrag (§&nbsp;45b SGB&nbsp;XI) – für alle Pflegegrade 1–5. Nicht genutzte Beträge bis zu 12 Monate übertragbar.
+        <p style="font-size:13px;color:#4a7c63;">
+          <strong style="color:#1b4332;">Bis zu 131&nbsp;€ monatlich</strong> – Der Entlastungsbetrag (§&nbsp;45b SGB&nbsp;XI) steht allen Personen mit anerkanntem Pflegegrad zu.
         </p>
       </div>`;
   }
@@ -1710,18 +1644,6 @@
       Anrufen
     </a>
     <a
-      href="https://wa.me/4915569451192"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="flex items-center justify-center"
-      style="width:50px;height:50px;background:#25D366;border-radius:22%;flex-shrink:0;"
-      aria-label="WhatsApp"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-      </svg>
-    </a>
-    <a
       href="#kontakt"
       class="btn-outline-white flex-1 justify-center py-3.5"
       style="font-size:15px;"
@@ -1799,54 +1721,7 @@
       localStorage.setItem('cookie-ok', '1');
     });
   })();
-
-  // WhatsApp hover expand (activates after intro animation)
-  setTimeout(function() {
-    var el  = document.getElementById('wa-float');
-    var txt = el ? el.querySelector('.wa-float-text') : null;
-    if (!el || !txt) return;
-    el.style.width = '56px';
-    el.style.borderRadius = '50%';
-    el.style.transition = 'width 0.35s ease, border-radius 0.35s ease';
-    el.style.animation = 'wa-wiggle 5s ease-in-out infinite';
-    txt.style.opacity = '0';
-    txt.style.maxWidth = '0';
-    txt.style.marginLeft = '0';
-    txt.style.animation = 'none';
-    txt.style.transition = 'opacity 0.25s ease, max-width 0.35s ease, margin-left 0.35s ease';
-    el.addEventListener('mouseenter', function() {
-      el.style.width = '155px';
-      el.style.borderRadius = '28px';
-      el.style.animationPlayState = 'paused';
-      txt.style.opacity = '1';
-      txt.style.maxWidth = '90px';
-      txt.style.marginLeft = '6px';
-    });
-    el.addEventListener('mouseleave', function() {
-      el.style.width = '56px';
-      el.style.borderRadius = '50%';
-      el.style.animationPlayState = 'running';
-      txt.style.opacity = '0';
-      txt.style.maxWidth = '0';
-      txt.style.marginLeft = '0';
-    });
-  }, 2600);
-
 </script>
-
-<!-- WhatsApp Floating Button (desktop only) -->
-<a href="https://wa.me/4915569451192" target="_blank" rel="noopener noreferrer"
-   aria-label="Kontakt via WhatsApp"
-   style="position:fixed;bottom:24px;right:24px;z-index:9999;align-items:center;justify-content:center;background:#25D366;box-shadow:0 4px 16px rgba(0,0,0,0.25);transition:transform 0.2s,box-shadow 0.2s;"
-   id="wa-float"
-   class="hidden lg:flex wa-float"
-   onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(0,0,0,0.35)';"
-   onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.25)';">
-  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" style="flex-shrink:0;">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-  <span class="wa-float-text">WhatsApp</span>
-</a>
 
 </body>
 </html>
