@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – Haushaltshilfe & Alltagshilfe Hannover | Haushaltspartner.de</title>
+  <meta name="description" content="Tipps & Infos rund um Haushaltshilfe, Alltagshilfe und Pflege in Hannover. Entlastungsbetrag, Pflegekasse, Verhinderungspflege und mehr.">
+  <link rel="canonical" href="https://www.haushaltspartner.de/blog">
+  <link rel="icon" type="image/png" href="Brand_Assets/Haushaltspartner%20Logo%20gr%C3%BCn.png">
+  <link rel="stylesheet" href="tailwind.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif; background: #fff; color: #1a2e23; -webkit-font-smoothing: antialiased; }
+    #navbar { transition: background 0.3s ease, box-shadow 0.3s ease; }
+    #navbar.scrolled { background: #1b4332 !important; box-shadow: 0 2px 24px rgba(0,0,0,0.25); }
+    .btn-gold { display:inline-flex;align-items:center;gap:8px;background:#e8a320;color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;transition:background 0.2s ease,transform 0.15s ease;letter-spacing:-0.01em; }
+    .btn-gold:hover { background:#f0b429;transform:translateY(-1px); }
+    .btn-outline-green { display:inline-flex;align-items:center;gap:8px;background:transparent;color:#1b4332;font-weight:700;padding:13px 28px;border-radius:6px;border:2px solid #2d6a4f;text-decoration:none;transition:background 0.2s,transform 0.15s;letter-spacing:-0.01em; }
+    .btn-outline-green:hover { background:#f0faf2;transform:translateY(-1px); }
+    .section-label { display:inline-block;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#40916c;margin-bottom:12px; }
+    .section-headline { font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:#1b4332; }
+    .blog-card { background:#fff;border-radius:16px;overflow:hidden;border:1px solid #e8f5ec;box-shadow:0 2px 16px rgba(27,67,50,0.06);transition:transform 0.25s ease,box-shadow 0.25s ease; }
+    .blog-card:hover { transform:translateY(-4px);box-shadow:0 12px 40px rgba(27,67,50,0.12); }
+    footer { font-weight: 500; }
+    footer a { transition: color 0.2s; }
+    footer a:hover { color: #95d5b2; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f0faf2; }
+    ::-webkit-scrollbar-thumb { background: #40916c; border-radius: 3px; }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+    @keyframes wa-wiggle {
+      0%       { transform: rotate(0deg); }
+      2%       { transform: rotate(-15deg); }
+      4%       { transform: rotate(15deg); }
+      6%       { transform: rotate(-10deg); }
+      8%       { transform: rotate(10deg); }
+      10%      { transform: rotate(-5deg); }
+      12%      { transform: rotate(5deg); }
+      14%,100% { transform: rotate(0deg); }
+    }
+    @keyframes wa-intro {
+      0%, 55% { width: 155px; border-radius: 28px; }
+      100%    { width: 56px;  border-radius: 50%; }
+    }
+    @keyframes wa-text-out {
+      0%, 40%   { opacity: 1; max-width: 90px; margin-left: 6px; }
+      90%, 100% { opacity: 0; max-width: 0;    margin-left: 0; }
+    }
+    .wa-float {
+      width: 56px; height: 56px; border-radius: 50%; overflow: hidden;
+      animation: wa-intro 2.5s ease-in-out both, wa-wiggle 5s ease-in-out 6s infinite;
+    }
+    .wa-float:hover { animation-play-state: paused; }
+    .wa-float-text {
+      color: white; font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden;
+      animation: wa-text-out 2.5s ease-in-out forwards;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#1b4332]" role="navigation" aria-label="Hauptnavigation">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between h-[70px]">
+      <a href="index.html" aria-label="Haushaltspartner – Startseite">
+        <img src="Brand_Assets/Haushaltshilfe%20%26%20Alltagshilfe%20Hannover%20Haushaltspartner%20Logo.webp" alt="Haushaltspartner" class="w-auto" style="height:44px;">
+      </a>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="index.html#leistungen" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Leistungen</a>
+        <a href="index.html#pflegegrad" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Pflegegrad 1–5</a>
+        <a href="index.html#vorteile" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Über uns</a>
+        <a href="index.html#region" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Einsatzgebiet</a>
+        <a href="index.html#kontakt" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Kontakt</a>
+        <a href="karriere.html" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Karriere</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:+4951092638603" class="flex items-center gap-2 text-white font-700 text-sm hover:text-[#95d5b2] transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          05109 2638603
+        </a>
+        <a href="index.html#kontakt" class="btn-gold text-sm py-2.5 px-5">Kostenlos anfragen</a>
+      </div>
+      <button id="menu-toggle" class="lg:hidden text-white p-2 -mr-2 rounded-md hover:bg-white/10" aria-label="Menü öffnen" aria-expanded="false">
+        <svg id="menu-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="menu-icon-close" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="lg:hidden border-t border-white/10 py-4">
+      <div class="flex flex-col gap-1">
+        <a href="index.html#leistungen" class="text-[#95d5b2] hover:text-white hover:bg-[#1b4332]/5 text-sm font-600 py-3 px-3 rounded-md">Leistungen</a>
+        <a href="index.html#pflegegrad" class="text-[#95d5b2] hover:text-white hover:bg-[#1b4332]/5 text-sm font-600 py-3 px-3 rounded-md">Pflegegrad 1–5</a>
+        <a href="index.html#vorteile" class="text-[#95d5b2] hover:text-white hover:bg-[#1b4332]/5 text-sm font-600 py-3 px-3 rounded-md">Über uns</a>
+        <a href="index.html#region" class="text-[#95d5b2] hover:text-white hover:bg-[#1b4332]/5 text-sm font-600 py-3 px-3 rounded-md">Einsatzgebiet</a>
+        <a href="index.html#kontakt" class="text-[#95d5b2] hover:text-white hover:bg-[#1b4332]/5 text-sm font-600 py-3 px-3 rounded-md">Kontakt</a>
+        <a href="karriere.html" class="text-[#95d5b2] hover:text-white hover:bg-[#1b4332]/5 text-sm font-600 py-3 px-3 rounded-md">Karriere</a>
+        <div class="pt-3 border-t border-white/10 mt-1">
+          <a href="index.html#kontakt" class="btn-gold text-sm py-3 text-center w-full justify-center">Kostenlos anfragen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="bg-[#1b4332] pt-[70px] pb-16 lg:pb-20 overflow-hidden" style="position:relative;">
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div style="position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(ellipse at 80% 50%,rgba(64,145,108,0.15) 0%,transparent 70%);"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-10">
+    <a href="index.html" class="inline-flex items-center gap-2 text-[#95d5b2] hover:text-white text-sm font-600 transition-colors mb-8">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Zurück zur Startseite
+    </a>
+    <div class="max-w-3xl">
+      <span class="section-label" style="color:#95d5b2;">Ratgeber &amp; Tipps</span>
+      <h1 style="font-size:clamp(30px,5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-0.04em;color:#fff;" class="mt-2 mb-5">
+        Blog – Tipps &amp; Infos zur<br><span style="color:#74c69d;">Haushaltshilfe in Hannover</span>
+      </h1>
+      <p class="text-[#b7e4c7] text-lg leading-relaxed mb-0 max-w-2xl">
+        Nützliche Ratgeber rund um Haushaltshilfe, Alltagshilfe, Pflegekasse und Entlastungsbetrag – verständlich erklärt für Betroffene und Angehörige in Hannover.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- BLOG ARTICLES -->
+<section class="bg-white py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="section-label">Alle Artikel</span>
+      <h2 class="section-headline mt-1">Aktuelles aus dem Haushaltspartner-Blog</h2>
+      <p class="text-[#4a7c63] text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
+        Hier finden Sie Informationen und Tipps zu Haushaltshilfe, Pflegekasse und allem, was den Alltag in Hannover leichter macht.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Artikel 1 -->
+      <article class="blog-card">
+        <div style="background:linear-gradient(135deg,#1b4332 0%,#2d6a4f 100%);padding:32px 28px 28px;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;right:0;width:120px;height:120px;background:rgba(116,198,157,0.1);border-radius:50%;transform:translate(30px,-30px);"></div>
+          <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#95d5b2;margin-bottom:12px;background:rgba(255,255,255,0.1);padding:4px 10px;border-radius:4px;">Pflegekasse</span>
+          <h2 style="font-size:20px;font-weight:800;color:#fff;line-height:1.3;letter-spacing:-0.02em;">Entlastungsbetrag 2026: Was steht Ihnen zu?</h2>
+        </div>
+        <div style="padding:24px 28px 28px;">
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed mb-5">
+            Der Entlastungsbetrag nach §&nbsp;45b SGB&nbsp;XI beträgt 131&nbsp;€ pro Monat und steht allen Menschen mit Pflegegrad 1–5 zu. Viele Betroffene nutzen ihn noch immer nicht – obwohl das Geld nicht verfällt und bis zu 12 Monate angespart werden kann. In diesem Artikel erklären wir, wie Sie Ihren Anspruch einfach nutzen.
+          </p>
+          <div class="flex items-center justify-between">
+            <span style="font-size:12px;color:#40916c;font-weight:600;">Mai 2026 · 4 min Lesezeit</span>
+            <a href="blog/entlastungsbetrag-2026.html" style="display:inline-flex;align-items:center;gap:6px;color:#1b4332;font-weight:700;font-size:14px;text-decoration:none;" class="hover:text-[#40916c] transition-colors">
+              Weiterlesen
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artikel 2 -->
+      <article class="blog-card">
+        <div style="background:linear-gradient(135deg,#2d6a4f 0%,#40916c 100%);padding:32px 28px 28px;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;right:0;width:120px;height:120px;background:rgba(116,198,157,0.1);border-radius:50%;transform:translate(30px,-30px);"></div>
+          <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#d8f3dc;margin-bottom:12px;background:rgba(255,255,255,0.1);padding:4px 10px;border-radius:4px;">Pflegekasse</span>
+          <h2 style="font-size:20px;font-weight:800;color:#fff;line-height:1.3;letter-spacing:-0.02em;">Verhinderungspflege – So nutzen Sie Ihren Anspruch richtig</h2>
+        </div>
+        <div style="padding:24px 28px 28px;">
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed mb-5">
+            Wenn die Hauptpflegeperson krank ist oder in den Urlaub fährt, greift die Verhinderungspflege nach §&nbsp;39 SGB&nbsp;XI. Bis zu 1.612&nbsp;€ pro Jahr zahlt die Pflegekasse – für bis zu 6 Wochen Ersatzpflege. Wir erklären, wer Anspruch hat und wie die Beantragung funktioniert.
+          </p>
+          <div class="flex items-center justify-between">
+            <span style="font-size:12px;color:#40916c;font-weight:600;">Mai 2026 · 5 min Lesezeit</span>
+            <a href="blog/verhinderungspflege-ratgeber.html" style="display:inline-flex;align-items:center;gap:6px;color:#1b4332;font-weight:700;font-size:14px;text-decoration:none;" class="hover:text-[#40916c] transition-colors">
+              Weiterlesen
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Artikel 3 -->
+      <article class="blog-card">
+        <div style="background:linear-gradient(135deg,#40916c 0%,#74c69d 100%);padding:32px 28px 28px;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;right:0;width:120px;height:120px;background:rgba(255,255,255,0.1);border-radius:50%;transform:translate(30px,-30px);"></div>
+          <span style="display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#1b4332;margin-bottom:12px;background:rgba(255,255,255,0.25);padding:4px 10px;border-radius:4px;">Ratgeber</span>
+          <h2 style="font-size:20px;font-weight:800;color:#fff;line-height:1.3;letter-spacing:-0.02em;">Haushaltshilfe in Hannover: Was kostet es und wer zahlt?</h2>
+        </div>
+        <div style="padding:24px 28px 28px;">
+          <p class="text-[#4a7c63] text-[15px] leading-relaxed mb-5">
+            Wie viel kostet eine Haushaltshilfe in Hannover – und welche Möglichkeiten gibt es, die Kosten über die Pflegekasse zu decken? Wir geben eine ehrliche Übersicht zu Preisen, Entlastungsbetrag, Pflegegeld und weiteren Finanzierungsoptionen für Hannover und die Region.
+          </p>
+          <div class="flex items-center justify-between">
+            <span style="font-size:12px;color:#40916c;font-weight:600;">Mai 2026 · 6 min Lesezeit</span>
+            <a href="blog/haushaltshilfe-kosten-hannover.html" style="display:inline-flex;align-items:center;gap:6px;color:#1b4332;font-weight:700;font-size:14px;text-decoration:none;" class="hover:text-[#40916c] transition-colors">
+              Weiterlesen
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Hinweis weitere Artikel -->
+    <div style="margin-top:56px;background:#f0faf2;border-radius:16px;padding:36px 32px;border:1px solid #d8f3dc;text-align:center;">
+      <div class="w-12 h-12 rounded-xl bg-[#1b4332] flex items-center justify-center mx-auto mb-4">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#74c69d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </div>
+      <h3 style="font-size:20px;font-weight:800;color:#1b4332;letter-spacing:-0.02em;margin-bottom:10px;">Weitere Artikel folgen in Kürze</h3>
+      <p class="text-[#4a7c63] text-[15px] leading-relaxed max-w-xl mx-auto">
+        Wir arbeiten kontinuierlich an neuen Ratgebern und Tipps rund um Haushaltshilfe, Alltagshilfe und Pflege in Hannover. Schauen Sie bald wieder vorbei – oder kontaktieren Sie uns direkt, wenn Sie eine Frage haben.
+      </p>
+      <a href="index.html#kontakt" class="btn-gold mt-6 mx-auto justify-center" style="display:inline-flex;">Jetzt kostenlos beraten lassen</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA SECTION -->
+<section class="bg-[#1b4332] py-16 lg:py-20">
+  <div class="max-w-3xl mx-auto px-5 lg:px-8 text-center">
+    <span class="section-label" style="color:#95d5b2;">Persönliche Beratung</span>
+    <h2 style="font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:#fff;" class="mt-2 mb-4">
+      Fragen zur Haushaltshilfe<br>in Hannover?
+    </h2>
+    <p class="text-[#b7e4c7] text-lg leading-relaxed mb-8">
+      Wir beraten Sie kostenlos und persönlich – zu allen Fragen rund um Haushaltshilfe, Entlastungsbetrag und Pflegekasse. Melden Sie sich einfach.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="index.html#kontakt" class="btn-gold justify-center">Jetzt kostenlos anfragen</a>
+      <a href="tel:+4951092638603" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,0.2);transition:background 0.2s;justify-content:center;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        05109 2638603
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-[#0d2318] text-[#74c69d] pt-12 pb-28 lg:pb-12">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+
+      <div>
+        <img
+          src="Brand_Assets/Haushaltshilfe%20%26%20Alltagshilfe%20Hannover%20Haushaltspartner%20Logo.webp"
+          alt="Haushaltspartner Logo"
+          class="w-auto mb-4"
+          style="height:60px;"
+          loading="lazy"
+        >
+        <p class="text-[14px] leading-relaxed text-[#52b788]">
+          Professionelle Haushaltshilfe &amp; Alltagshilfe<br>
+          in Hannover &amp; Region Hannover.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-700 text-[13px] uppercase tracking-widest mb-4">Menü</h4>
+        <ul class="space-y-2.5 text-[14px]">
+          <li><a href="index.html#leistungen" class="hover:text-white transition-colors">Haushaltshilfe</a></li>
+          <li><a href="index.html#leistungen" class="hover:text-white transition-colors">Alltagshilfe</a></li>
+          <li><a href="index.html#leistungen" class="hover:text-white transition-colors">Seniorenhilfe</a></li>
+          <li><a href="index.html#pflegegrad" class="hover:text-white transition-colors">Pflegegrad 1–5</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-700 text-[13px] uppercase tracking-widest mb-4">Kontakt</h4>
+        <ul class="space-y-2.5 text-[14px]">
+          <li>
+            <a href="tel:+4951092638603" class="hover:text-white transition-colors flex items-center gap-2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              05109 2638603
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@haushaltspartner.de" class="hover:text-white transition-colors flex items-center gap-2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              info@haushaltspartner.de
+            </a>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Wilhelm-Busch-Straße 6, 30167 Hannover
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px]">
+      <p class="text-[#40916c]">&copy; 2025 Haushaltspartner. Alle Rechte vorbehalten.</p>
+      <div class="flex gap-6">
+        <a href="impressum.html" class="hover:text-white transition-colors">Impressum</a>
+        <a href="datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+        <a href="agb.html" class="hover:text-white transition-colors">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    iconOpen.classList.toggle('hidden', isOpen);
+    iconClose.classList.toggle('hidden', !isOpen);
+  });
+</script>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/4915569451192" target="_blank" rel="noopener noreferrer"
+   aria-label="Kontakt via WhatsApp"
+   id="wa-float"
+   style="position:fixed;bottom:24px;right:24px;z-index:9999;align-items:center;justify-content:center;background:#25D366;box-shadow:0 4px 16px rgba(0,0,0,0.25);transition:transform 0.2s,box-shadow 0.2s;"
+   class="hidden lg:flex wa-float"
+   onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(0,0,0,0.35)';"
+   onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.25)';">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" style="flex-shrink:0;">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  <span class="wa-float-text">WhatsApp</span>
+</a>
+<script>
+  setTimeout(function() {
+    var el  = document.getElementById("wa-float");
+    var txt = el ? el.querySelector(".wa-float-text") : null;
+    if (!el || !txt) return;
+    el.style.width = "56px";
+    el.style.borderRadius = "50%";
+    el.style.transition = "width 0.35s ease, border-radius 0.35s ease";
+    el.style.animation = "wa-wiggle 5s ease-in-out infinite";
+    txt.style.opacity = "0";
+    txt.style.maxWidth = "0";
+    txt.style.marginLeft = "0";
+    txt.style.animation = "none";
+    txt.style.transition = "opacity 0.25s ease, max-width 0.35s ease, margin-left 0.35s ease";
+    el.addEventListener("mouseenter", function() {
+      el.style.width = "155px";
+      el.style.borderRadius = "28px";
+      el.style.animationPlayState = "paused";
+      txt.style.opacity = "1";
+      txt.style.maxWidth = "90px";
+      txt.style.marginLeft = "6px";
+    });
+    el.addEventListener("mouseleave", function() {
+      el.style.width = "56px";
+      el.style.borderRadius = "50%";
+      el.style.animationPlayState = "running";
+      txt.style.opacity = "0";
+      txt.style.maxWidth = "0";
+      txt.style.marginLeft = "0";
+    });
+  }, 2600);
+</script>
+
+</body>
+</html>
