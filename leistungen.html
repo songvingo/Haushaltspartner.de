@@ -127,10 +127,27 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="lg:hidden border-t border-white/10 py-4">
       <div class="flex flex-col gap-1">
-        <a href="leistungen" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Leistungen</a>
-        <a href="fensterputzservice" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2 px-3 pl-6 rounded-md transition-colors mobile-nav-link" style="font-size:12px;opacity:0.85;">↳ Fensterputzservice</a>
-        <a href="entlastungsbetrag" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Entlastungsbetrag</a>
-        <a href="verhinderungspflege" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Verhinderungspflege</a>
+
+        <!-- Leistungen Akkordeon -->
+        <button class="mobile-acc-toggle text-[#95d5b2] text-sm font-600 py-3 px-3 rounded-md transition-colors w-full text-left flex items-center justify-between hover:text-white hover:bg-white/5" style="background:none;border:none;cursor:pointer;font-family:inherit;">
+          Leistungen
+          <svg class="mobile-acc-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition:transform 0.2s;flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-acc-content" style="display:none;padding-left:10px;">
+          <a href="leistungen" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Alle Leistungen</a>
+          <a href="fensterputzservice" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Fensterputzservice</a>
+        </div>
+
+        <!-- Pflegekasse Akkordeon -->
+        <button class="mobile-acc-toggle text-[#95d5b2] text-sm font-600 py-3 px-3 rounded-md transition-colors w-full text-left flex items-center justify-between hover:text-white hover:bg-white/5" style="background:none;border:none;cursor:pointer;font-family:inherit;">
+          Pflegekasse
+          <svg class="mobile-acc-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition:transform 0.2s;flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-acc-content" style="display:none;padding-left:10px;">
+          <a href="entlastungsbetrag" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Entlastungsbetrag</a>
+          <a href="verhinderungspflege" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Verhinderungspflege</a>
+        </div>
+
         <a href="ueber-uns" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Über uns</a>
         <a href="einsatzgebiet" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Einsatzgebiet</a>
         <a href="blog" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Blog</a>
@@ -541,6 +558,32 @@
   });
   document.addEventListener('click', () => {
     document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.remove('open'));
+  });
+
+  // ── Mobile Akkordeon ──
+  document.querySelectorAll('.mobile-acc-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      const chevron = this.querySelector('.mobile-acc-chevron');
+      const isOpen = content.style.display === 'block';
+      // Schließe alle anderen
+      document.querySelectorAll('.mobile-acc-content').forEach(c => c.style.display = 'none');
+      document.querySelectorAll('.mobile-acc-chevron').forEach(c => c.style.transform = '');
+      // Toggle dieses
+      if (!isOpen) {
+        content.style.display = 'block';
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+  // Sub-links schließen das Menü
+  document.querySelectorAll('.mobile-sub-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    });
   });
 </script>
 <!-- WhatsApp Floating Button (desktop only) -->
