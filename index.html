@@ -311,16 +311,16 @@
 
     /* ── Region chips ── */
     .region-chip {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      color: #fff;
+      background: #fff;
+      border: 1px solid #b7e4c7;
+      color: #1b4332;
       padding: 8px 16px;
       border-radius: 100px;
       font-size: 14px;
       font-weight: 500;
-      transition: background 0.2s;
+      transition: background 0.2s, border-color 0.2s;
     }
-    .region-chip:hover { background: rgba(255,255,255,0.18); }
+    .region-chip:hover { background: #d1fae5; border-color: #95d5b2; }
     .region-chip.primary {
       background: #e8a320;
       border-color: #e8a320;
@@ -1284,10 +1284,10 @@
 <!-- ═══════════════════════════════════════════════
      SERVICEGEBIET (Region)
 ═══════════════════════════════════════════════ -->
-<section id="region" class="relative bg-[#1b4332] py-20 lg:py-28 overflow-hidden">
+<section id="region" class="relative bg-[#f0faf4] py-20 lg:py-28 overflow-hidden">
   <!-- BG decor -->
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-    <div style="position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(ellipse at 80% 50%, rgba(64,145,108,0.12) 0%,transparent 70%);"></div>
+    <div style="position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(ellipse at 80% 50%, rgba(64,145,108,0.08) 0%,transparent 70%);"></div>
   </div>
 
   <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
@@ -1295,12 +1295,12 @@
 
       <!-- Left -->
       <div>
-        <span class="section-label section-label-light">Unser Einsatzgebiet</span>
-        <h2 class="section-headline section-headline-light mt-1 mb-6">
+        <span class="section-label">Unser Einsatzgebiet</span>
+        <h2 class="section-headline mt-1 mb-6">
           Ihr Partner in<br>Hannover &amp; der Region
         </h2>
-        <p class="text-[#b7e4c7] leading-relaxed mb-8 text-[16px]">
-          Wir bieten <strong class="text-white">Haushaltshilfe und Alltagshilfe</strong> in Hannover und der gesamten Region Hannover – in allen Stadtteilen und Gemeinden. Schnelle Erreichbarkeit und kurze Wege garantieren zuverlässigen Service direkt bei Ihnen zu Hause.
+        <p class="text-[#2d4a3e] leading-relaxed mb-8 text-[16px]">
+          Wir bieten <strong class="text-[#1b4332]">Haushaltshilfe und Alltagshilfe</strong> in Hannover und der gesamten Region Hannover – in allen Stadtteilen und Gemeinden. Schnelle Erreichbarkeit und kurze Wege garantieren zuverlässigen Service direkt bei Ihnen zu Hause.
         </p>
 
         <!-- Region list – klickbare Links zu Stadtteil-Seiten -->
@@ -1328,13 +1328,13 @@
 
         <div class="flex flex-wrap gap-3 mt-2">
           <a href="#kontakt" class="btn-gold">Verfügbarkeit anfragen</a>
-          <a href="einsatzgebiet.html" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,0.25);transition:background 0.2s;letter-spacing:-0.01em;">Alle Orte ansehen</a>
+          <a href="einsatzgebiet.html" style="display:inline-flex;align-items:center;gap:8px;background:#fff;color:#1b4332;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;border:2px solid #b7e4c7;transition:background 0.2s,border-color 0.2s;letter-spacing:-0.01em;">Alle Orte ansehen</a>
         </div>
       </div>
 
       <!-- Right: Map -->
       <div class="hidden lg:block">
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.4);border:2px solid rgba(255,255,255,0.1);aspect-ratio:4/3;background:#1b4332;">
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(27,67,50,0.15);border:2px solid #b7e4c7;aspect-ratio:4/3;background:#d1fae5;">
           <img
             src="Fotos/Haushaltshilfe%20Hannover%20Alltagshilfe%20Maschpark%20Haushaltspartner.webp"
             alt="Haushaltshilfe und Alltagshilfe in Hannover – Maschpark"
