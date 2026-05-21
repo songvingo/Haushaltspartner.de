@@ -113,6 +113,20 @@
 
   <!-- Tailwind CSS (compiled) -->
   <link rel="stylesheet" href="tailwind.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Was ist der Entlastungsbetrag nach §45b SGB XI?","acceptedAnswer":{"@type":"Answer","text":"Der Entlastungsbetrag ist eine gesetzliche Leistung der Pflegeversicherung in Höhe von 131 Euro pro Monat. Er kann bei anerkannten Anbietern für Alltagshilfe, Haushaltsunterstützung und Betreuungsleistungen eingesetzt werden. Haushaltspartner ist ein nach §45b SGB XI zugelassener Anbieter in Niedersachsen."}},
+      {"@type":"Question","name":"Ab welchem Pflegegrad habe ich Anspruch auf den Entlastungsbetrag?","acceptedAnswer":{"@type":"Answer","text":"Alle Personen mit einem anerkannten Pflegegrad 1 bis 5, die zu Hause leben, haben Anspruch auf den Entlastungsbetrag. Ein Antrag bei der eigenen Pflegekasse genügt – wir unterstützen Sie dabei gerne."}},
+      {"@type":"Question","name":"Rechnet Haushaltspartner direkt mit der Pflegekasse ab?","acceptedAnswer":{"@type":"Answer","text":"Ja. Haushaltspartner rechnet als anerkannter §45b-Anbieter direkt mit Ihrer Pflegekasse ab – ob AOK, TK, BARMER, Knappschaft oder eine andere Kasse. Sie müssen nichts vorstrecken und wir übernehmen die gesamte Abrechnung."}},
+      {"@type":"Question","name":"Was passiert, wenn ich den Entlastungsbetrag in einem Monat nicht aufbrauche?","acceptedAnswer":{"@type":"Answer","text":"Nicht genutzte Monatsbeträge werden automatisch übertragen. Nicht verbrauchte Beträge aus dem Vorjahr können noch bis zum 30. Juni des Folgejahres eingesetzt werden. Danach verfallen sie unwiederbringlich."}},
+      {"@type":"Question","name":"Ich habe noch keinen Pflegegrad – kann ich trotzdem Ihre Hilfe in Anspruch nehmen?","acceptedAnswer":{"@type":"Answer","text":"Ja, unsere Leistungen können auch ohne Pflegegrad gebucht werden. Wenn Sie möglicherweise Anspruch auf einen Pflegegrad haben, beraten wir Sie gern und unterstützen beim Antragsprozess."}},
+      {"@type":"Question","name":"Wie schnell kann der erste Einsatz stattfinden?","acceptedAnswer":{"@type":"Answer","text":"Nach einem ersten Telefonat können wir in der Regel sehr kurzfristig starten. Rufen Sie uns an unter 05109 2638603 – wir melden uns schnell zurück und besprechen alles Weitere persönlich."}}
+    ]
+  }
+  </script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; }
@@ -445,6 +459,15 @@
     .nav-dropdown-item:hover { background: rgba(255,255,255,0.1); color: #fff; }
     .nav-link-green { color: #40916c; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
     .nav-link-green:hover { color: #2d6a4f; }
+
+    /* ── FAQ ── */
+    .faq-item { }
+    .faq-question { width:100%;text-align:left;padding:20px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;background:none;border:none;font-family:inherit;font-size:17px;font-weight:700;color:#1b4332;letter-spacing:-0.02em;gap:16px; }
+    .faq-question:hover { color:#40916c; }
+    .faq-answer { max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.2s ease; }
+    .faq-answer.open { max-height:400px;padding-bottom:20px; }
+    .faq-chevron { flex-shrink:0;transition:transform 0.3s ease;color:#40916c; }
+    .faq-item.active .faq-chevron { transform:rotate(180deg); }
 
     /* ── Footer ── */
     footer { font-weight: 500; }
@@ -1491,6 +1514,90 @@
 
 
 <!-- ═══════════════════════════════════════════════
+     FAQ
+═══════════════════════════════════════════════ -->
+<section id="faq" class="bg-white py-20 lg:py-28">
+  <div class="max-w-3xl mx-auto px-5 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="section-label">Häufige Fragen</span>
+      <h2 class="section-headline mt-1">Das fragen unsere Kunden</h2>
+    </div>
+
+    <div id="faq-list" style="border-top:1px solid #d1fae5;">
+
+      <div class="faq-item" style="border-bottom:1px solid #d1fae5;">
+        <button class="faq-question" aria-expanded="false">
+          Was ist der Entlastungsbetrag nach §45b SGB XI?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p class="text-[#4a7c63] text-[16px] leading-relaxed">Der Entlastungsbetrag ist eine gesetzliche Leistung der Pflegeversicherung in Höhe von <strong class="text-[#1b4332]">131 € pro Monat</strong>. Er kann bei anerkannten Anbietern für Alltagshilfe, Haushaltsunterstützung und Betreuungsleistungen eingesetzt werden. Haushaltspartner ist ein nach §45b SGB XI zugelassener Anbieter in Niedersachsen.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:1px solid #d1fae5;">
+        <button class="faq-question" aria-expanded="false">
+          Ab welchem Pflegegrad habe ich Anspruch auf den Entlastungsbetrag?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p class="text-[#4a7c63] text-[16px] leading-relaxed">Alle Personen mit einem anerkannten <strong class="text-[#1b4332]">Pflegegrad 1 bis 5</strong>, die zu Hause leben, haben Anspruch auf den Entlastungsbetrag. Ein Antrag bei Ihrer Pflegekasse genügt – wir unterstützen Sie dabei gerne.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:1px solid #d1fae5;">
+        <button class="faq-question" aria-expanded="false">
+          Rechnet ihr direkt mit der Pflegekasse ab?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p class="text-[#4a7c63] text-[16px] leading-relaxed">Ja. Haushaltspartner rechnet als anerkannter §45b-Anbieter <strong class="text-[#1b4332]">direkt mit Ihrer Pflegekasse</strong> ab – ob AOK, TK, BARMER, Knappschaft oder eine andere Kasse. Sie müssen nichts vorstrecken. Wir übernehmen die gesamte Abrechnung.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:1px solid #d1fae5;">
+        <button class="faq-question" aria-expanded="false">
+          Was passiert, wenn ich den Entlastungsbetrag in einem Monat nicht aufbrauche?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p class="text-[#4a7c63] text-[16px] leading-relaxed">Nicht genutzte Monatsbeträge verfallen nicht sofort – sie werden automatisch übertragen. Nicht verbrauchte Beträge aus dem Vorjahr können noch bis zum <strong class="text-[#1b4332]">30. Juni des Folgejahres</strong> eingesetzt werden. Danach verfallen sie unwiederbringlich.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:1px solid #d1fae5;">
+        <button class="faq-question" aria-expanded="false">
+          Ich habe noch keinen Pflegegrad – kann ich trotzdem Ihre Hilfe in Anspruch nehmen?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p class="text-[#4a7c63] text-[16px] leading-relaxed">Ja, unsere Leistungen können auch <strong class="text-[#1b4332]">ohne Pflegegrad</strong> gebucht werden. Wenn Sie möglicherweise Anspruch auf einen Pflegegrad haben, beraten wir Sie gern und unterstützen beim Antragsprozess.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:1px solid #d1fae5;">
+        <button class="faq-question" aria-expanded="false">
+          Wie schnell kann der erste Einsatz stattfinden?
+          <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p class="text-[#4a7c63] text-[16px] leading-relaxed">Nach einem ersten Telefonat und der Klärung Ihrer Situation können wir in der Regel <strong class="text-[#1b4332]">sehr kurzfristig starten</strong>. Rufen Sie uns an unter <a href="tel:+4951092638603" class="text-[#40916c] font-700 underline">05109 2638603</a> – wir melden uns schnell zurück.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="faq" class="btn-gold">
+        Alle Fragen ansehen
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
      KONTAKT / CTA
 ═══════════════════════════════════════════════ -->
 <section id="kontakt" class="relative bg-[#1b4332] py-20 lg:py-28 overflow-hidden">
@@ -1659,6 +1766,7 @@
           <li><a href="ueber-uns" class="hover:text-white transition-colors">Über uns</a></li>
           <li><a href="karriere" class="hover:text-white transition-colors">Karriere</a></li>
           <li><a href="blog" class="hover:text-white transition-colors">Blog</a></li>
+          <li><a href="faq" class="hover:text-white transition-colors">FAQ</a></li>
           <li><a href="#kontakt" class="hover:text-white transition-colors">Kontakt</a></li>
         </ul>
       </div>
@@ -1689,7 +1797,7 @@
 
     <!-- Bottom bar -->
     <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px]">
-      <p class="text-[#40916c]">&copy; 2025 Haushaltspartner. Alle Rechte vorbehalten.</p>
+      <p class="text-[#40916c]">&copy; 2026 Haushaltspartner. Alle Rechte vorbehalten.</p>
       <div class="flex gap-6">
         <a href="impressum.html" class="hover:text-white transition-colors">Impressum</a>
         <a href="datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
@@ -1750,6 +1858,25 @@
       menuToggle.setAttribute('aria-expanded', 'false');
       iconOpen.classList.remove('hidden');
       iconClose.classList.add('hidden');
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const item = this.closest('.faq-item');
+      const answer = item.querySelector('.faq-answer');
+      const isOpen = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('active');
+        i.querySelector('.faq-answer').classList.remove('open');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('active');
+        answer.classList.add('open');
+        this.setAttribute('aria-expanded', 'true');
+      }
     });
   });
 

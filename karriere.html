@@ -418,6 +418,16 @@
         <textarea id="nachricht" name="nachricht" class="form-input" placeholder="Erzähl uns kurz von dir – warum möchtest du bei Haushaltspartner arbeiten?" required></textarea>
       </div>
 
+      <div class="mb-6">
+        <label for="lebenslauf" class="block text-[#2d6a4f] text-[13px] font-700 mb-1.5 uppercase tracking-widest">Lebenslauf <span style="color:#9cafa4;font-weight:500;text-transform:none;letter-spacing:0;">(optional)</span></label>
+        <label for="lebenslauf" style="display:flex;align-items:center;gap:12px;border:2px dashed #b7e4c7;border-radius:8px;padding:16px 20px;cursor:pointer;background:#f7fdf9;transition:border-color 0.2s,background 0.2s;" id="upload-label">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+          <span id="upload-text" style="color:#4a7c63;font-size:15px;">PDF oder Word-Datei hochladen</span>
+        </label>
+        <input type="file" id="lebenslauf" name="lebenslauf" accept=".pdf,.doc,.docx" style="display:none;" onchange="document.getElementById('upload-text').textContent = this.files[0] ? this.files[0].name : 'PDF oder Word-Datei hochladen';">
+        <p style="font-size:13px;color:#9cafa4;margin-top:6px;">Erlaubte Formate: PDF, DOC, DOCX · Max. 5 MB</p>
+      </div>
+
       <p class="text-[#4a7c63] text-[13px] mb-5 leading-relaxed">
         Mit dem Absenden stimmst du unserer
         <a href="datenschutz.html" class="text-[#2d6a4f] underline hover:text-[#1b4332]">Datenschutzerklärung</a> zu.
@@ -447,6 +457,7 @@
           <li><a href="ueber-uns" class="hover:text-white transition-colors">Über uns</a></li>
           <li><a href="karriere" class="hover:text-white transition-colors">Karriere</a></li>
           <li><a href="blog" class="hover:text-white transition-colors">Blog</a></li>
+          <li><a href="faq" class="hover:text-white transition-colors">FAQ</a></li>
           <li><a href="index.html#kontakt" class="hover:text-white transition-colors">Kontakt</a></li>
         </ul>
       </div>
