@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haushaltspartner – Flyer</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      background: #d4d4d4;
+      padding: 40px 20px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    }
+
+    /* ─── A4 Page ─── */
+    .page {
+      width: 794px;
+      height: 1123px;
+      background: #ffffff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.28), 0 4px 16px rgba(0,0,0,0.12);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─── HEADER ─── */
+    .header {
+      position: relative;
+      height: 390px;
+      flex-shrink: 0;
+      background: #f7fdf9;
+    }
+
+    /* Full-bleed hero photo – right side */
+    .hero-wrap {
+      position: absolute;
+      top: 0; right: 0;
+      width: 64%;
+      height: 100%;
+      clip-path: polygon(9% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    .hero-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      display: block;
+    }
+
+    /* Gradient overlay on photo */
+    .hero-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(27,67,50,0.55) 0%, transparent 50%);
+    }
+
+    /* Dark green diagonal accent strip */
+    .header-stripe {
+      position: absolute;
+      top: 0; right: 0;
+      width: 64%;
+      height: 100%;
+      clip-path: polygon(7% 0%, 11% 0%, 1% 100%, -3% 100%);
+      background: #1b4332;
+      z-index: 3;
+    }
+
+    /* Logo */
+    .logo {
+      position: absolute;
+      top: 22px;
+      left: 26px;
+      height: 46px;
+      z-index: 4;
+      object-fit: contain;
+    }
+
+    /* Gold entlastungsbetrag badge */
+    .badge {
+      position: absolute;
+      top: 22px;
+      left: 26px;
+      margin-top: 78px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #e8a320;
+      color: #fff;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 4px;
+      z-index: 4;
+    }
+
+    .badge::before {
+      content: '✓';
+      font-size: 10px;
+    }
+
+    /* Headline block */
+    .headline {
+      position: absolute;
+      bottom: 38px;
+      left: 26px;
+      z-index: 4;
+      max-width: 290px;
+    }
+
+    .headline h1 {
+      font-size: 48px;
+      font-weight: 900;
+      color: #1b4332;
+      line-height: 1.0;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+    }
+
+    .headline .sub {
+      margin-top: 10px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #40916c;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+    }
+
+    /* ─── ABOUT SECTION ─── */
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 26px 28px 22px;
+      border-bottom: 1.5px solid #e8f5ec;
+      flex-shrink: 0;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 800;
+      color: #40916c;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 9px;
+    }
+
+    .about-text p {
+      font-size: 11.5px;
+      color: #4a7c63;
+      line-height: 1.75;
+    }
+
+    .about-circle {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 3px solid #1b4332;
+      box-shadow: 0 4px 16px rgba(27,67,50,0.25);
+    }
+
+    .about-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* ─── FEATURES ROW ─── */
+    .features {
+      display: flex;
+      align-items: center;
+      padding: 18px 28px;
+      background: #f0faf2;
+      border-bottom: 1.5px solid #d8f3dc;
+      flex-shrink: 0;
+      gap: 8px;
+    }
+
+    .feature {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      background: #1b4332;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .feature-icon svg {
+      width: 19px;
+      height: 19px;
+      fill: #74c69d;
+    }
+
+    .feature-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #1a2e23;
+      line-height: 1.4;
+    }
+
+    .feature-divider {
+      width: 1px;
+      height: 36px;
+      background: #d8f3dc;
+      flex-shrink: 0;
+    }
+
+    /* ─── BOTTOM: SERVICES + CONTACT ─── */
+    .bottom {
+      display: flex;
+      align-items: stretch;
+      gap: 22px;
+      padding: 28px 28px 28px;
+      flex: 1;
+      min-height: 0;
+    }
+
+    /* Services */
+    .services {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .service-grid {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px 14px;
+    }
+
+    .service-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .service-dot {
+      width: 20px;
+      height: 20px;
+      background: #1b4332;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .service-dot svg {
+      width: 11px;
+      height: 11px;
+      fill: #74c69d;
+    }
+
+    .service-item span {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #1a2e23;
+      line-height: 1.35;
+    }
+
+    /* Entlastungsbetrag note */
+    .entlastung-note {
+      margin-top: 20px;
+      padding: 12px 14px;
+      background: #f0faf2;
+      border-left: 3px solid #e8a320;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .entlastung-note .note-title {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #e8a320;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .entlastung-note p {
+      font-size: 10.5px;
+      color: #4a7c63;
+      line-height: 1.55;
+    }
+
+    /* Contact Box */
+    .contact-box {
+      width: 205px;
+      flex-shrink: 0;
+      background: #1b4332;
+      border-radius: 14px;
+      padding: 22px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .contact-box-title {
+      font-size: 10px;
+      font-weight: 800;
+      color: #74c69d;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Phone */
+    .contact-phone-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .phone-bubble {
+      width: 38px;
+      height: 38px;
+      background: #40916c;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .phone-bubble svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+
+    .phone-number {
+      font-size: 17px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .phone-free {
+      font-size: 9px;
+      color: #74c69d;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* Contact items */
+    .contact-divider {
+      height: 1px;
+      background: rgba(116,198,157,0.2);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+    }
+
+    .contact-item-icon {
+      width: 24px;
+      height: 24px;
+      background: rgba(64,145,108,0.25);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .contact-item-icon svg {
+      width: 13px;
+      height: 13px;
+      fill: #74c69d;
+    }
+
+    .contact-item-body {}
+
+    .contact-item-label {
+      font-size: 8.5px;
+      font-weight: 700;
+      color: #52b788;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 2px;
+    }
+
+    .contact-item-value {
+      font-size: 10.5px;
+      color: #b7e4c7;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    /* Circle photo in contact box */
+    .contact-photo {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2.5px solid #40916c;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .contact-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* ─── FOOTER STRIP ─── */
+    .footer-strip {
+      height: 9px;
+      background: linear-gradient(90deg, #1b4332 0%, #40916c 50%, #e8a320 100%);
+      flex-shrink: 0;
+    }
+
+    /* ─── PRINT ─── */
+    @media print {
+      body {
+        background: none;
+        padding: 0;
+        margin: 0;
+      }
+      .page {
+        box-shadow: none;
+        width: 210mm;
+        height: 297mm;
+      }
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ── HEADER ── -->
+    <div class="header">
+      <div class="hero-wrap">
+        <img src="Fotos/Haushaltshilfe-Haushaltspartner-Alltagshilfe-Hannover-Mitarbeiter Kunde.webp"
+             alt="Mitarbeiter und Kunde">
+      </div>
+      <div class="header-stripe"></div>
+
+      <img class="logo"
+           src="Brand_Assets/Haushaltspartner Logo grün mit Text.png"
+           alt="Haushaltspartner">
+
+      <div class="badge">Entlastungsbetrag anerkannt</div>
+
+      <div class="headline">
+        <h1>Ihr Partner<br>im Alltag</h1>
+        <p class="sub">Hannover &amp; Region</p>
+      </div>
+    </div>
+
+    <!-- ── ÜBER UNS ── -->
+    <div class="about">
+      <div class="about-text">
+        <p class="section-label">Über uns</p>
+        <p>Haushaltspartner bietet professionelle Haushaltshilfe, Alltagshilfe und Seniorenhilfe in Hannover und der Region. Mit Einfühlungsvermögen, Verlässlichkeit und persönlichem Engagement unterstützen wir Menschen mit Pflegegrad 1–5 in ihrem Zuhause – damit Sie den Alltag entspannt genießen können.</p>
+      </div>
+      <div class="about-circle">
+        <img src="Fotos/Haushaltshilfe Haushaltspartner Alltagshilfe Hannover Mitarbeiter putzen.webp"
+             alt="Haushaltshilfe Hannover">
+      </div>
+    </div>
+
+    <!-- ── FEATURES ── -->
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        </div>
+        <p class="feature-label">Persönliche<br>Betreuung</p>
+      </div>
+      <div class="feature-divider"></div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <p class="feature-label">Erfahrene<br>Mitarbeiter</p>
+      </div>
+      <div class="feature-divider"></div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+        </div>
+        <p class="feature-label">Transparente<br>Kommunikation</p>
+      </div>
+    </div>
+
+    <!-- ── BOTTOM: LEISTUNGEN + KONTAKT ── -->
+    <div class="bottom">
+
+      <!-- Services -->
+      <div class="services">
+        <p class="section-label">Unsere Leistungen</p>
+        <div class="service-grid">
+          <div class="service-item">
+            <div class="service-dot">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <span>Haushaltshilfe</span>
+          </div>
+          <div class="service-item">
+            <div class="service-dot">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <span>Begleitung &amp; Betreuung</span>
+          </div>
+          <div class="service-item">
+            <div class="service-dot">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <span>Alltagshilfe</span>
+          </div>
+          <div class="service-item">
+            <div class="service-dot">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <span>Einkaufshilfe</span>
+          </div>
+          <div class="service-item">
+            <div class="service-dot">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <span>Seniorenhilfe</span>
+          </div>
+          <div class="service-item">
+            <div class="service-dot">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <span>Pflegegrad 1–5</span>
+          </div>
+        </div>
+
+        <div class="entlastung-note">
+          <p class="note-title">Entlastungsbetrag nutzen</p>
+          <p>Als anerkannter Anbieter können Sie Ihren Entlastungsbetrag von bis zu <strong>125 € monatlich</strong> direkt für unsere Leistungen einsetzen. Wir helfen bei der Abrechnung mit Ihrer Pflegekasse.</p>
+        </div>
+      </div>
+
+      <!-- Contact Box -->
+      <div class="contact-box">
+        <p class="contact-box-title">Kontakt</p>
+
+        <div class="contact-phone-row">
+          <div class="phone-bubble">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div>
+            <p class="phone-number">05109 2638603</p>
+            <p class="phone-free">Kostenlos anfragen</p>
+          </div>
+        </div>
+
+        <div class="contact-divider"></div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div class="contact-item-body">
+            <p class="contact-item-label">Adresse</p>
+            <p class="contact-item-value">Stadträr 14<br>30952 Ronnenberg</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div class="contact-item-body">
+            <p class="contact-item-label">E-Mail</p>
+            <p class="contact-item-value">info@haushaltspartner.de</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </div>
+          <div class="contact-item-body">
+            <p class="contact-item-label">Website</p>
+            <p class="contact-item-value">www.haushaltspartner.de</p>
+          </div>
+        </div>
+
+        <div class="contact-divider"></div>
+
+        <div class="contact-photo">
+          <img src="Fotos/Haushaltshilfe Alltagshilfe Songvi Ngo.webp"
+               alt="Songvi Ngo – Haushaltspartner">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── FOOTER STRIP ── -->
+    <div class="footer-strip"></div>
+
+  </div>
+</body>
+</html>
