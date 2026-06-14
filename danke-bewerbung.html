@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vielen Dank für deine Bewerbung – Haushaltspartner</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="Brand_Assets/Haushaltspartner%20Logo%20gr%C3%BCn.png">
+  <link rel="stylesheet" href="tailwind.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif; background: #f7fdf9; color: #1a2e23; -webkit-font-smoothing: antialiased; }
+    .btn-gold { display:inline-flex;align-items:center;gap:8px;background:#e8a320;color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;transition:background 0.2s ease,transform 0.15s ease; }
+    .btn-gold:hover { background:#f0b429;transform:translateY(-1px); }
+    .card-link { display:block;background:#fff;border-radius:16px;border:1px solid #d8f3dc;padding:24px;text-decoration:none;transition:box-shadow 0.2s,transform 0.2s; }
+    .card-link:hover { box-shadow:0 8px 32px rgba(27,67,50,0.12);transform:translateY(-3px); }
+    /* ── Nav Dropdown ── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1b4332;
+      border-radius: 10px;
+      padding: 6px;
+      min-width: 210px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.12);
+      z-index: 200;
+    }
+    .nav-dropdown-menu.open { display: block; }
+    .nav-dropdown-item {
+      display: block;
+      padding: 10px 14px;
+      color: #95d5b2;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+    .nav-dropdown-item:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    #navbar { transition: background 0.3s ease, box-shadow 0.3s ease; }
+    #navbar.scrolled { background: #1b4332 !important; box-shadow: 0 2px 24px rgba(0,0,0,0.25); }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#1b4332]" role="navigation" aria-label="Hauptnavigation">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between h-[70px]">
+      <a href="index.html" aria-label="Haushaltspartner – Startseite">
+        <img src="Brand_Assets/haushaltspartner-logo.webp" alt="Haushaltspartner" class="w-auto" style="height:44px;">
+      </a>
+      <div class="hidden lg:flex items-center gap-8">
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle text-[#95d5b2] hover:text-white text-sm font-600 transition-colors flex items-center gap-1" style="background:none;border:none;cursor:pointer;font-family:inherit;padding:0;" aria-expanded="false">
+            Leistungen
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.7;margin-top:1px;"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="leistungen" class="nav-dropdown-item">Alle Leistungen</a>
+            <a href="fensterputzservice" class="nav-dropdown-item">Fensterputzservice</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle text-[#95d5b2] hover:text-white text-sm font-600 transition-colors flex items-center gap-1" style="background:none;border:none;cursor:pointer;font-family:inherit;padding:0;" aria-expanded="false">
+            Pflegekasse
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.7;margin-top:1px;"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="entlastungsbetrag" class="nav-dropdown-item">Entlastungsbetrag</a>
+            <a href="verhinderungspflege" class="nav-dropdown-item">Verhinderungspflege</a>
+          </div>
+        </div>
+        <a href="ueber-uns" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Über uns</a>
+        <a href="einsatzgebiet" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Einsatzgebiet</a>
+        <a href="blog" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Blog</a>
+        <a href="index.html#kontakt" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Kontakt</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:+4915569451192" class="flex items-center gap-2 text-white font-700 text-sm hover:text-[#95d5b2] transition-colors">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          0155 69451192
+        </a>
+        <a href="index.html#kontakt" class="btn-gold text-sm py-2.5 px-5">Kostenlos anfragen</a>
+      </div>
+      <button id="menu-toggle" class="lg:hidden text-white p-2 -mr-2 rounded-md hover:bg-white/10 transition-colors" aria-label="Menü öffnen" aria-expanded="false">
+        <svg id="menu-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="menu-icon-close" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="lg:hidden border-t border-white/10 py-4">
+      <div class="flex flex-col gap-1">
+        <button class="mobile-acc-toggle text-[#95d5b2] text-sm font-600 py-3 px-3 rounded-md transition-colors w-full text-left flex items-center justify-between hover:text-white hover:bg-white/5" style="background:none;border:none;cursor:pointer;font-family:inherit;">
+          Leistungen
+          <svg class="mobile-acc-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition:transform 0.2s;flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-acc-content" style="display:none;padding-left:10px;">
+          <a href="leistungen" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Alle Leistungen</a>
+          <a href="fensterputzservice" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Fensterputzservice</a>
+        </div>
+        <button class="mobile-acc-toggle text-[#95d5b2] text-sm font-600 py-3 px-3 rounded-md transition-colors w-full text-left flex items-center justify-between hover:text-white hover:bg-white/5" style="background:none;border:none;cursor:pointer;font-family:inherit;">
+          Pflegekasse
+          <svg class="mobile-acc-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition:transform 0.2s;flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="mobile-acc-content" style="display:none;padding-left:10px;">
+          <a href="entlastungsbetrag" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Entlastungsbetrag</a>
+          <a href="verhinderungspflege" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Verhinderungspflege</a>
+        </div>
+        <a href="ueber-uns" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Über uns</a>
+        <a href="einsatzgebiet" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Einsatzgebiet</a>
+        <a href="blog" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Blog</a>
+        <a href="index.html#kontakt" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Kontakt</a>
+        <div class="pt-3 border-t border-white/10 mt-1 flex flex-col gap-3">
+          <a href="tel:+4915569451192" class="flex items-center gap-2 text-white font-700 text-sm">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            0155 69451192
+          </a>
+          <a href="index.html#kontakt" class="btn-gold text-sm py-3 text-center">Kostenlos anfragen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO CONFIRMATION -->
+<div style="position:relative;padding:120px 24px 140px;text-align:center;overflow:hidden;">
+  <div style="position:absolute;inset:0;z-index:0;">
+    <img src="Fotos/Haushaltshilfe%20Haushaltspartner%20Alltagshilfe%20Hannover%20Mitarbeiter%20putzen.webp" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:blur(4px);transform:scale(1.05);" loading="eager">
+    <div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);"></div>
+  </div>
+  <div style="position:relative;z-index:1;">
+    <div style="width:80px;height:80px;border-radius:50%;background:rgba(232,163,32,0.15);border:2px solid #e8a320;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#e8a320" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h1 style="font-size:clamp(28px,5vw,46px);font-weight:900;line-height:1.1;letter-spacing:-0.03em;color:#fff;margin:0 0 16px;">
+      Vielen Dank für deine Bewerbung!
+    </h1>
+    <p style="font-size:18px;color:#fff;line-height:1.7;max-width:520px;margin:0 auto 32px;text-shadow:0 1px 8px rgba(0,0,0,0.5);">
+      Wir haben deine Bewerbung erhalten und melden uns innerhalb von <strong style="color:#e8a320;">3 Werktagen</strong> bei dir zurück.
+    </p>
+    <a href="index.html" class="btn-gold">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Zurück zur Startseite
+    </a>
+  </div>
+</div>
+
+<!-- NEXT STEPS -->
+<div style="max-width:720px;margin:0 auto;padding:56px 24px 0;">
+  <h2 style="font-size:22px;font-weight:900;color:#1b4332;letter-spacing:-0.02em;text-align:center;margin:0 0 8px;">Wie geht es weiter?</h2>
+  <p style="text-align:center;color:#4a7c63;font-size:15px;margin:0 0 32px;">So läuft der Bewerbungsprozess bei uns ab.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+    <div style="background:#fff;border-radius:14px;border:1px solid #d8f3dc;padding:24px;text-align:center;">
+      <div style="width:44px;height:44px;border-radius:50%;background:#1b4332;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:18px;font-weight:900;color:#fff;">1</div>
+      <h3 style="font-size:14px;font-weight:700;color:#1b4332;margin:0 0 6px;">Bewerbung prüfen</h3>
+      <p style="font-size:13px;color:#4a7c63;margin:0;line-height:1.6;">Wir schauen uns deine Unterlagen in Ruhe an und melden uns innerhalb von 3 Werktagen.</p>
+    </div>
+    <div style="background:#fff;border-radius:14px;border:1px solid #d8f3dc;padding:24px;text-align:center;">
+      <div style="width:44px;height:44px;border-radius:50%;background:#1b4332;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:18px;font-weight:900;color:#fff;">2</div>
+      <h3 style="font-size:14px;font-weight:700;color:#1b4332;margin:0 0 6px;">Kennenlerngespräch</h3>
+      <p style="font-size:13px;color:#4a7c63;margin:0;line-height:1.6;">Wir lernen uns persönlich oder telefonisch kennen und besprechen alles Weitere.</p>
+    </div>
+    <div style="background:#fff;border-radius:14px;border:1px solid #d8f3dc;padding:24px;text-align:center;">
+      <div style="width:44px;height:44px;border-radius:50%;background:#1b4332;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:18px;font-weight:900;color:#fff;">3</div>
+      <h3 style="font-size:14px;font-weight:700;color:#1b4332;margin:0 0 6px;">Willkommen im Team</h3>
+      <p style="font-size:13px;color:#4a7c63;margin:0;line-height:1.6;">Nach einem erfolgreichen Gespräch starten wir gemeinsam – mit einer strukturierten Einarbeitung.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TEAM KENNENLERNEN -->
+<div style="max-width:720px;margin:0 auto;padding:56px 24px 0;">
+  <h2 style="font-size:22px;font-weight:900;color:#1b4332;letter-spacing:-0.02em;text-align:center;margin:0 0 8px;">Lern uns kennen</h2>
+  <p style="text-align:center;color:#4a7c63;font-size:15px;margin:0 0 32px;">Erfahre mehr über Haushaltspartner und was uns ausmacht.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+    <a href="ueber-uns" class="card-link" style="padding:0;overflow:hidden;">
+      <div style="height:200px;overflow:hidden;">
+        <img src="Fotos/Haushaltshilfe-Alltagshilfe-Hannover-Haushaltspartner-Gesch%C3%A4ftsf%C3%BChrer-Songvi-Ngo%20(1).webp" alt="Über uns" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" loading="lazy">
+      </div>
+      <div style="padding:22px;">
+        <h3 style="font-size:17px;font-weight:700;color:#1b4332;margin:0 0 8px;">Über uns</h3>
+        <p style="font-size:14px;color:#4a7c63;margin:0 0 14px;line-height:1.6;">Wer wir sind und wofür wir stehen.</p>
+        <span style="font-size:13px;font-weight:700;color:#2d6a4f;">Mehr erfahren →</span>
+      </div>
+    </a>
+    <a href="karriere" class="card-link" style="padding:0;overflow:hidden;">
+      <div style="height:200px;overflow:hidden;">
+        <img src="Fotos/Haushaltshilfe%20Haushaltspartner%20Alltagshilfe%20Hannover%20Mitarbeiter%20putzen.webp" alt="Karriere" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+      </div>
+      <div style="padding:22px;">
+        <h3 style="font-size:17px;font-weight:700;color:#1b4332;margin:0 0 8px;">Karriere</h3>
+        <p style="font-size:14px;color:#4a7c63;margin:0 0 14px;line-height:1.6;">Alle offenen Stellen bei Haushaltspartner.</p>
+        <span style="font-size:13px;font-weight:700;color:#2d6a4f;">Stellen ansehen →</span>
+      </div>
+    </a>
+    <a href="einsatzgebiet" class="card-link" style="padding:0;overflow:hidden;">
+      <div style="height:200px;overflow:hidden;">
+        <img src="Fotos/Haushaltshilfe%20Haushaltspartner%20Alltagshilfe%20Karte%20Region%20Hannover.webp" alt="Einsatzgebiet" style="width:100%;height:100%;object-fit:cover;" loading="lazy">
+      </div>
+      <div style="padding:22px;">
+        <h3 style="font-size:17px;font-weight:700;color:#1b4332;margin:0 0 8px;">Einsatzgebiet</h3>
+        <p style="font-size:14px;color:#4a7c63;margin:0 0 14px;line-height:1.6;">Wo wir in Hannover und der Region aktiv sind.</p>
+        <span style="font-size:13px;font-weight:700;color:#2d6a4f;">Mehr erfahren →</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-[#0d2318] text-[#74c69d] pt-12 pb-28 lg:pb-12" style="margin-top:64px;">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+      <div>
+        <img src="Brand_Assets/haushaltspartner-logo.webp" alt="Haushaltspartner Logo" class="w-auto mb-4" style="height:60px;" loading="lazy">
+        <p class="text-[14px] leading-relaxed text-[#52b788]">Professionelle Haushaltshilfe &amp; Alltagshilfe<br>in Hannover &amp; Region Hannover.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-700 text-[13px] uppercase tracking-widest mb-4">Menü</h4>
+        <ul class="space-y-2.5 text-[14px]">
+          <li><a href="leistungen" class="hover:text-white transition-colors">Leistungen</a></li>
+          <li><a href="ueber-uns" class="hover:text-white transition-colors">Über uns</a></li>
+          <li><a href="karriere" class="hover:text-white transition-colors">Karriere</a></li>
+          <li><a href="blog" class="hover:text-white transition-colors">Blog</a></li>
+          <li><a href="faq" class="hover:text-white transition-colors">FAQ</a></li>
+          <li><a href="index.html#kontakt" class="hover:text-white transition-colors">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-700 text-[13px] uppercase tracking-widest mb-4">Kontakt</h4>
+        <ul class="space-y-2.5 text-[14px]">
+          <li><a href="tel:+4915569451192" class="hover:text-white transition-colors flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>0155 69451192</a></li>
+          <li><a href="mailto:info@haushaltspartner.de" class="hover:text-white transition-colors flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@haushaltspartner.de</a></li>
+          <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Wilhelm-Busch-Straße 6, 30167 Hannover</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px]">
+      <p class="text-[#40916c]">&copy; 2026 Haushaltspartner. Alle Rechte vorbehalten.</p>
+      <div class="flex gap-6">
+        <a href="impressum.html" class="hover:text-white transition-colors">Impressum</a>
+        <a href="datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
+        <a href="agb.html" class="hover:text-white transition-colors">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); });
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    iconOpen.classList.toggle('hidden', isOpen);
+    iconClose.classList.toggle('hidden', !isOpen);
+  });
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const menu = this.nextElementSibling;
+      const isOpen = menu.classList.contains('open');
+      document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.remove('open'));
+      if (!isOpen) menu.classList.add('open');
+      this.setAttribute('aria-expanded', !isOpen);
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.remove('open'));
+  });
+  document.querySelectorAll('.mobile-nav-link, .mobile-sub-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    });
+  });
+  document.querySelectorAll('.mobile-acc-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      const chevron = this.querySelector('.mobile-acc-chevron');
+      const isOpen = content.style.display === 'block';
+      document.querySelectorAll('.mobile-acc-content').forEach(c => c.style.display = 'none');
+      document.querySelectorAll('.mobile-acc-chevron').forEach(c => c.style.transform = '');
+      if (!isOpen) { content.style.display = 'block'; chevron.style.transform = 'rotate(180deg)'; }
+    });
+  });
+</script>
+
+</body>
+</html>
