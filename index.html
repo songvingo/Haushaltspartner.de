@@ -1662,7 +1662,7 @@
           aria-label="Kontaktformular"
         >
           <input type="hidden" name="access_key" value="772dbae4-50a9-4d2f-9bd0-a1497bd5879a">
-          <input type="hidden" name="subject" value="Neue Anfrage – Haushaltspartner – {vorname} {nachname}">
+          <input type="hidden" name="subject" id="anfrage-subject" value="Neue Anfrage – Haushaltspartner">
           <input type="hidden" name="from_name" value="Haushaltspartner">
           <input type="hidden" name="redirect" value="https://haushaltspartner.de/danke">
 
@@ -2219,6 +2219,19 @@
       txt.style.marginLeft = '0';
     });
   }, 2600);
+
+  // Betreff dynamisch mit Kundennamen befüllen
+  const anfrageForm = document.querySelector('form[action="https://api.web3forms.com/submit"]');
+  if (anfrageForm) {
+    anfrageForm.addEventListener('submit', function() {
+      const vorname = (document.getElementById('vorname')?.value || '').trim();
+      const nachname = (document.getElementById('nachname')?.value || '').trim();
+      const subject = document.getElementById('anfrage-subject');
+      if (subject && (vorname || nachname)) {
+        subject.value = 'Neue Anfrage – Haushaltspartner – ' + vorname + ' ' + nachname;
+      }
+    });
+  }
 
 </script>
 

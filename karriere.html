@@ -399,7 +399,7 @@
       style="background:#f7fdf9;border:1px solid #e8f5ec;border-radius:16px;padding:clamp(24px,5vw,40px);"
     >
       <input type="hidden" name="access_key" value="772dbae4-50a9-4d2f-9bd0-a1497bd5879a">
-      <input type="hidden" name="subject" value="Neue Bewerbung – {vorname} {nachname}">
+      <input type="hidden" name="subject" id="bewerbung-subject" value="Neue Bewerbung – Haushaltspartner Karriere">
       <input type="hidden" name="from_name" value="Haushaltspartner Karriere">
       <input type="hidden" name="redirect" value="https://haushaltspartner.de/danke.html">
       <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
@@ -557,6 +557,19 @@
       iconClose.classList.add('hidden');
     });
   });
+
+  // Betreff dynamisch mit Bewerbername befüllen
+  const bewerbungForm = document.querySelector('form[action="https://api.web3forms.com/submit"]');
+  if (bewerbungForm) {
+    bewerbungForm.addEventListener('submit', function() {
+      const vorname = (document.getElementById('vorname')?.value || '').trim();
+      const nachname = (document.getElementById('nachname')?.value || '').trim();
+      const subject = document.getElementById('bewerbung-subject');
+      if (subject && (vorname || nachname)) {
+        subject.value = 'Neue Bewerbung – ' + vorname + ' ' + nachname;
+      }
+    });
+  }
 </script>
 <!-- WhatsApp Floating Button (desktop only) -->
 <style>
