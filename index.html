@@ -1662,7 +1662,7 @@
           aria-label="Kontaktformular"
         >
           <input type="hidden" name="access_key" value="772dbae4-50a9-4d2f-9bd0-a1497bd5879a">
-          <input type="hidden" name="subject" id="anfrage-subject" value="Neue Anfrage – Haushaltspartner">
+          <input type="hidden" name="subject" id="anfrage-subject" value="Neue Anfrage">
           <input type="hidden" name="from_name" value="Haushaltspartner">
           <input type="hidden" name="redirect" value="https://haushaltspartner.de/danke">
 
@@ -2228,7 +2228,7 @@
       const nachname = (document.getElementById('nachname')?.value || '').trim();
       const subject = document.getElementById('anfrage-subject');
       if (subject && (vorname || nachname)) {
-        subject.value = 'Neue Anfrage – Haushaltspartner – ' + vorname + ' ' + nachname;
+        subject.value = 'Neue Anfrage – ' + vorname + ' ' + nachname;
       }
     });
   }
