@@ -25,6 +25,8 @@
     .form-input:focus { border-color:#40916c;box-shadow:0 0 0 3px rgba(64,145,108,0.12); }
     .form-input::placeholder { color:#9cafa4; }
     textarea.form-input { resize:vertical;min-height:120px; }
+    .privacy-check-wrap.error { border-color:#e03131 !important; background:rgba(224,49,49,0.06) !important; }
+    .privacy-check-wrap.error input[type="checkbox"] { outline:2px solid #e03131; outline-offset:2px; }
     footer { font-weight: 500; }
     footer a { transition: color 0.2s; }
     footer a:hover { color: #95d5b2; }
@@ -451,10 +453,15 @@
         <p style="font-size:13px;color:#9cafa4;margin-top:6px;">Erlaubte Formate: PDF, DOC, DOCX · Max. 5 MB</p>
       </div>
 
-      <p class="text-[#4a7c63] text-[13px] mb-5 leading-relaxed">
-        Mit dem Absenden stimmst du unserer
-        <a href="datenschutz.html" class="text-[#2d6a4f] underline hover:text-[#1b4332]">Datenschutzerklärung</a> zu.
-      </p>
+      <div class="mb-5">
+        <label for="datenschutz" class="privacy-check-wrap" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;border:1px solid transparent;cursor:pointer;transition:border-color 0.2s,background-color 0.2s;">
+          <input type="checkbox" id="datenschutz" name="datenschutz" required style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:#e8a320;cursor:pointer;">
+          <span class="text-[#4a7c63] text-[13px] leading-relaxed">
+            Ich habe die <a href="datenschutz.html" class="text-[#2d6a4f] underline hover:text-[#1b4332]">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten einverstanden. *
+          </span>
+        </label>
+        <p id="datenschutz-error" style="display:none;color:#e03131;font-size:12px;margin-top:5px;padding-left:12px;">Bitte stimme der Datenschutzerklärung zu, um fortzufahren.</p>
+      </div>
 
       <button type="submit" class="btn-gold w-full justify-center" style="font-size:16px;padding:16px;border:none;cursor:pointer;font-family:inherit;">
         Bewerbung absenden
@@ -561,6 +568,23 @@
   // Betreff dynamisch mit Bewerbername befüllen
   const bewerbungForm = document.querySelector('form[action="https://api.web3forms.com/submit"]');
   if (bewerbungForm) {
+    const bewerbungDatenschutz = document.getElementById('datenschutz');
+    const bewerbungDatenschutzWrap = document.querySelector('label.privacy-check-wrap[for="datenschutz"]');
+    const bewerbungDatenschutzError = document.getElementById('datenschutz-error');
+
+    if (bewerbungDatenschutz) {
+      bewerbungDatenschutz.addEventListener('invalid', function() {
+        bewerbungDatenschutzWrap?.classList.add('error');
+        if (bewerbungDatenschutzError) bewerbungDatenschutzError.style.display = 'block';
+      });
+      bewerbungDatenschutz.addEventListener('change', function() {
+        if (this.checked) {
+          bewerbungDatenschutzWrap?.classList.remove('error');
+          if (bewerbungDatenschutzError) bewerbungDatenschutzError.style.display = 'none';
+        }
+      });
+    }
+
     bewerbungForm.addEventListener('submit', function() {
       const vorname = (document.getElementById('vorname')?.value || '').trim();
       const nachname = (document.getElementById('nachname')?.value || '').trim();

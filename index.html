@@ -414,6 +414,12 @@
 
     textarea.form-input { resize: vertical; min-height: 110px; }
 
+    .privacy-check-wrap.error {
+      border-color: #ff6b6b !important;
+      background: rgba(255,107,107,0.08) !important;
+    }
+    .privacy-check-wrap.error input[type="checkbox"] { outline: 2px solid #ff6b6b; outline-offset: 2px; }
+
     /* ── Krankenkassen Marquee ── */
     @keyframes kk-scroll {
       0%   { transform: translateX(0); }
@@ -1715,11 +1721,16 @@
             <textarea id="nachricht" name="nachricht" class="form-input" placeholder="Beschreiben Sie kurz, wobei Sie Unterstützung benötigen..."></textarea>
           </div>
 
-          <!-- Privacy note -->
-          <p class="text-[#74c69d] text-[13px] mb-5 leading-relaxed">
-            Mit dem Absenden stimmen Sie unserer
-            <a href="datenschutz.html" class="underline hover:text-white transition-colors">Datenschutzerklärung</a> zu.
-          </p>
+          <!-- Privacy checkbox -->
+          <div class="mb-5">
+            <label for="datenschutz" class="privacy-check-wrap" style="display:flex;align-items:flex-start;gap:10px;padding:10px 12px;border-radius:8px;border:1px solid transparent;cursor:pointer;transition:border-color 0.2s,background-color 0.2s;">
+              <input type="checkbox" id="datenschutz" name="datenschutz" required style="margin-top:3px;width:16px;height:16px;flex-shrink:0;accent-color:#e8a320;cursor:pointer;">
+              <span class="text-[#74c69d] text-[13px] leading-relaxed">
+                Ich habe die <a href="datenschutz.html" class="underline hover:text-white transition-colors">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten einverstanden. *
+              </span>
+            </label>
+            <p id="datenschutz-error" style="display:none;color:#ff8787;font-size:12px;margin-top:5px;padding-left:12px;">Bitte stimmen Sie der Datenschutzerklärung zu, um fortzufahren.</p>
+          </div>
 
           <button
             type="submit"
@@ -2223,7 +2234,27 @@
   // Betreff dynamisch mit Kundennamen befüllen
   const anfrageForm = document.querySelector('form[action="https://api.web3forms.com/submit"]');
   if (anfrageForm) {
-    anfrageForm.addEventListener('submit', function() {
+    const anfrageDatenschutz = document.getElementById('datenschutz');
+    const anfrageDatenschutzWrap = document.querySelector('label.privacy-check-wrap[for="datenschutz"]');
+    const anfrageDatenschutzError = document.getElementById('datenschutz-error');
+
+    if (anfrageDatenschutz) {
+      anfrageDatenschutz.addEventListener('change', function() {
+        if (this.checked) {
+          anfrageDatenschutzWrap?.classList.remove('error');
+          if (anfrageDatenschutzError) anfrageDatenschutzError.style.display = 'none';
+        }
+      });
+    }
+
+    anfrageForm.addEventListener('submit', function(e) {
+      if (anfrageDatenschutz && !anfrageDatenschutz.checked) {
+        e.preventDefault();
+        anfrageDatenschutzWrap?.classList.add('error');
+        if (anfrageDatenschutzError) anfrageDatenschutzError.style.display = 'block';
+        anfrageDatenschutz.focus();
+        return;
+      }
       const vorname = (document.getElementById('vorname')?.value || '').trim();
       const nachname = (document.getElementById('nachname')?.value || '').trim();
       const subject = document.getElementById('anfrage-subject');
