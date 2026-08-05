@@ -414,6 +414,64 @@
 
     textarea.form-input { resize: vertical; min-height: 110px; }
 
+    /* ── Formular-Fortschrittsleiste ── */
+    .form-progress-track {
+      height: 6px;
+      border-radius: 99px;
+      background: rgba(255,255,255,0.14);
+      overflow: hidden;
+    }
+    .form-progress-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 99px;
+      background: linear-gradient(90deg, #40916c 0%, #74c69d 100%);
+      transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1), background 0.35s ease;
+    }
+    .form-progress.is-ready .form-progress-fill {
+      background: linear-gradient(90deg, #e8a320 0%, #f5c451 100%);
+    }
+    .form-progress-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .form-progress-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #95d5b2;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+    .form-progress.is-ready .form-progress-status { color: #f5c451; }
+    .form-progress-check {
+      width: 14px;
+      height: 14px;
+      opacity: 0;
+      transform: scale(0.6);
+      transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .form-progress.is-ready .form-progress-check { opacity: 1; transform: scale(1); }
+    .form-progress-percent {
+      color: #74c69d;
+      font-size: 12px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      transition: color 0.3s ease;
+    }
+    .form-progress.is-ready .form-progress-percent { color: #f5c451; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .form-progress-fill,
+      .form-progress-check { transition: none; }
+    }
+
     .privacy-check-wrap.error {
       border-color: #ff6b6b !important;
       background: rgba(255,107,107,0.08) !important;
@@ -736,15 +794,15 @@
         <div class="flex flex-wrap gap-x-6 gap-y-3">
           <div class="flex items-center gap-2 text-[#4a7c63] text-sm font-500">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Pflegegrad 1–5 abrechenbar
+            Abrechnung direkt mit der Pflegekasse
           </div>
           <div class="flex items-center gap-2 text-[#4a7c63] text-sm font-500">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Kostenlose Erstberatung
+            Zertifiziert vom Land Niedersachsen
           </div>
           <div class="flex items-center gap-2 text-[#4a7c63] text-sm font-500">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Aus Hannover – für Hannover
+            Immer die selbe Hilfsperson
           </div>
         </div>
 
@@ -1144,10 +1202,10 @@
             </tr>
             <tr style="background:#fff;">
               <td style="padding:12px 16px;font-weight:600;color:#1b4332;border-bottom:1px solid #e8f5ec;">
-                <a href="verhinderungspflege" class="nav-link-green">Verhinderungspflege</a><br><span style="font-size:11px;color:#40916c;font-weight:500;">§ 39 SGB XI</span>
+                <a href="verhinderungspflege" class="nav-link-green">Verhinderungs- &amp; Kurzzeitpflege</a><br><span style="font-size:11px;color:#40916c;font-weight:500;">§§ 39, 42 SGB XI</span>
               </td>
               <td style="padding:12px 10px;text-align:center;color:#b0c9bb;border-bottom:1px solid #e8f5ec;font-size:18px;">–</td>
-              <td colspan="4" style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;border-bottom:1px solid #e8f5ec;">1.612 €/Jahr<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">bis zu 6 Wochen · PG 2–5</span></td>
+              <td colspan="4" style="padding:12px 10px;text-align:center;font-weight:700;color:#1b4332;border-bottom:1px solid #e8f5ec;">3.539 €/Jahr<br><span style="font-size:11px;font-weight:400;color:#4a7c63;">gemeinsamer Jahresbetrag · PG 2–5</span></td>
             </tr>
             <tr style="background:#f7fdf9;">
               <td style="padding:12px 16px;font-weight:600;color:#1b4332;border-radius:0 0 0 8px;">
@@ -1674,7 +1732,21 @@
 
           <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
 
-          <h3 class="text-white font-800 text-xl mb-6" style="letter-spacing:-0.02em;">Ihre Anfrage</h3>
+          <h3 class="text-white font-800 text-xl mb-4" style="letter-spacing:-0.02em;">Ihre Anfrage</h3>
+
+          <!-- Fortschrittsleiste -->
+          <div id="form-progress" class="form-progress mb-6">
+            <div class="form-progress-label">
+              <span class="form-progress-status">
+                <svg class="form-progress-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span id="form-progress-text">Nur 4 Angaben nötig</span>
+              </span>
+              <span class="form-progress-percent" id="form-progress-percent">0&nbsp;%</span>
+            </div>
+            <div class="form-progress-track" role="progressbar" aria-labelledby="form-progress-text" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <div class="form-progress-fill" id="form-progress-fill"></div>
+            </div>
+          </div>
 
           <div class="grid sm:grid-cols-2 gap-4 mb-4">
             <div>
@@ -1687,38 +1759,40 @@
             </div>
           </div>
 
-          <div class="mb-4">
-            <label for="telefon" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Telefon</label>
-            <input type="tel" id="telefon" name="telefon" class="form-input" placeholder="0511 000 000" autocomplete="tel">
+          <div class="grid sm:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label for="telefon" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Telefon</label>
+              <input type="tel" id="telefon" name="telefon" class="form-input" placeholder="0511 000 000" autocomplete="tel">
+            </div>
+            <div>
+              <label for="email" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">E-Mail</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="maria@email.de" required autocomplete="email">
+            </div>
           </div>
 
-          <div class="mb-4">
-            <label for="email" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">E-Mail</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="maria@email.de" required autocomplete="email">
-          </div>
-
-          <div class="mb-4">
-            <label for="ort" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Ort</label>
-            <input type="text" id="ort" name="ort" class="form-input" placeholder="z.B. Hannover, Ronnenberg..." autocomplete="address-level2">
-          </div>
-
-          <div class="mb-4">
-            <label for="pflegegrad" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Pflegegrad (falls vorhanden)</label>
-            <select id="pflegegrad" name="pflegegrad" class="form-input" style="appearance:none;-webkit-appearance:none;cursor:pointer;">
-              <option value="">Bitte wählen...</option>
-              <option>Kein Pflegegrad</option>
-              <option>Pflegegrad 1</option>
-              <option>Pflegegrad 2</option>
-              <option>Pflegegrad 3</option>
-              <option>Pflegegrad 4</option>
-              <option>Pflegegrad 5</option>
-              <option>Noch nicht beantragt</option>
-            </select>
-          </div>
-
-          <div class="mb-6">
-            <label for="nachricht" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Wie können wir helfen?</label>
-            <textarea id="nachricht" name="nachricht" class="form-input" placeholder="Beschreiben Sie kurz, wobei Sie Unterstützung benötigen..."></textarea>
+          <div class="grid sm:grid-cols-2 gap-4 mb-6 items-start">
+            <div class="flex flex-col gap-4">
+              <div>
+                <label for="ort" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Ort</label>
+                <input type="text" id="ort" name="ort" class="form-input" placeholder="z.B. Hannover, Ronnenberg..." autocomplete="address-level2">
+              </div>
+              <div>
+                <label for="pflegegrad-auswahl" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Pflegegrad (falls vorhanden)</label>
+                <select id="pflegegrad-auswahl" name="pflegegrad" class="form-input" style="appearance:none;-webkit-appearance:none;cursor:pointer;">
+                  <option value="">Bitte wählen...</option>
+                  <option>Pflegegrad 1</option>
+                  <option>Pflegegrad 2</option>
+                  <option>Pflegegrad 3</option>
+                  <option>Pflegegrad 4</option>
+                  <option>Pflegegrad 5</option>
+                  <option>Noch nicht beantragt</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex flex-col h-full">
+              <label for="nachricht" class="block text-[#95d5b2] text-[13px] font-600 mb-1.5 uppercase tracking-widest">Wie können wir helfen?</label>
+              <textarea id="nachricht" name="nachricht" class="form-input" style="flex:1;" placeholder="Beschreiben Sie kurz, wobei Sie Unterstützung benötigen..."></textarea>
+            </div>
           </div>
 
           <!-- Privacy checkbox -->
@@ -2273,6 +2347,68 @@
           if (anfrageDatenschutzError) anfrageDatenschutzError.style.display = 'none';
         }
       });
+    }
+
+    // Fortschrittsleiste
+    const progressBox = document.getElementById('form-progress');
+    if (progressBox) {
+      const progressFill = document.getElementById('form-progress-fill');
+      const progressText = document.getElementById('form-progress-text');
+      const progressPercent = document.getElementById('form-progress-percent');
+      const progressTrack = progressBox.querySelector('.form-progress-track');
+
+      // Pflichtfelder zuerst – sie bestimmen den "Bereit"-Status
+      const felder = [
+        { el: document.getElementById('vorname'), pflicht: true },
+        { el: document.getElementById('nachname'), pflicht: true },
+        { el: document.getElementById('email'), pflicht: true, mail: true },
+        { el: anfrageDatenschutz, pflicht: true, check: true },
+        { el: document.getElementById('telefon'), pflicht: false },
+        { el: document.getElementById('ort'), pflicht: false },
+        { el: document.getElementById('pflegegrad-auswahl'), pflicht: false },
+        { el: document.getElementById('nachricht'), pflicht: false }
+      ].filter(function(f) { return f.el; });
+
+      const istGefuellt = function(f) {
+        if (f.check) return f.el.checked;
+        const wert = (f.el.value || '').trim();
+        if (!wert) return false;
+        if (f.mail) return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(wert);
+        return true;
+      };
+
+      const updateProgress = function() {
+        const gefuellt = felder.filter(istGefuellt).length;
+        const offenePflicht = felder.filter(function(f) {
+          return f.pflicht && !istGefuellt(f);
+        }).length;
+        const prozent = Math.round((gefuellt / felder.length) * 100);
+        const bereit = offenePflicht === 0;
+
+        if (progressFill) progressFill.style.width = prozent + '%';
+        if (progressPercent) progressPercent.innerHTML = prozent + '&nbsp;%';
+        progressBox.classList.toggle('is-ready', bereit);
+
+        if (progressTrack) progressTrack.setAttribute('aria-valuenow', String(prozent));
+
+        if (progressText) {
+          if (bereit) {
+            progressText.textContent = prozent === 100 ? 'Alles ausgefüllt' : 'Bereit zum Absenden';
+          } else if (gefuellt === 0) {
+            progressText.textContent = 'Nur 4 Angaben nötig';
+          } else {
+            progressText.textContent = offenePflicht === 1
+              ? 'Noch 1 Pflichtangabe'
+              : 'Noch ' + offenePflicht + ' Pflichtangaben';
+          }
+        }
+      };
+
+      felder.forEach(function(f) {
+        f.el.addEventListener('input', updateProgress);
+        f.el.addEventListener('change', updateProgress);
+      });
+      updateProgress();
     }
 
     anfrageForm.addEventListener('submit', function(e) {
