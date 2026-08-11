@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pflegegrad-Check 2026: kostenlos einschätzen | Haushaltspartner</title>
+  <meta name="description" content="Welcher Pflegegrad ist realistisch? Schätzen Sie ihn anhand der sechs offiziellen Begutachtungs-Module ein – kostenlos, anonym, ohne Datenübertragung.">
+  <link rel="canonical" href="https://haushaltspartner.de/pflegegrad-check">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pflegegrad-Check 2026: kostenlos einschätzen | Haushaltspartner">
+  <meta property="og:description" content="Welcher Pflegegrad ist realistisch? Schätzen Sie ihn anhand der sechs offiziellen Begutachtungs-Module ein – kostenlos, anonym, ohne Datenübertragung.">
+  <meta property="og:url" content="https://haushaltspartner.de/pflegegrad-check">
+  <link rel="icon" type="image/png" href="Brand_Assets/Haushaltspartner%20Logo%20gr%C3%BCn.png">
+  <link rel="stylesheet" href="tailwind.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif; background: #fff; color: #1a2e23; -webkit-font-smoothing: antialiased; }
+    #navbar { transition: background 0.3s ease, box-shadow 0.3s ease; }
+    #navbar.scrolled { background: #1b4332 !important; box-shadow: 0 2px 24px rgba(0,0,0,0.25); }
+    .btn-gold { display:inline-flex;align-items:center;gap:8px;background:#e8a320;color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;transition:background 0.2s ease,transform 0.15s ease;letter-spacing:-0.01em; }
+    .btn-gold:hover { background:#f0b429;transform:translateY(-1px); }
+    .btn-outline-green { display:inline-flex;align-items:center;gap:8px;background:transparent;color:#1b4332;font-weight:700;padding:13px 28px;border-radius:6px;border:2px solid #2d6a4f;text-decoration:none;transition:background 0.2s,transform 0.15s;letter-spacing:-0.01em; }
+    .btn-outline-green:hover { background:#f0faf2;transform:translateY(-1px); }
+    .section-label { display:inline-block;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#40916c;margin-bottom:12px; }
+    .section-headline { font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:#1b4332; }
+    footer { font-weight: 500; }
+    footer a { transition: color 0.2s; }
+    footer a:hover { color: #95d5b2; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #f0faf2; }
+    ::-webkit-scrollbar-thumb { background: #40916c; border-radius: 3px; }
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+    @keyframes wa-wiggle {
+      0%       { transform: rotate(0deg); }
+      2%       { transform: rotate(-15deg); }
+      4%       { transform: rotate(15deg); }
+      6%       { transform: rotate(-10deg); }
+      8%       { transform: rotate(10deg); }
+      10%      { transform: rotate(-5deg); }
+      12%      { transform: rotate(5deg); }
+      14%,100% { transform: rotate(0deg); }
+    }
+    @keyframes wa-intro {
+      0%, 55% { width: 155px; border-radius: 28px; }
+      100%    { width: 56px;  border-radius: 50%; }
+    }
+    @keyframes wa-text-out {
+      0%, 40%   { opacity: 1; max-width: 90px; margin-left: 6px; }
+      90%, 100% { opacity: 0; max-width: 0;    margin-left: 0; }
+    }
+    .wa-float {
+      width: 56px; height: 56px; border-radius: 50%; overflow: hidden;
+      animation: wa-intro 2.5s ease-in-out both, wa-wiggle 5s ease-in-out 6s infinite;
+    }
+    .wa-float:hover { animation-play-state: paused; }
+    .wa-float-text {
+      color: white; font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden;
+      animation: wa-text-out 2.5s ease-in-out forwards;
+    }
+      /* ── Nav Dropdown ── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1b4332;
+      border-radius: 10px;
+      padding: 6px;
+      min-width: 210px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.12);
+      z-index: 200;
+    }
+    .nav-dropdown-menu.open { display: block; }
+    .nav-dropdown-item {
+      display: block;
+      padding: 10px 14px;
+      color: #95d5b2;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+    .nav-dropdown-item:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+    /* ── Seitenspezifisch ── */
+    .pgc-shell {
+      background: #fff;
+      border: 1px solid #e8f5ec;
+      border-radius: 18px;
+      box-shadow: 0 4px 10px rgba(27,67,50,0.05), 0 18px 48px rgba(27,67,50,0.10);
+      overflow: hidden;
+    }
+    .pgc-progress-track { height: 5px; background: #e8f5ec; }
+    .pgc-progress-bar {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #40916c, #74c69d);
+      transition: width 0.35s cubic-bezier(0.34, 1.2, 0.64, 1);
+    }
+    .pgc-body { padding: 34px 30px 30px; }
+    @media (max-width: 640px) { .pgc-body { padding: 26px 20px 22px; } }
+
+    .pgc-step-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #40916c;
+      margin-bottom: 8px;
+    }
+    .pgc-question {
+      font-size: clamp(19px, 2.4vw, 24px);
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+      color: #1b4332;
+      margin-bottom: 22px;
+    }
+
+    .pgc-option {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      width: 100%;
+      text-align: left;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 600;
+      color: #2a5c3f;
+      background: #f7fdf9;
+      border: 2px solid #e8f5ec;
+      border-radius: 11px;
+      padding: 14px 17px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: transform 0.14s ease, border-color 0.16s ease, background 0.16s ease;
+    }
+    .pgc-option:hover { border-color: #95d5b2; background: #f0faf2; transform: translateY(-1px); }
+    .pgc-option:focus-visible { outline: 2px solid #40916c; outline-offset: 3px; }
+    .pgc-option:active { transform: translateY(0); }
+    .pgc-option[aria-checked="true"] { border-color: #40916c; background: #e8f5ec; color: #1b4332; }
+    .pgc-radio {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid #b7e4c7;
+      background: #fff;
+      position: relative;
+      transition: border-color 0.16s ease;
+    }
+    .pgc-option[aria-checked="true"] .pgc-radio { border-color: #40916c; }
+    .pgc-option[aria-checked="true"] .pgc-radio::after {
+      content: "";
+      position: absolute;
+      inset: 3px;
+      border-radius: 50%;
+      background: #40916c;
+    }
+
+    .pgc-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 22px; }
+    .pgc-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      color: #4a7c63;
+      background: none;
+      border: none;
+      padding: 8px 4px;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: color 0.15s ease;
+    }
+    .pgc-back:hover { color: #1b4332; }
+    .pgc-back:focus-visible { outline: 2px solid #40916c; outline-offset: 2px; }
+    .pgc-back[disabled] { opacity: 0.35; cursor: default; }
+    .pgc-count { font-size: 13px; font-weight: 600; color: #4a7c63; }
+
+    /* ── Ergebnis ── */
+    .pgc-result-grade {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      background: #1b4332;
+      color: #fff;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(27,67,50,0.28);
+    }
+    .pgc-result-grade .pgc-grade-num { font-size: 52px; font-weight: 900; line-height: 1; letter-spacing: -0.04em; }
+    .pgc-result-grade .pgc-grade-lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #95d5b2; margin-top: 4px; }
+    .pgc-result-grade.pgc-none { background: #4a7c63; }
+    .pgc-result-grade.pgc-none .pgc-grade-num { font-size: 30px; }
+
+    .pgc-score-bar-track { height: 10px; background: #e8f5ec; border-radius: 999px; overflow: hidden; margin: 6px 0 8px; }
+    .pgc-score-bar { height: 100%; border-radius: 999px; background: linear-gradient(90deg, #40916c, #74c69d); width: 0; transition: width 0.7s cubic-bezier(0.34, 1.1, 0.64, 1); }
+
+    .pgc-benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #f7fdf9;
+      border: 1px solid #e8f5ec;
+      border-radius: 11px;
+      padding: 15px 17px;
+      margin-bottom: 10px;
+    }
+    .pgc-benefit-amt { font-size: 17px; font-weight: 800; color: #1b4332; letter-spacing: -0.02em; white-space: nowrap; }
+    .pgc-benefit-name { font-size: 14px; font-weight: 600; color: #2a5c3f; }
+    .pgc-benefit-sub { font-size: 12px; color: #4a7c63; margin-top: 2px; }
+
+    .pgc-module-card {
+      background: #fff;
+      border: 1px solid #e8f5ec;
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 2px 4px rgba(27,67,50,0.04), 0 8px 22px rgba(27,67,50,0.05);
+    }
+    .pgc-module-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+      background: #e8f5ec;
+      color: #2d6a4f;
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .pgc-module-weight { font-size: 12px; font-weight: 800; color: #40916c; letter-spacing: 0.04em; }
+
+    [hidden] { display: none !important; }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Startseite","item":"https://haushaltspartner.de/"},
+    {"@type":"ListItem","position":2,"name":"Pflegegrad-Check"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-[#1b4332]" role="navigation" aria-label="Hauptnavigation">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between h-[70px]">
+      <a href="/" aria-label="Haushaltspartner – Startseite">
+        <img src="Brand_Assets/haushaltspartner-logo.webp" alt="Haushaltspartner – Haushaltshilfe & Alltagshilfe Hannover" class="w-auto" style="height:44px;">
+      </a>
+      <div class="hidden lg:flex items-center gap-8">
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle text-[#95d5b2] hover:text-white text-sm font-600 transition-colors flex items-center gap-1" style="background:none;border:none;cursor:pointer;font-family:inherit;padding:0;" aria-expanded="false">Leistungen<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.7;margin-top:1px;"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="nav-dropdown-menu">
+            <a href="leistungen" class="nav-dropdown-item">Alle Leistungen</a>
+            <a href="fensterputzservice" class="nav-dropdown-item">Fensterputzservice</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle text-[#95d5b2] hover:text-white text-sm font-600 transition-colors flex items-center gap-1" style="background:none;border:none;cursor:pointer;font-family:inherit;padding:0;" aria-expanded="false">Pflegekasse<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="opacity:0.7;margin-top:1px;"><polyline points="6 9 12 15 18 9"/></svg></button>
+          <div class="nav-dropdown-menu">
+            <a href="entlastungsbetrag" class="nav-dropdown-item">Entlastungsbetrag</a>
+            <a href="verhinderungspflege" class="nav-dropdown-item">Verhinderungspflege</a>
+            <a href="pflegegrad-check" class="nav-dropdown-item">Pflegegrad-Check</a>
+            <a href="formulare" class="nav-dropdown-item">Formulare</a>
+            <a href="pflege-lexikon" class="nav-dropdown-item">Pflege-Lexikon</a>
+          </div>
+        </div>
+        <a href="ueber-uns" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Über uns</a>
+        <a href="karriere" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Karriere</a>
+        <a href="blog" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Blog</a>
+        <a href="/#kontakt" class="text-[#95d5b2] hover:text-white text-sm font-600 transition-colors">Kontakt</a>
+      </div>
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="tel:+4951092638603" class="flex items-center gap-2 text-white font-700 text-sm hover:text-[#95d5b2] transition-colors"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>05109 2638603</a>
+        <a href="/#kontakt" class="btn-gold text-sm py-2.5 px-5">Kostenlos anfragen</a>
+      </div>
+      <button id="menu-toggle" class="lg:hidden text-white p-2 -mr-2 rounded-md hover:bg-white/10 transition-colors" aria-label="Menü öffnen" aria-expanded="false">
+        <svg id="menu-icon-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="menu-icon-close" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="lg:hidden border-t border-white/10 py-4">
+      <div class="flex flex-col gap-1">
+        <button class="mobile-acc-toggle text-[#95d5b2] text-sm font-600 py-3 px-3 rounded-md transition-colors w-full text-left flex items-center justify-between hover:text-white hover:bg-white/5" style="background:none;border:none;cursor:pointer;font-family:inherit;">Leistungen<svg class="mobile-acc-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition:transform 0.2s;flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="mobile-acc-content" style="display:none;padding-left:10px;">
+          <a href="leistungen" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Alle Leistungen</a>
+          <a href="fensterputzservice" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Fensterputzservice</a>
+        </div>
+        <button class="mobile-acc-toggle text-[#95d5b2] text-sm font-600 py-3 px-3 rounded-md transition-colors w-full text-left flex items-center justify-between hover:text-white hover:bg-white/5" style="background:none;border:none;cursor:pointer;font-family:inherit;">Pflegekasse<svg class="mobile-acc-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition:transform 0.2s;flex-shrink:0;"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="mobile-acc-content" style="display:none;padding-left:10px;">
+          <a href="entlastungsbetrag" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Entlastungsbetrag</a>
+          <a href="verhinderungspflege" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Verhinderungspflege</a>
+          <a href="pflegegrad-check" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Pflegegrad-Check</a>
+          <a href="formulare" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Formulare</a>
+          <a href="pflege-lexikon" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-2.5 px-3 rounded-md transition-colors block mobile-sub-link">Pflege-Lexikon</a>
+        </div>
+        <a href="ueber-uns" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Über uns</a>
+        <a href="karriere" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Karriere</a>
+        <a href="blog" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Blog</a>
+        <a href="/#kontakt" class="text-[#95d5b2] hover:text-white hover:bg-white/5 text-sm font-600 py-3 px-3 rounded-md transition-colors mobile-nav-link">Kontakt</a>
+        <div class="pt-3 border-t border-white/10 mt-1 flex flex-col gap-3">
+          <a href="tel:+4951092638603" class="flex items-center gap-2 text-white font-700 text-sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>05109 2638603</a>
+          <a href="/#kontakt" class="btn-gold text-sm py-3 text-center">Kostenlos anfragen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="bg-[#1b4332] pt-[70px] pb-16 lg:pb-20 overflow-hidden" style="position:relative;">
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div style="position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(ellipse at 80% 50%,rgba(64,145,108,0.15) 0%,transparent 70%);"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-10">
+    <a href="/" class="inline-flex items-center gap-2 text-[#95d5b2] hover:text-white text-sm font-600 transition-colors mb-8">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Zurück zur Startseite
+    </a>
+    <div class="max-w-3xl">
+      <span class="section-label" style="color:#95d5b2;">Kostenlos &amp; anonym</span>
+      <h1 style="font-size:clamp(30px,5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-0.04em;color:#fff;" class="mt-2 mb-5">
+        Pflegegrad-Check:<br><span style="color:#74c69d;">Welcher Grad</span><br>ist realistisch?
+      </h1>
+      <p class="text-[#b7e4c7] text-lg leading-relaxed max-w-2xl">
+        Beantworten Sie 19 kurze Fragen aus den sechs Bereichen, die auch der Medizinische Dienst bei der Begutachtung bewertet. Am Ende sehen Sie eine <strong class="text-white">unverbindliche Einschätzung</strong> – ohne Anmeldung, ohne Datenübertragung.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CHECK -->
+<section class="bg-white py-16 lg:py-24">
+  <div class="max-w-3xl mx-auto px-5 lg:px-8">
+
+    <!-- Startkarte -->
+    <div id="pgc-intro" class="pgc-shell">
+      <div class="pgc-body">
+        <span class="section-label">In wenigen Minuten zur Einschätzung</span>
+        <h2 class="section-headline mt-1 mb-4" style="font-size:clamp(24px,3vw,34px);">So funktioniert der Check</h2>
+        <p class="text-[#4a7c63] text-[16px] leading-relaxed mb-7">
+          Sie klicken sich durch sechs Themenbereiche – dieselben sechs Module, die auch bei der offiziellen Begutachtung bewertet werden. Antworten Sie so, wie es an einem <strong class="text-[#1b4332]">durchschnittlichen Tag</strong> zutrifft.
+        </p>
+
+        <div class="grid grid-cols-3 gap-3 mb-7">
+          <div style="background:#f0faf2;border:1px solid #d8f3dc;border-radius:12px;padding:18px 12px;text-align:center;">
+            <p style="font-size:30px;font-weight:900;line-height:1;color:#1b4332;">6</p>
+            <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#40916c;margin-top:6px;">Module</p>
+          </div>
+          <div style="background:#f0faf2;border:1px solid #d8f3dc;border-radius:12px;padding:18px 12px;text-align:center;">
+            <p style="font-size:30px;font-weight:900;line-height:1;color:#1b4332;">~3</p>
+            <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#40916c;margin-top:6px;">Minuten</p>
+          </div>
+          <div style="background:#f0faf2;border:1px solid #d8f3dc;border-radius:12px;padding:18px 12px;text-align:center;">
+            <p style="font-size:30px;font-weight:900;line-height:1;color:#1b4332;">0 €</p>
+            <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#40916c;margin-top:6px;">unverbindlich</p>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:11px;background:#f7fdf9;border:1px solid #e8f5ec;border-radius:11px;padding:14px 16px;margin-bottom:24px;">
+          <svg style="flex-shrink:0;margin-top:2px;" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <p style="font-size:13px;line-height:1.65;color:#4a7c63;">
+            <strong style="color:#1b4332;">Ihre Angaben bleiben auf Ihrem Gerät.</strong> Der Check rechnet direkt im Browser – es werden keine Daten übertragen, gespeichert oder ausgewertet.
+          </p>
+        </div>
+
+        <button type="button" id="pgc-start" class="btn-gold" style="width:100%;justify-content:center;border:none;cursor:pointer;font-family:inherit;font-size:16px;">
+          Check starten
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Fragen -->
+    <div id="pgc-quiz" class="pgc-shell" hidden>
+      <div class="pgc-progress-track"><div class="pgc-progress-bar" id="pgc-progress"></div></div>
+      <div class="pgc-body">
+        <p class="pgc-step-label" id="pgc-module-label"></p>
+        <h2 class="pgc-question" id="pgc-question"></h2>
+        <div id="pgc-options" role="radiogroup" aria-labelledby="pgc-question"></div>
+        <div class="pgc-nav">
+          <button type="button" class="pgc-back" id="pgc-back">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            Zurück
+          </button>
+          <span class="pgc-count" id="pgc-count"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ergebnis -->
+    <div id="pgc-result" class="pgc-shell" hidden>
+      <div class="pgc-body">
+        <div style="text-align:center;">
+          <p class="pgc-step-label">Ihre unverbindliche Einschätzung</p>
+          <div class="pgc-result-grade" id="pgc-grade-badge">
+            <span class="pgc-grade-num" id="pgc-grade-num"></span>
+            <span class="pgc-grade-lbl" id="pgc-grade-lbl"></span>
+          </div>
+          <h2 class="section-headline mb-3" style="font-size:clamp(22px,2.8vw,30px);" id="pgc-grade-title"></h2>
+          <p class="text-[#4a7c63] text-[16px] leading-relaxed mb-7" id="pgc-grade-text" style="max-width:520px;margin-left:auto;margin-right:auto;"></p>
+        </div>
+
+        <div style="background:#f7fdf9;border:1px solid #e8f5ec;border-radius:12px;padding:20px;margin-bottom:26px;">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;">
+            <span style="font-size:13px;font-weight:700;color:#2a5c3f;">Gewichtete Punkte</span>
+            <span style="font-size:15px;font-weight:800;color:#1b4332;"><span id="pgc-score"></span> <span style="font-size:12px;font-weight:600;color:#4a7c63;">von 100</span></span>
+          </div>
+          <div class="pgc-score-bar-track"><div class="pgc-score-bar" id="pgc-score-bar"></div></div>
+          <p style="font-size:12px;color:#4a7c63;line-height:1.6;">Ab 12,5 Punkten beginnt Pflegegrad 1, ab 27 Punkten Pflegegrad 2, ab 47,5 Pflegegrad 3, ab 70 Pflegegrad 4 und ab 90 Punkten Pflegegrad 5.</p>
+        </div>
+
+        <div id="pgc-benefits-wrap" class="mb-7">
+          <h3 style="font-size:17px;font-weight:800;color:#1b4332;letter-spacing:-0.02em;margin-bottom:12px;">Diese Leistungen wären damit möglich</h3>
+          <div id="pgc-benefits"></div>
+          <p style="font-size:12px;color:#4a7c63;line-height:1.6;margin-top:10px;">Beträge gemäß SGB XI, Stand August 2026. Was Ihnen konkret zusteht, entscheidet Ihre Pflegekasse.</p>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:11px;background:#fdf8ee;border:1px solid #f2e2c4;border-radius:11px;padding:14px 16px;margin-bottom:24px;">
+          <svg style="flex-shrink:0;margin-top:2px;" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#c58c1c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="16.5" x2="12.01" y2="16.5"/></svg>
+          <p style="font-size:13px;line-height:1.65;color:#7a5c1e;">
+            <strong style="color:#5c4415;">Das ist keine Begutachtung.</strong> Der Check ist eine grobe Orientierung auf Basis weniger Fragen. Die offizielle Einstufung nimmt allein der Medizinische Dienst nach einem persönlichen Hausbesuch vor.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="/#kontakt" class="btn-gold justify-center" style="flex:1;">Jetzt kostenlos beraten lassen</a>
+          <button type="button" id="pgc-restart" class="btn-outline-green justify-center" style="cursor:pointer;font-family:inherit;">Check wiederholen</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SO WIRD DER PFLEGEGRAD ERMITTELT -->
+<section class="bg-[#f0faf2] py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center mb-12 max-w-2xl mx-auto">
+      <span class="section-label">Gut zu wissen</span>
+      <h2 class="section-headline mt-1 mb-4">Wie der Pflegegrad wirklich ermittelt wird</h2>
+      <p class="text-[#4a7c63] text-lg leading-relaxed">
+        Seit 2017 zählt nicht mehr, wie viele Minuten die Pflege dauert, sondern wie <strong class="text-[#1b4332]">selbstständig</strong> jemand seinen Alltag bewältigt. Bewertet werden sechs Lebensbereiche – jeder mit einem eigenen Gewicht.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="pgc-module-card">
+        <span class="pgc-module-num">1</span>
+        <h3 style="font-size:17px;font-weight:800;color:#1b4332;letter-spacing:-0.02em;margin-bottom:4px;">Mobilität</h3>
+        <p class="pgc-module-weight mb-2">10 % Gewichtung</p>
+        <p style="font-size:14px;line-height:1.65;color:#4a7c63;">Aufstehen, sich in der Wohnung bewegen, Treppen steigen.</p>
+      </div>
+      <div class="pgc-module-card">
+        <span class="pgc-module-num">2</span>
+        <h3 style="font-size:17px;font-weight:800;color:#1b4332;letter-spacing:-0.02em;margin-bottom:4px;">Denken &amp; Kommunikation</h3>
+        <p class="pgc-module-weight mb-2">15 % gemeinsam mit Modul 3</p>
+        <p style="font-size:14px;line-height:1.65;color:#4a7c63;">Orientierung, Erinnern, Verstehen, Gefahren erkennen.</p>
+      </div>
+      <div class="pgc-module-card">
+        <span class="pgc-module-num">3</span>
+        <h3 style="font-size:17px;font-weight:800;color:#1b4332;letter-spacing:-0.02em;margin-bottom:4px;">Verhalten &amp; Psyche</h3>
+        <p class="pgc-module-weight mb-2">15 % gemeinsam mit Modul 2</p>
+        <p style="font-size:14px;line-height:1.65;color:#4a7c63;">Nächtliche Unruhe, Ängste, Abwehr von Unterstützung.</p>
+      </div>
+      <div class="pgc-module-card">
+        <span class="pgc-module-num">4</span>
+        <h3 style="font-size:17px;font-weight:800;color:#1b4332;letter-spacing:-0.02em;margin-bottom:4px;">Selbstversorgung</h3>
+        <p class="pgc-module-weight mb-2">40 % Gewichtung</p>
+        <p style="font-size:14px;line-height:1.65;color:#4a7c63;">Körperpflege, Anziehen, Essen und Trinken, Toilette.</p>
+      </div>
+      <div class="pgc-module-card">
+        <span class="pgc-module-num">5</span>
+        <h3 style="font-size:17px;font-weight:800;color:#1b4332;letter-spacing:-0.02em;margin-bottom:4px;">Krankheit &amp; Therapie</h3>
+        <p class="pgc-module-weight mb-2">20 % Gewichtung</p>
+        <p style="font-size:14px;line-height:1.65;color:#4a7c63;">Medikamente, Arzttermine, Wundversorgung.</p>
+      </div>
+      <div class="pgc-module-card">
+        <span class="pgc-module-num">6</span>
+        <h3 style="font-size:17px;font-weight:800;color:#1b4332;letter-spacing:-0.02em;margin-bottom:4px;">Alltag &amp; Kontakte</h3>
+        <p class="pgc-module-weight mb-2">15 % Gewichtung</p>
+        <p style="font-size:14px;line-height:1.65;color:#4a7c63;">Tagesstruktur, Beschäftigung, soziale Teilhabe.</p>
+      </div>
+    </div>
+
+    <p style="font-size:13px;color:#4a7c63;line-height:1.7;margin-top:26px;text-align:center;max-width:700px;margin-left:auto;margin-right:auto;">
+      Die Module 2 und 3 zählen zusammen mit 15 % – gewertet wird dabei der jeweils höhere der beiden Werte, nicht die Summe.
+    </p>
+  </div>
+</section>
+
+
+<!-- PASST DAZU -->
+<section class="bg-white py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center mb-10">
+      <span class="section-label">Passt dazu</span>
+      <h2 class="section-headline mt-1">Ihr nächster Schritt</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <a href="formulare" class="pgc-module-card" style="text-decoration:none;">
+        <h3 style="font-size:17px;font-weight:800;color:#1b4332;letter-spacing:-0.02em;margin-bottom:6px;">Formulare</h3>
+        <p style="font-size:14px;line-height:1.65;color:#4a7c63;">Pflegegrad beantragen, Vorsorge regeln – wir helfen beim Ausfüllen.</p>
+      </a>
+      <a href="entlastungsbetrag" class="pgc-module-card" style="text-decoration:none;">
+        <h3 style="font-size:17px;font-weight:800;color:#1b4332;letter-spacing:-0.02em;margin-bottom:6px;">Entlastungsbetrag</h3>
+        <p style="font-size:14px;line-height:1.65;color:#4a7c63;">131 € im Monat ab Pflegegrad 1 – wir rechnen direkt mit der Kasse ab.</p>
+      </a>
+      <a href="pflege-lexikon" class="pgc-module-card" style="text-decoration:none;">
+        <h3 style="font-size:17px;font-weight:800;color:#1b4332;letter-spacing:-0.02em;margin-bottom:6px;">Pflege-Lexikon</h3>
+        <p style="font-size:14px;line-height:1.65;color:#4a7c63;">Alle wichtigen Fachbegriffe rund um die Pflege, einfach erklärt.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA SECTION -->
+<section class="bg-[#1b4332] py-16 lg:py-20">
+  <div class="max-w-3xl mx-auto px-5 lg:px-8 text-center">
+    <span class="section-label" style="color:#95d5b2;">Lieber persönlich?</span>
+    <h2 style="font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:#fff;" class="mt-2 mb-4">
+      Sie müssen das nicht<br>allein herausfinden
+    </h2>
+    <p class="text-[#b7e4c7] text-lg leading-relaxed mb-8">
+      Wir schätzen Ihren möglichen Pflegegrad gemeinsam mit Ihnen ein, begleiten Sie durch den Antrag und sind auf Wunsch beim Begutachtungstermin dabei.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="/#kontakt" class="btn-gold justify-center">Jetzt kostenlos beraten lassen</a>
+      <a href="tel:+4951092638603" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,0.2);transition:background 0.2s;justify-content:center;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        05109 2638603
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+// ── Pflegegrad-Check ──────────────────────────────────────────────
+// Vereinfachte Nachbildung des Neuen Begutachtungsassessments (NBA).
+// Rechnet ausschließlich im Browser – es werden keine Daten übertragen.
+(function () {
+  'use strict';
+
+  var SCALE_SELF = [
+    'Selbstständig – braucht keine Hilfe',
+    'Überwiegend selbstständig – braucht nur wenig Hilfe',
+    'Überwiegend unselbstständig – braucht viel Hilfe',
+    'Unselbstständig – geht nur mit vollständiger Hilfe'
+  ];
+  var SCALE_ABILITY = [
+    'Fähigkeit vorhanden',
+    'Größtenteils vorhanden',
+    'In geringem Maße vorhanden',
+    'Nicht vorhanden'
+  ];
+  var SCALE_FREQ = [
+    'Nie oder sehr selten',
+    'Ein- bis dreimal pro Woche',
+    'Mehrmals wöchentlich',
+    'Täglich'
+  ];
+  var SCALE_HELP = [
+    'Entfällt oder selbstständig',
+    'Gelegentlich Hilfe nötig',
+    'Regelmäßig Hilfe nötig',
+    'Mehrfach täglich Hilfe nötig'
+  ];
+
+  // weight = Anteil an den 100 Punkten. Module 2 und 3 teilen sich 15 %.
+  var MODULES = [
+    { name: 'Mobilität', weight: 10, scale: SCALE_SELF, questions: [
+      'Kann die Position im Bett selbst wechseln – sich aufsetzen, umdrehen, aufrichten?',
+      'Kann sich innerhalb der Wohnung selbst fortbewegen?',
+      'Kann Treppen steigen?'
+    ]},
+    { name: 'Denken & Kommunikation', weight: 15, group: 'kognitiv', scale: SCALE_ABILITY, questions: [
+      'Kann sich örtlich und zeitlich orientieren – weiß, wo und welcher Tag es ist?',
+      'Erkennt Personen aus dem näheren Umfeld?',
+      'Erkennt Risiken und Gefahren, etwa eine heiße Herdplatte?'
+    ]},
+    { name: 'Verhalten & Psyche', weight: 15, group: 'kognitiv', scale: SCALE_FREQ, questions: [
+      'Wie oft kommt es zu nächtlicher Unruhe oder Umherirren?',
+      'Wie oft treten Ängste, Niedergeschlagenheit oder Antriebslosigkeit auf?',
+      'Wie oft wird Unterstützung bei der Körperpflege abgewehrt?'
+    ]},
+    { name: 'Selbstversorgung', weight: 40, scale: SCALE_SELF, questions: [
+      'Waschen, Duschen oder Baden – wie selbstständig gelingt das?',
+      'An- und Auskleiden – wie selbstständig gelingt das?',
+      'Essen und Trinken selbst zu sich nehmen – wie selbstständig gelingt das?',
+      'Die Toilette benutzen – wie selbstständig gelingt das?'
+    ]},
+    { name: 'Krankheit & Therapie', weight: 20, scale: SCALE_HELP, questions: [
+      'Medikamente richtig und pünktlich einnehmen',
+      'Arzt- und Therapietermine wahrnehmen',
+      'Versorgung von Wunden, Injektionen oder Verbandwechsel'
+    ]},
+    { name: 'Alltag & Kontakte', weight: 15, scale: SCALE_SELF, questions: [
+      'Den Tagesablauf selbst einteilen und gestalten',
+      'Kontakt zu Menschen im direkten Umfeld halten',
+      'Sich selbst beschäftigen und Aktivitäten planen'
+    ]}
+  ];
+
+  // Alle Fragen zu einer flachen Liste – ein Schritt pro Frage.
+  var STEPS = [];
+  MODULES.forEach(function (mod, mi) {
+    mod.questions.forEach(function (q, qi) {
+      STEPS.push({ moduleIndex: mi, moduleName: mod.name, moduleNum: mi + 1, scale: mod.scale, text: q, qi: qi });
+    });
+  });
+
+  var GRADES = [
+    { min: 90,   grade: 5 },
+    { min: 70,   grade: 4 },
+    { min: 47.5, grade: 3 },
+    { min: 27,   grade: 2 },
+    { min: 12.5, grade: 1 },
+    { min: 0,    grade: 0 }
+  ];
+
+  var PFLEGEGELD = { 2: '347 €', 3: '599 €', 4: '800 €', 5: '990 €' };
+
+  var GRADE_TEXT = {
+    0: 'Nach diesen Angaben wird die Schwelle für einen Pflegegrad rechnerisch noch nicht erreicht. Das kann sich ändern, sobald der Hilfebedarf zunimmt – und eine Begutachtung bewertet deutlich mehr Details als dieser kurze Check.',
+    1: 'Pflegegrad 1 bedeutet eine geringe Beeinträchtigung der Selbstständigkeit. Auch damit steht Ihnen bereits der Entlastungsbetrag zu – genau die Leistung, über die wir unsere Haushaltshilfe abrechnen.',
+    2: 'Pflegegrad 2 bedeutet eine erhebliche Beeinträchtigung der Selbstständigkeit. Ab hier kommen Pflegegeld sowie Verhinderungs- und Kurzzeitpflege zum Entlastungsbetrag hinzu.',
+    3: 'Pflegegrad 3 bedeutet eine schwere Beeinträchtigung der Selbstständigkeit. Die Pflegekasse beteiligt sich deutlich stärker an der Versorgung zu Hause.',
+    4: 'Pflegegrad 4 bedeutet eine schwerste Beeinträchtigung der Selbstständigkeit. Der Unterstützungsbedarf ist hoch – entsprechend umfangreich fallen die Leistungen aus.',
+    5: 'Pflegegrad 5 bedeutet schwerste Beeinträchtigung mit besonderen Anforderungen an die pflegerische Versorgung. Es ist die höchste Stufe mit den umfangreichsten Leistungen.'
+  };
+
+  var el = {
+    intro:    document.getElementById('pgc-intro'),
+    quiz:     document.getElementById('pgc-quiz'),
+    result:   document.getElementById('pgc-result'),
+    start:    document.getElementById('pgc-start'),
+    restart:  document.getElementById('pgc-restart'),
+    back:     document.getElementById('pgc-back'),
+    progress: document.getElementById('pgc-progress'),
+    modLabel: document.getElementById('pgc-module-label'),
+    question: document.getElementById('pgc-question'),
+    options:  document.getElementById('pgc-options'),
+    count:    document.getElementById('pgc-count'),
+    gradeBadge: document.getElementById('pgc-grade-badge'),
+    gradeNum:   document.getElementById('pgc-grade-num'),
+    gradeLbl:   document.getElementById('pgc-grade-lbl'),
+    gradeTitle: document.getElementById('pgc-grade-title'),
+    gradeText:  document.getElementById('pgc-grade-text'),
+    score:      document.getElementById('pgc-score'),
+    scoreBar:   document.getElementById('pgc-score-bar'),
+    benefits:   document.getElementById('pgc-benefits')
+  };
+  if (!el.intro || !el.quiz || !el.result) return;
+
+  var answers = [];
+  var current = 0;
+
+  function render() {
+    var step = STEPS[current];
+    el.progress.style.width = (current / STEPS.length * 100) + '%';
+    el.modLabel.textContent = 'Modul ' + step.moduleNum + ' von 6 · ' + step.moduleName;
+    el.question.textContent = step.text;
+    el.count.textContent = 'Frage ' + (current + 1) + ' von ' + STEPS.length;
+    el.back.disabled = current === 0;
+
+    el.options.innerHTML = '';
+    step.scale.forEach(function (label, value) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'pgc-option';
+      btn.setAttribute('role', 'radio');
+      btn.setAttribute('aria-checked', answers[current] === value ? 'true' : 'false');
+      btn.innerHTML = '<span class="pgc-radio" aria-hidden="true"></span><span>' + label + '</span>';
+      btn.addEventListener('click', function () {
+        answers[current] = value;
+        if (current < STEPS.length - 1) {
+          current++;
+          render();
+        } else {
+          showResult();
+        }
+      });
+      el.options.appendChild(btn);
+    });
+  }
+
+  function computeScore() {
+    var byModule = MODULES.map(function (mod, mi) {
+      var vals = STEPS
+        .map(function (s, i) { return s.moduleIndex === mi ? (answers[i] || 0) : null; })
+        .filter(function (v) { return v !== null; });
+      var sum = vals.reduce(function (a, b) { return a + b; }, 0);
+      return sum / (3 * vals.length); // 0..1
+    });
+
+    var total = 0;
+    // Module 1, 4, 5, 6 zählen einzeln.
+    [0, 3, 4, 5].forEach(function (mi) { total += byModule[mi] * MODULES[mi].weight; });
+    // Module 2 und 3 teilen sich 15 % – der höhere Wert zählt.
+    total += Math.max(byModule[1], byModule[2]) * 15;
+    return total;
+  }
+
+  function gradeFor(score) {
+    for (var i = 0; i < GRADES.length; i++) {
+      if (score >= GRADES[i].min) return GRADES[i].grade;
+    }
+    return 0;
+  }
+
+  function benefit(amount, name, sub) {
+    var row = document.createElement('div');
+    row.className = 'pgc-benefit';
+    row.innerHTML =
+      '<span class="pgc-benefit-amt">' + amount + '</span>' +
+      '<span><span class="pgc-benefit-name">' + name + '</span>' +
+      (sub ? '<span class="pgc-benefit-sub" style="display:block;">' + sub + '</span>' : '') +
+      '</span>';
+    return row;
+  }
+
+  function showResult() {
+    var score = computeScore();
+    var grade = gradeFor(score);
+
+    el.quiz.hidden = true;
+    el.result.hidden = false;
+
+    el.gradeBadge.classList.toggle('pgc-none', grade === 0);
+    if (grade === 0) {
+      el.gradeNum.textContent = 'kein';
+      el.gradeLbl.textContent = 'Pflegegrad';
+      el.gradeTitle.textContent = 'Rechnerisch noch kein Pflegegrad';
+    } else {
+      el.gradeNum.textContent = grade;
+      el.gradeLbl.textContent = 'Pflegegrad';
+      el.gradeTitle.textContent = 'Voraussichtlich Pflegegrad ' + grade;
+    }
+    el.gradeText.textContent = GRADE_TEXT[grade];
+
+    el.score.textContent = score.toFixed(1).replace('.', ',');
+    setTimeout(function () { el.scoreBar.style.width = Math.min(score, 100) + '%'; }, 60);
+
+    el.benefits.innerHTML = '';
+    if (grade === 0) {
+      el.benefits.appendChild(benefit('–', 'Noch kein Anspruch auf Leistungen der Pflegekasse',
+        'Lassen Sie sich trotzdem beraten – oft lohnt sich ein Antrag.'));
+    } else {
+      el.benefits.appendChild(benefit('131 €', 'Entlastungsbetrag pro Monat',
+        '§ 45b SGB XI · dafür setzen wir unsere Haushaltshilfe ein'));
+      el.benefits.appendChild(benefit('42 €', 'Pflegehilfsmittel pro Monat',
+        '§ 40 Abs. 2 SGB XI · Handschuhe, Desinfektion, Bettschutz'));
+      if (grade >= 2) {
+        el.benefits.appendChild(benefit(PFLEGEGELD[grade], 'Pflegegeld pro Monat',
+          '§ 37 SGB XI · bei Pflege durch Angehörige, frei verwendbar'));
+        el.benefits.appendChild(benefit('3.539 €', 'Verhinderungs- & Kurzzeitpflege pro Jahr',
+          '§§ 39, 42 SGB XI · gemeinsamer Jahresbetrag'));
+      }
+    }
+
+    el.result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  el.start.addEventListener('click', function () {
+    answers = [];
+    current = 0;
+    el.intro.hidden = true;
+    el.result.hidden = true;
+    el.quiz.hidden = false;
+    render();
+    el.quiz.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  el.back.addEventListener('click', function () {
+    if (current > 0) { current--; render(); }
+  });
+
+  el.restart.addEventListener('click', function () {
+    answers = [];
+    current = 0;
+    el.result.hidden = true;
+    el.quiz.hidden = false;
+    el.scoreBar.style.width = '0';
+    render();
+    el.quiz.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>
+
+<!-- FOOTER -->
+<footer class="bg-[#0d2318] text-[#74c69d] pt-12 pb-28 lg:pb-12">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+      <div>
+        <img src="Brand_Assets/haushaltspartner-logo.webp" alt="Haushaltspartner Logo" class="w-auto mb-4" style="height:60px;" loading="lazy">
+        <p class="text-[14px] leading-relaxed text-[#52b788]">Professionelle Haushaltshilfe &amp; Alltagshilfe<br>in Hannover &amp; Region Hannover.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-700 text-[13px] uppercase tracking-widest mb-4">Menü</h4>
+        <ul class="space-y-2.5 text-[14px]">
+          <li><a href="leistungen" class="hover:text-white transition-colors">Leistungen</a></li>
+          <li><a href="ueber-uns" class="hover:text-white transition-colors">Über uns</a></li>
+          <li><a href="karriere" class="hover:text-white transition-colors">Karriere</a></li>
+          <li><a href="blog" class="hover:text-white transition-colors">Blog</a></li>
+          <li><a href="faq" class="hover:text-white transition-colors">FAQ</a></li>
+          <li><a href="/#kontakt" class="hover:text-white transition-colors">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-700 text-[13px] uppercase tracking-widest mb-4">Kontakt</h4>
+        <ul class="space-y-2.5 text-[14px]">
+          <li><a href="tel:+4951092638603" class="hover:text-white transition-colors flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>05109 2638603</a></li>
+          <li><a href="mailto:info@haushaltspartner.de" class="hover:text-white transition-colors flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@haushaltspartner.de</a></li>
+          <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Wilhelm-Busch-Straße 6, 30167 Hannover</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[13px]">
+      <p class="text-[#40916c]">&copy; 2026 Haushaltspartner. Alle Rechte vorbehalten.</p>
+      <div class="flex gap-6">
+        <a href="impressum" class="hover:text-white transition-colors">Impressum</a>
+        <a href="datenschutz" class="hover:text-white transition-colors">Datenschutz</a>
+        <a href="agb" class="hover:text-white transition-colors">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    iconOpen.classList.toggle('hidden', isOpen);
+    iconClose.classList.toggle('hidden', !isOpen);
+  });
+  // ── Nav Dropdowns ──
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const menu = this.nextElementSibling;
+      const isOpen = menu.classList.contains('open');
+      document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.remove('open'));
+      if (!isOpen) menu.classList.add('open');
+      this.setAttribute('aria-expanded', !isOpen);
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.remove('open'));
+  });
+
+  // ── Mobile Akkordeon ──
+  document.querySelectorAll('.mobile-acc-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      const content = this.nextElementSibling;
+      const chevron = this.querySelector('.mobile-acc-chevron');
+      const isOpen = content.style.display === 'block';
+      // Schließe alle anderen
+      document.querySelectorAll('.mobile-acc-content').forEach(c => c.style.display = 'none');
+      document.querySelectorAll('.mobile-acc-chevron').forEach(c => c.style.transform = '');
+      // Toggle dieses
+      if (!isOpen) {
+        content.style.display = 'block';
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+  // Sub-links schließen das Menü
+  document.querySelectorAll('.mobile-sub-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    });
+  });
+</script>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/4915569451192" target="_blank" rel="noopener noreferrer"
+   aria-label="Kontakt via WhatsApp"
+   id="wa-float"
+   style="position:fixed;bottom:24px;right:24px;z-index:9999;align-items:center;justify-content:center;background:#25D366;box-shadow:0 4px 16px rgba(0,0,0,0.25);transition:transform 0.2s,box-shadow 0.2s;"
+   class="hidden lg:flex wa-float"
+   onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 20px rgba(0,0,0,0.35)';"
+   onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.25)';">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white" style="flex-shrink:0;">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  <span class="wa-float-text">WhatsApp</span>
+</a>
+<script>
+  setTimeout(function() {
+    var el  = document.getElementById("wa-float");
+    var txt = el ? el.querySelector(".wa-float-text") : null;
+    if (!el || !txt) return;
+    el.style.width = "56px";
+    el.style.borderRadius = "50%";
+    el.style.transition = "width 0.35s ease, border-radius 0.35s ease";
+    el.style.animation = "wa-wiggle 5s ease-in-out infinite";
+    txt.style.opacity = "0";
+    txt.style.maxWidth = "0";
+    txt.style.marginLeft = "0";
+    txt.style.animation = "none";
+    txt.style.transition = "opacity 0.25s ease, max-width 0.35s ease, margin-left 0.35s ease";
+    el.addEventListener("mouseenter", function() {
+      el.style.width = "155px";
+      el.style.borderRadius = "28px";
+      el.style.animationPlayState = "paused";
+      txt.style.opacity = "1";
+      txt.style.maxWidth = "90px";
+      txt.style.marginLeft = "6px";
+    });
+    el.addEventListener("mouseleave", function() {
+      el.style.width = "56px";
+      el.style.borderRadius = "50%";
+      el.style.animationPlayState = "running";
+      txt.style.opacity = "0";
+      txt.style.maxWidth = "0";
+      txt.style.marginLeft = "0";
+    });
+  }, 2600);
+</script>
+
+</body>
+</html>

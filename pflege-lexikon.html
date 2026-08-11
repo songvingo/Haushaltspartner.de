@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Über uns – Alltagshilfe & Haushaltshilfe Hannover | Haushaltspartner</title>
-  <meta name="description" content="Das Team hinter Haushaltspartner – Ihr persönlicher Anbieter für Haushaltshilfe & Alltagshilfe in Hannover. Menschlich, verlässlich, vor Ort.">
-  <link rel="canonical" href="https://haushaltspartner.de/ueber-uns">
+  <title>Pflege-Lexikon – Fachbegriffe einfach erklärt | Haushaltspartner</title>
+  <meta name="description" content="Pflegegrad, Entlastungsbetrag, Verhinderungspflege: Die wichtigsten Begriffe rund um die Pflege – verständlich erklärt, mit Verweis auf den jeweiligen Paragrafen.">
+  <link rel="canonical" href="https://haushaltspartner.de/pflege-lexikon">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pflege-Lexikon – Fachbegriffe einfach erklärt | Haushaltspartner">
+  <meta property="og:description" content="Pflegegrad, Entlastungsbetrag, Verhinderungspflege: Die wichtigsten Begriffe rund um die Pflege – verständlich erklärt, mit Verweis auf den jeweiligen Paragrafen.">
+  <meta property="og:url" content="https://haushaltspartner.de/pflege-lexikon">
   <link rel="icon" type="image/png" href="Brand_Assets/Haushaltspartner%20Logo%20gr%C3%BCn.png">
-  <!-- Tailwind CSS (compiled) -->
   <link rel="stylesheet" href="tailwind.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; }
@@ -17,10 +20,10 @@
     #navbar.scrolled { background: #1b4332 !important; box-shadow: 0 2px 24px rgba(0,0,0,0.25); }
     .btn-gold { display:inline-flex;align-items:center;gap:8px;background:#e8a320;color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;transition:background 0.2s ease,transform 0.15s ease;letter-spacing:-0.01em; }
     .btn-gold:hover { background:#f0b429;transform:translateY(-1px); }
+    .btn-outline-green { display:inline-flex;align-items:center;gap:8px;background:transparent;color:#1b4332;font-weight:700;padding:13px 28px;border-radius:6px;border:2px solid #2d6a4f;text-decoration:none;transition:background 0.2s,transform 0.15s;letter-spacing:-0.01em; }
+    .btn-outline-green:hover { background:#f0faf2;transform:translateY(-1px); }
     .section-label { display:inline-block;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#40916c;margin-bottom:12px; }
     .section-headline { font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:#1b4332; }
-    .benefit-card { display:flex;gap:20px;align-items:flex-start; }
-    .icon-circle { flex-shrink:0;width:52px;height:52px;border-radius:12px;background:#f0faf2;display:flex;align-items:center;justify-content:center; }
     footer { font-weight: 500; }
     footer a { transition: color 0.2s; }
     footer a:hover { color: #95d5b2; }
@@ -29,6 +32,33 @@
     ::-webkit-scrollbar-thumb { background: #40916c; border-radius: 3px; }
     #mobile-menu { display: none; }
     #mobile-menu.open { display: block; }
+    @keyframes wa-wiggle {
+      0%       { transform: rotate(0deg); }
+      2%       { transform: rotate(-15deg); }
+      4%       { transform: rotate(15deg); }
+      6%       { transform: rotate(-10deg); }
+      8%       { transform: rotate(10deg); }
+      10%      { transform: rotate(-5deg); }
+      12%      { transform: rotate(5deg); }
+      14%,100% { transform: rotate(0deg); }
+    }
+    @keyframes wa-intro {
+      0%, 55% { width: 155px; border-radius: 28px; }
+      100%    { width: 56px;  border-radius: 50%; }
+    }
+    @keyframes wa-text-out {
+      0%, 40%   { opacity: 1; max-width: 90px; margin-left: 6px; }
+      90%, 100% { opacity: 0; max-width: 0;    margin-left: 0; }
+    }
+    .wa-float {
+      width: 56px; height: 56px; border-radius: 50%; overflow: hidden;
+      animation: wa-intro 2.5s ease-in-out both, wa-wiggle 5s ease-in-out 6s infinite;
+    }
+    .wa-float:hover { animation-play-state: paused; }
+    .wa-float-text {
+      color: white; font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden;
+      animation: wa-text-out 2.5s ease-in-out forwards;
+    }
       /* ── Nav Dropdown ── */
     .nav-dropdown { position: relative; }
     .nav-dropdown-menu {
@@ -58,6 +88,79 @@
       white-space: nowrap;
     }
     .nav-dropdown-item:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+    /* ── Seitenspezifisch ── */
+    .lex-search-wrap { position: relative; max-width: 520px; margin: 0 auto; }
+    .lex-search {
+      width: 100%;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 500;
+      color: #1b4332;
+      background: #fff;
+      border: 2px solid #d8f3dc;
+      border-radius: 12px;
+      padding: 15px 18px 15px 48px;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+    .lex-search::placeholder { color: #8fb8a2; font-weight: 500; }
+    .lex-search:focus {
+      outline: none;
+      border-color: #40916c;
+      box-shadow: 0 0 0 4px rgba(64,145,108,0.12);
+    }
+    .lex-search-icon {
+      position: absolute;
+      left: 17px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+    .lex-entry {
+      background: #fff;
+      border: 1px solid #e8f5ec;
+      border-radius: 14px;
+      padding: 26px 28px;
+      box-shadow: 0 2px 4px rgba(27,67,50,0.04), 0 8px 24px rgba(27,67,50,0.05);
+      transition: border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+    .lex-entry:hover { border-color: #b7e4c7; box-shadow: 0 4px 8px rgba(27,67,50,0.06), 0 14px 34px rgba(27,67,50,0.10); }
+    .lex-entry h3 {
+      font-size: 19px;
+      font-weight: 800;
+      color: #1b4332;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .lex-para {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: #40916c;
+      background: #f0faf2;
+      border-radius: 999px;
+      padding: 3px 10px;
+      margin-bottom: 12px;
+    }
+    .lex-entry p { font-size: 15px; line-height: 1.7; color: #4a7c63; }
+    .lex-entry .lex-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #2d6a4f;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .lex-entry .lex-more:hover { color: #1b4332; border-color: #95d5b2; }
+    .lex-entry .lex-more:focus-visible { outline: 2px solid #40916c; outline-offset: 3px; border-radius: 2px; }
+    .lex-entry[hidden] { display: none; }
+    #lex-empty { display: none; }
+    #lex-empty.show { display: block; }
   </style>
 
   <script type="application/ld+json">
@@ -66,7 +169,7 @@
     "@type":"BreadcrumbList",
     "itemListElement":[
     {"@type":"ListItem","position":1,"name":"Startseite","item":"https://haushaltspartner.de/"},
-    {"@type":"ListItem","position":2,"name":"Über uns"}
+    {"@type":"ListItem","position":2,"name":"Pflege-Lexikon"}
     ]
   }
   </script>
@@ -140,224 +243,213 @@
   </div>
 </nav>
 
-
 <!-- PAGE HERO -->
-<section class="bg-[#1b4332] pt-[70px] overflow-hidden" style="position:relative;">
+<section class="bg-[#1b4332] pt-[70px] pb-16 lg:pb-20 overflow-hidden" style="position:relative;">
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
     <div style="position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(ellipse at 80% 50%,rgba(64,145,108,0.15) 0%,transparent 70%);"></div>
   </div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-20">
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-10">
     <a href="/" class="inline-flex items-center gap-2 text-[#95d5b2] hover:text-white text-sm font-600 transition-colors mb-8">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
       Zurück zur Startseite
     </a>
-    <span class="section-label" style="color:#95d5b2;display:block;">Über Haushaltspartner</span>
-    <h1 style="font-size:clamp(30px,5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-0.04em;color:#fff;" class="mt-2 mb-5 max-w-2xl">
-      Haushaltshilfe &amp; Alltagshilfe<br>in Hannover –<br><span style="color:#74c69d;">mit Herz dabei</span>
-    </h1>
-    <p class="text-[#b7e4c7] text-lg leading-relaxed max-w-xl">
-      Wir sind Haushaltspartner – ein lokales Unternehmen aus Ronnenberg für Hannover und die Region. Unser Antrieb ist die echte Unterstützung von Menschen, die Haushaltshilfe oder Alltagshilfe benötigen.
-    </p>
-  </div>
-</section>
-
-
-<!-- UNSERE GESCHICHTE -->
-<section class="bg-white py-20 lg:py-28">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-      <div>
-        <span class="section-label">Unsere Geschichte</span>
-        <h2 class="section-headline mt-1 mb-6">Warum wir Haushaltspartner gegründet haben</h2>
-        <p class="text-[#4a7c63] text-[16px] leading-relaxed mb-4">
-          Haushaltspartner entstand aus einem einfachen Gedanken: In Hannover und der Region fehlte ein verlässlicher, menschlicher Anbieter für <strong class="text-[#1b4332]">Haushaltshilfe und Alltagshilfe</strong>, der nicht nur Aufgaben erledigt, sondern wirklich für Menschen da ist.
-        </p>
-        <p class="text-[#4a7c63] text-[16px] leading-relaxed mb-4">
-          Als junges Unternehmen aus Ronnenberg bei Hannover haben wir uns auf Seniorenhilfe und die Unterstützung von Menschen mit Pflegegrad 1–5 spezialisiert. Wir glauben daran, dass <strong class="text-[#1b4332]">würdevolle Unterstützung im eigenen Zuhause</strong> keine Frage des Alters ist – sondern ein Grundrecht.
-        </p>
-        <p class="text-[#4a7c63] text-[16px] leading-relaxed mb-8">
-          Heute helfen wir über 300 Kunden in Hannover und der Region – mit Haushaltshilfe, Alltagshilfe und echter menschlicher Begleitung.
-        </p>
-        <div class="flex flex-wrap gap-6">
-          <div>
-            <p style="font-size:36px;font-weight:900;color:#1b4332;letter-spacing:-0.04em;line-height:1;">300<span style="color:#40916c;">+</span></p>
-            <p class="text-[#4a7c63] text-sm font-600 uppercase tracking-widest mt-1">Zufriedene Kunden</p>
-          </div>
-          <div>
-            <p style="font-size:36px;font-weight:900;color:#1b4332;letter-spacing:-0.04em;line-height:1;">3<span style="color:#40916c;">+</span></p>
-            <p class="text-[#4a7c63] text-sm font-600 uppercase tracking-widest mt-1">Jahre in Hannover</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(27,67,50,0.12);aspect-ratio:4/3;">
-          <img src="Fotos/Haushaltshilfe%20Haushaltspartner%20H%C3%A4nde.webp" alt="Haushaltspartner – Haushaltshilfe und Alltagshilfe in Hannover mit Herz" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- CEO QUOTE -->
-<section class="bg-[#1b4332] py-20 lg:py-24 overflow-hidden" style="border-top:1px solid rgba(255,255,255,0.08);">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-
-      <!-- Photo -->
-      <div class="flex justify-center lg:justify-end">
-        <div style="position:relative;max-width:300px;width:100%;">
-          <div style="width:100%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.4);border:4px solid rgba(255,255,255,0.15);">
-            <img src="Fotos/Haushaltshilfe-Alltagshilfe-Hannover-Haushaltspartner-Gesch%C3%A4ftsf%C3%BChrer-Songvi-Ngo%20(1).webp" alt="Songvi Ngo – Kundenberater bei Haushaltspartner" style="width:100%;height:100%;object-fit:cover;object-position:50% 15%;display:block;" loading="lazy">
-          </div>
-          <div style="position:absolute;bottom:-10px;right:10px;background:#e8a320;color:#fff;padding:8px 14px;border-radius:10px;box-shadow:0 8px 24px rgba(232,163,32,0.4);">
-            <p style="font-size:14px;font-weight:800;margin:0;">Kundenberater</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quote -->
-      <div>
-        <span class="section-label" style="color:#95d5b2;">Unser Antrieb</span>
-        <div style="position:relative;margin-top:12px;margin-bottom:28px;">
-          <svg width="48" height="36" viewBox="0 0 48 36" fill="none" aria-hidden="true" style="position:absolute;top:-8px;left:-4px;opacity:0.2;">
-            <path d="M0 36V22.5C0 10.5 7.5 3 22.5 0L24 3.75C16.5 5.25 12.75 9.75 12 16.5H22.5V36H0ZM25.5 36V22.5C25.5 10.5 33 3 48 0L49.5 3.75C42 5.25 38.25 9.75 37.5 16.5H48V36H25.5Z" fill="#fff"/>
-          </svg>
-          <blockquote class="text-[#d8f3dc] text-[15px] lg:text-[18px] leading-relaxed" style="letter-spacing:-0.01em;padding-left:8px;">
-            „Jeder Mensch verdient würdevolle Unterstützung in den eigenen vier Wänden – unabhängig von Alter oder Pflegegrad. Mit Haushaltspartner möchte ich Familien und pflegenden Angehörigen in Hannover echte Entlastung bieten. Als junger Mensch sehe ich es als meine Aufgabe, mit gutem Beispiel voranzugehen: für eine Haushaltshilfe und Alltagshilfe, die wirklich von Herz kommt."
-          </blockquote>
-        </div>
-        <div class="flex items-center gap-4">
-          <div style="width:48px;height:2px;background:#e8a320;border-radius:2px;"></div>
-          <div>
-            <p class="text-white font-800 text-[16px]" style="letter-spacing:-0.02em;">Songvi Ngo</p>
-            <p class="text-[#74c69d] text-[13px]">Kundenberater · Haushaltspartner</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- UNSERE WERTE -->
-<section class="bg-[#f7fdf9] py-20 lg:py-28">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="text-center mb-14">
-      <span class="section-label">Was uns ausmacht</span>
-      <h2 class="section-headline mt-1">Unsere Werte für Haushaltshilfe &amp; Alltagshilfe in Hannover</h2>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <div class="benefit-card">
-        <div class="icon-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
-        <div>
-          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Verlässlichkeit</h3>
-          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Pünktlichkeit und Zuverlässigkeit sind keine Extras – sie sind der Standard bei Haushaltspartner in Hannover.</p>
-        </div>
-      </div>
-
-      <div class="benefit-card">
-        <div class="icon-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </div>
-        <div>
-          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Mit Herz dabei</h3>
-          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Haushaltshilfe ist für uns Berufung, nicht nur Job. Wir behandeln jeden Kunden mit Würde, Respekt und echtem Mitgefühl.</p>
-        </div>
-      </div>
-
-      <div class="benefit-card">
-        <div class="icon-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </div>
-        <div>
-          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Lokal verwurzelt</h3>
-          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Wir sind aus Ronnenberg – für Hannover und die Region. Kurze Wege bedeuten schnelle Hilfe wenn sie gebraucht wird.</p>
-        </div>
-      </div>
-
-      <div class="benefit-card">
-        <div class="icon-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <div>
-          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Transparenz</h3>
-          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Klare Preise, ehrliche Kommunikation, keine versteckten Kosten. Wir erklären alles verständlich – auch die Abrechnung mit der Pflegekasse.</p>
-        </div>
-      </div>
-
-      <div class="benefit-card">
-        <div class="icon-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-        </div>
-        <div>
-          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Feste Bezugsperson</h3>
-          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Kein ständiger Personalwechsel. Ihre persönliche Haushaltshilfe in Hannover kennt Ihre Gewohnheiten und Bedürfnisse.</p>
-        </div>
-      </div>
-
-      <div class="benefit-card">
-        <div class="icon-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div>
-          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Qualifiziert &amp; erfahren</h3>
-          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Unser Team ist im Umgang mit pflegebedürftigen Menschen ausgebildet. Qualität und Sorgfalt haben bei Haushaltspartner höchste Priorität.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- PARTNER -->
-<section class="bg-white py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="text-center mb-14">
-      <span class="section-label">Netzwerk</span>
-      <h2 class="section-headline mt-1">Unsere Partner für Haushaltshilfe in Hannover</h2>
-      <p class="text-[#4a7c63] text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
-        Gemeinsam sind wir stärker. Durch unser lokales Netzwerk in Hannover können wir noch umfassender helfen.
+    <div class="max-w-3xl">
+      <span class="section-label" style="color:#95d5b2;">Pflege-Lexikon</span>
+      <h1 style="font-size:clamp(30px,5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-0.04em;color:#fff;" class="mt-2 mb-5">
+        Fachbegriffe –<br><span style="color:#74c69d;">einfach erklärt</span>
+      </h1>
+      <p class="text-[#b7e4c7] text-lg leading-relaxed max-w-2xl">
+        Pflegegrad, Entlastungsbetrag, Verhinderungspflege: Rund um die Pflege gibt es viele Begriffe, die niemand von sich aus kennt. Hier erklären wir die wichtigsten in verständlicher Sprache – <strong class="text-white">ohne Paragrafendeutsch</strong>.
       </p>
     </div>
+  </div>
+</section>
 
-    <div class="flex flex-wrap justify-center gap-6">
-      <a href="https://www.hannoverhilfe.de/" target="_blank" rel="noopener noreferrer" style="display:flex;flex-direction:column;align-items:center;gap:16px;background:#f7fdf9;border:1px solid #e8f5ec;border-radius:16px;padding:36px 48px;text-decoration:none;transition:box-shadow 0.2s,transform 0.15s;box-shadow:0 2px 12px rgba(27,67,50,0.06);" class="hover:shadow-lg hover:-translate-y-1 max-w-sm w-full">
-        <img src="Brand_Assets/Logo-hannoverhilfe.webp" alt="Hannover Hilfe – Partner für Haushaltshilfe und Alltagshilfe Hannover" style="height:64px;width:auto;object-fit:contain;" loading="lazy">
-        <div class="text-center">
-          <p class="text-[#1b4332] font-700 text-[16px]" style="letter-spacing:-0.01em;">Hannover Hilfe</p>
-          <p class="text-[#4a7c63] text-[14px] mt-1">Lokaler Partner für Alltagsbegleitung &amp; Haushaltshilfe in Hannover</p>
-        </div>
+
+<!-- LEXIKON -->
+<section class="bg-white py-16 lg:py-24">
+  <div class="max-w-5xl mx-auto px-5 lg:px-8">
+
+    <div class="text-center mb-10">
+      <span class="section-label">Von A bis Z</span>
+      <h2 class="section-headline mt-1">Die wichtigsten Pflegebegriffe erklärt</h2>
+    </div>
+
+    <div class="lex-search-wrap mb-12">
+      <label for="lex-search" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;">Begriff suchen</label>
+      <svg class="lex-search-icon" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="lex-search" class="lex-search" placeholder="Begriff suchen – z. B. Pflegegeld" autocomplete="off">
+    </div>
+
+    <div id="lex-list" class="grid md:grid-cols-2 gap-5">
+
+      <article class="lex-entry">
+        <h3>Alltagsbegleitung</h3>
+        <p>Unterstützung im täglichen Leben: gemeinsame Spaziergänge, Begleitung zu Arztterminen, Hilfe bei Besorgungen und einfach Zeit für ein Gespräch. Gehört zu den Leistungen, die über den Entlastungsbetrag abgerechnet werden können.</p>
+        <a href="leistungen" class="lex-more">Unsere Leistungen<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Angebot zur Unterstützung im Alltag</h3>
+        <span class="lex-para">§ 45a SGB XI</span>
+        <p>Ein behördlich anerkannter Dienst – wie Haushaltspartner. Nur bei solchen Anbietern können Sie den Entlastungsbetrag einsetzen und direkt mit der Pflegekasse abrechnen lassen. Die Anerkennung erteilt das jeweilige Bundesland.</p>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Begutachtung</h3>
+        <p>Der Hausbesuch, bei dem der Pflegegrad ermittelt wird. Eine Gutachterin oder ein Gutachter schaut sich an, wie selbstständig Sie sechs Lebensbereiche bewältigen, und vergibt dafür Punkte. Aus der Gesamtpunktzahl ergibt sich der Pflegegrad.</p>
+        <a href="pflegegrad-check" class="lex-more">Pflegegrad-Check<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Betreuungsverfügung</h3>
+        <p>Eine schriftliche Festlegung, wen das Betreuungsgericht als rechtliche Betreuung bestellen soll, falls das einmal nötig wird – und wen ausdrücklich nicht. Anders als bei der Vorsorgevollmacht entscheidet am Ende trotzdem das Gericht.</p>
+        <a href="formulare" class="lex-more">Zu den Formularen<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Entlastungsbetrag</h3>
+        <span class="lex-para">§ 45b SGB XI</span>
+        <p>Ein fester Betrag von 131 € im Monat für alle mit Pflegegrad 1 bis 5, die zu Hause leben. Er ist zweckgebunden für anerkannte Entlastungsleistungen wie Haushaltshilfe und Alltagsbegleitung. Nicht genutzte Beträge verfallen nicht sofort – sie lassen sich noch bis zum 30. Juni des Folgejahres einsetzen.</p>
+        <a href="entlastungsbetrag" class="lex-more">Mehr zum Entlastungsbetrag<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Gemeinsamer Jahresbetrag</h3>
+        <span class="lex-para">§§ 39, 42 SGB XI</span>
+        <p>Seit Juli 2025 sind Verhinderungspflege und Kurzzeitpflege zu einem gemeinsamen Topf zusammengefasst: 3.539 € im Jahr ab Pflegegrad 2. Sie entscheiden selbst, wie Sie den Betrag auf beide Leistungen verteilen.</p>
+        <a href="verhinderungspflege" class="lex-more">Mehr dazu<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Haushaltshilfe</h3>
+        <p>Hilfe bei der Hausarbeit: Reinigung, Wäsche, Einkäufe, Kochen und Ordnung halten. Bei einem anerkannten Anbieter lässt sich die Haushaltshilfe über den Entlastungsbetrag finanzieren – Sie müssen dafür nichts vorstrecken.</p>
+        <a href="leistungen" class="lex-more">Unsere Leistungen<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Kurzzeitpflege</h3>
+        <span class="lex-para">§ 42 SGB XI</span>
+        <p>Vorübergehende Pflege in einer stationären Einrichtung – zum Beispiel nach einem Krankenhausaufenthalt oder wenn die häusliche Versorgung kurzfristig nicht möglich ist. Anspruch besteht ab Pflegegrad 2.</p>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Medizinischer Dienst (MD)</h3>
+        <p>Die unabhängige Stelle, die für gesetzlich Versicherte die Begutachtung zum Pflegegrad durchführt. Bei privat Versicherten übernimmt das Unternehmen Medicproof diese Aufgabe.</p>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Patientenverfügung</h3>
+        <p>Darin halten Sie im Voraus fest, welche medizinischen Behandlungen Sie wünschen und welche Sie ablehnen – für den Fall, dass Sie sich später nicht mehr äußern können. Sie gilt unmittelbar, ohne dass ein Gericht beteiligt wird.</p>
+        <a href="formulare" class="lex-more">Zu den Formularen<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Pflegegeld</h3>
+        <span class="lex-para">§ 37 SGB XI</span>
+        <p>Geld, das die Pflegekasse direkt an die pflegebedürftige Person auszahlt, wenn die Pflege von Angehörigen oder anderen Privatpersonen übernommen wird. Die Höhe hängt vom Pflegegrad ab und beginnt bei Pflegegrad 2. Das Pflegegeld ist frei verwendbar.</p>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Pflegegrad</h3>
+        <p>Der Pflegegrad drückt aus, wie viel Unterstützung ein Mensch im Alltag braucht. Es gibt fünf Stufen – von Pflegegrad 1 bei geringem Bedarf bis Pflegegrad 5 bei sehr hohem Bedarf. Je höher der Grad, desto mehr Leistungen zahlt die Pflegekasse.</p>
+        <a href="pflegegrad-check" class="lex-more">Pflegegrad einschätzen<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Pflegehilfsmittel zum Verbrauch</h3>
+        <span class="lex-para">§ 40 Abs. 2 SGB XI</span>
+        <p>Bis zu 42 € im Monat für Verbrauchsmaterial wie Einmalhandschuhe, Desinfektionsmittel oder Bettschutzeinlagen. Der Anspruch gilt für alle mit Pflegegrad 1 bis 5, die zu Hause versorgt werden.</p>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Pflegekasse</h3>
+        <p>Die Stelle, die die Leistungen der Pflegeversicherung bezahlt. Sie ist bei Ihrer Krankenkasse angesiedelt – wer bei der AOK versichert ist, hat also auch die Pflegekasse der AOK. Dort stellen Sie den Antrag auf einen Pflegegrad.</p>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Pflegesachleistung</h3>
+        <span class="lex-para">§ 36 SGB XI</span>
+        <p>Leistungen eines ambulanten Pflegedienstes, die direkt mit der Pflegekasse abgerechnet werden – etwa Körperpflege oder Hilfe beim Anziehen. Sie können statt des Pflegegeldes oder anteilig zusammen mit ihm genutzt werden.</p>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Pflegetagebuch</h3>
+        <p>Eine einfache Dokumentation darüber, wobei im Alltag tatsächlich Hilfe nötig war – geführt über ein bis zwei Wochen. Es ist die beste Vorbereitung auf den Begutachtungstermin und die stärkste Grundlage für einen späteren Widerspruch.</p>
+        <a href="formulare" class="lex-more">Wir helfen dabei<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Verhinderungspflege</h3>
+        <span class="lex-para">§ 39 SGB XI</span>
+        <p>Springt ein, wenn die private Pflegeperson vorübergehend ausfällt – wegen Urlaub, Krankheit oder einfach zur Erholung. Die Pflegekasse bezahlt dann eine Ersatzbetreuung. Möglich ab Pflegegrad 2.</p>
+        <a href="verhinderungspflege" class="lex-more">Mehr zur Verhinderungspflege<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Vorsorgevollmacht</h3>
+        <p>Damit bestimmen Sie selbst eine Vertrauensperson, die für Sie handeln darf, wenn Sie es nicht mehr können – etwa gegenüber Ärzten, Banken oder Behörden. Sie ist das stärkste Vorsorgedokument, weil sie ein gerichtliches Betreuungsverfahren meist überflüssig macht.</p>
+        <a href="formulare" class="lex-more">Zu den Formularen<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </article>
+
+      <article class="lex-entry">
+        <h3>Widerspruch</h3>
+        <p>Fällt der Pflegegrad niedriger aus als erwartet, können Sie innerhalb eines Monats nach dem Bescheid widersprechen. Ein geführtes Pflegetagebuch und eine gute Begründung sind dabei entscheidend – ein Widerspruch hat häufiger Erfolg, als viele denken.</p>
+      </article>
+
+    </div>
+
+    <p id="lex-empty" class="text-center text-[#4a7c63] text-[16px] leading-relaxed" style="padding:40px 0;">
+      Zu diesem Begriff haben wir noch keinen Eintrag.<br>
+      <a href="/#kontakt" style="color:#2d6a4f;font-weight:700;text-decoration:underline;text-underline-offset:3px;">Fragen Sie uns einfach direkt</a> – wir erklären es Ihnen in Ruhe.
+    </p>
+
+    <p style="font-size:13px;color:#4a7c63;line-height:1.7;margin-top:36px;text-align:center;">
+      Stand: August 2026. Alle Angaben ohne Gewähr – maßgeblich sind Ihre individuelle Situation und die Entscheidung Ihrer Pflegekasse.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- PASST DAZU -->
+<section class="bg-[#f0faf2] py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center mb-10">
+      <span class="section-label">Passt dazu</span>
+      <h2 class="section-headline mt-1">Ihr nächster Schritt</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <a href="pflegegrad-check" class="lex-entry" style="text-decoration:none;">
+        <h3>Pflegegrad-Check</h3>
+        <p>Welcher Pflegegrad ist realistisch? Kostenlos und anonym einschätzen.</p>
       </a>
-      <a href="https://pataletis-physio.de/" target="_blank" rel="noopener noreferrer" style="display:flex;flex-direction:column;align-items:center;gap:16px;background:#f7fdf9;border:1px solid #e8f5ec;border-radius:16px;padding:36px 48px;text-decoration:none;transition:box-shadow 0.2s,transform 0.15s;box-shadow:0 2px 12px rgba(27,67,50,0.06);" class="hover:shadow-lg hover:-translate-y-1 max-w-sm w-full">
-        <img src="Brand_Assets/logo-pataletis-physio.avif" alt="Physio Pataletis – Physiotherapie Partner Hannover" style="height:64px;width:auto;object-fit:contain;" loading="lazy">
-        <div class="text-center">
-          <p class="text-[#1b4332] font-700 text-[16px]" style="letter-spacing:-0.01em;">Physio Pataletis</p>
-          <p class="text-[#4a7c63] text-[14px] mt-1">Physiotherapie – Partner in Hannover</p>
-        </div>
+      <a href="formulare" class="lex-entry" style="text-decoration:none;">
+        <h3>Formulare</h3>
+        <p>Anträge und Vorsorge-Dokumente – wir füllen sie mit Ihnen aus.</p>
+      </a>
+      <a href="/#kontakt" class="lex-entry" style="text-decoration:none;">
+        <h3>Persönlich fragen</h3>
+        <p>Lieber im Gespräch? Wir erklären Ihnen alles in Ruhe am Telefon.</p>
       </a>
     </div>
   </div>
 </section>
 
 
-<!-- CTA -->
+<!-- CTA SECTION -->
 <section class="bg-[#1b4332] py-16 lg:py-20">
   <div class="max-w-3xl mx-auto px-5 lg:px-8 text-center">
-    <span class="section-label" style="color:#95d5b2;">Jetzt anfragen</span>
+    <span class="section-label" style="color:#95d5b2;">Noch Fragen?</span>
     <h2 style="font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:#fff;" class="mt-2 mb-4">
-      Lernen Sie Haushaltspartner<br>persönlich kennen
+      Wir erklären es Ihnen<br>ohne Fachchinesisch
     </h2>
     <p class="text-[#b7e4c7] text-lg leading-relaxed mb-8">
-      Kostenlose Erstberatung für Haushaltshilfe &amp; Alltagshilfe in Hannover – unverbindlich und persönlich.
+      Kostenlose Erstberatung, Rückmeldung in der Regel innerhalb von 24 Stunden – und wir nehmen uns die Zeit, die Sie brauchen.
     </p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="/#kontakt" class="btn-gold justify-center">Jetzt kostenlos anfragen</a>
-      <a href="tel:+4951092638603" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,0.2);justify-content:center;">
+      <a href="/#kontakt" class="btn-gold justify-center">Jetzt kostenlos beraten lassen</a>
+      <a href="tel:+4951092638603" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,0.2);transition:background 0.2s;justify-content:center;">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
         05109 2638603
       </a>
@@ -365,6 +457,31 @@
   </div>
 </section>
 
+<script>
+  // ── Lexikon-Suche ──
+  (function () {
+    const input = document.getElementById('lex-search');
+    const list = document.getElementById('lex-list');
+    const empty = document.getElementById('lex-empty');
+    if (!input || !list || !empty) return;
+
+    const entries = Array.from(list.querySelectorAll('.lex-entry')).map(el => ({
+      el: el,
+      text: el.textContent.toLowerCase()
+    }));
+
+    input.addEventListener('input', function () {
+      const q = this.value.trim().toLowerCase();
+      let visible = 0;
+      entries.forEach(entry => {
+        const match = !q || entry.text.includes(q);
+        entry.el.hidden = !match;
+        if (match) visible++;
+      });
+      empty.classList.toggle('show', visible === 0);
+    });
+  })();
+</script>
 
 <!-- FOOTER -->
 <footer class="bg-[#0d2318] text-[#74c69d] pt-12 pb-28 lg:pb-12">
@@ -407,7 +524,9 @@
 
 <script>
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); });
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const iconOpen = document.getElementById('menu-icon-open');
@@ -459,36 +578,8 @@
     });
   });
 </script>
-<!-- WhatsApp Floating Button (desktop only) -->
-<style>
-  @keyframes wa-wiggle {
-    0%       { transform: rotate(0deg); }
-    2%       { transform: rotate(-15deg); }
-    4%       { transform: rotate(15deg); }
-    6%       { transform: rotate(-10deg); }
-    8%       { transform: rotate(10deg); }
-    10%      { transform: rotate(-5deg); }
-    12%      { transform: rotate(5deg); }
-    14%,100% { transform: rotate(0deg); }
-  }
-  @keyframes wa-intro {
-    0%, 55% { width: 155px; border-radius: 28px; }
-    100%    { width: 56px;  border-radius: 50%; }
-  }
-  @keyframes wa-text-out {
-    0%, 40%   { opacity: 1; max-width: 90px; margin-left: 6px; }
-    90%, 100% { opacity: 0; max-width: 0;    margin-left: 0; }
-  }
-  .wa-float {
-    width: 56px; height: 56px; border-radius: 50%; overflow: hidden;
-    animation: wa-intro 2.5s ease-in-out both, wa-wiggle 5s ease-in-out 6s infinite;
-  }
-  .wa-float:hover { animation-play-state: paused; }
-  .wa-float-text {
-    color: white; font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden;
-    animation: wa-text-out 2.5s ease-in-out forwards;
-  }
-</style>
+
+<!-- WhatsApp Floating Button -->
 <a href="https://wa.me/4915569451192" target="_blank" rel="noopener noreferrer"
    aria-label="Kontakt via WhatsApp"
    id="wa-float"
@@ -501,8 +592,6 @@
   </svg>
   <span class="wa-float-text">WhatsApp</span>
 </a>
-
-
 <script>
   setTimeout(function() {
     var el  = document.getElementById("wa-float");

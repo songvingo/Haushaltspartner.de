@@ -36,6 +36,26 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://haushaltspartner.de/pflegegrad-check</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://haushaltspartner.de/formulare</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://haushaltspartner.de/formulare-verhinderungspflege</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://haushaltspartner.de/pflege-lexikon</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://haushaltspartner.de/fensterputzservice</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -44,6 +64,42 @@
     <loc>https://haushaltspartner.de/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://haushaltspartner.de/blog/pflegegrad-beantragen</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://haushaltspartner.de/blog/pflegehilfsmittel-42-euro</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://haushaltspartner.de/blog/pflegegrad-widerspruch</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://haushaltspartner.de/blog/haushaltshilfe-anspruch</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://haushaltspartner.de/blog/kurzzeitpflege</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://haushaltspartner.de/blog/demenz-zu-hause-begleiten</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-12</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://haushaltspartner.de/blog/entlastungsbetrag-2026</loc>

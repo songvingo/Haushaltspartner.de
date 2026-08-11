@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Über uns – Alltagshilfe & Haushaltshilfe Hannover | Haushaltspartner</title>
-  <meta name="description" content="Das Team hinter Haushaltspartner – Ihr persönlicher Anbieter für Haushaltshilfe & Alltagshilfe in Hannover. Menschlich, verlässlich, vor Ort.">
-  <link rel="canonical" href="https://haushaltspartner.de/ueber-uns">
+  <title>Formulare & Anträge zur Pflege | Haushaltspartner Hannover</title>
+  <meta name="description" content="Pflegegrad-Antrag, Verhinderungspflege, Vorsorgevollmacht, Patientenverfügung: die wichtigsten Formulare im Überblick – wir helfen Ihnen kostenlos beim Ausfüllen.">
+  <link rel="canonical" href="https://haushaltspartner.de/formulare">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Formulare & Anträge zur Pflege | Haushaltspartner Hannover">
+  <meta property="og:description" content="Pflegegrad-Antrag, Verhinderungspflege, Vorsorgevollmacht, Patientenverfügung: die wichtigsten Formulare im Überblick – wir helfen Ihnen kostenlos beim Ausfüllen.">
+  <meta property="og:url" content="https://haushaltspartner.de/formulare">
   <link rel="icon" type="image/png" href="Brand_Assets/Haushaltspartner%20Logo%20gr%C3%BCn.png">
-  <!-- Tailwind CSS (compiled) -->
   <link rel="stylesheet" href="tailwind.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; }
@@ -17,10 +20,10 @@
     #navbar.scrolled { background: #1b4332 !important; box-shadow: 0 2px 24px rgba(0,0,0,0.25); }
     .btn-gold { display:inline-flex;align-items:center;gap:8px;background:#e8a320;color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;transition:background 0.2s ease,transform 0.15s ease;letter-spacing:-0.01em; }
     .btn-gold:hover { background:#f0b429;transform:translateY(-1px); }
+    .btn-outline-green { display:inline-flex;align-items:center;gap:8px;background:transparent;color:#1b4332;font-weight:700;padding:13px 28px;border-radius:6px;border:2px solid #2d6a4f;text-decoration:none;transition:background 0.2s,transform 0.15s;letter-spacing:-0.01em; }
+    .btn-outline-green:hover { background:#f0faf2;transform:translateY(-1px); }
     .section-label { display:inline-block;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#40916c;margin-bottom:12px; }
     .section-headline { font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:#1b4332; }
-    .benefit-card { display:flex;gap:20px;align-items:flex-start; }
-    .icon-circle { flex-shrink:0;width:52px;height:52px;border-radius:12px;background:#f0faf2;display:flex;align-items:center;justify-content:center; }
     footer { font-weight: 500; }
     footer a { transition: color 0.2s; }
     footer a:hover { color: #95d5b2; }
@@ -29,6 +32,33 @@
     ::-webkit-scrollbar-thumb { background: #40916c; border-radius: 3px; }
     #mobile-menu { display: none; }
     #mobile-menu.open { display: block; }
+    @keyframes wa-wiggle {
+      0%       { transform: rotate(0deg); }
+      2%       { transform: rotate(-15deg); }
+      4%       { transform: rotate(15deg); }
+      6%       { transform: rotate(-10deg); }
+      8%       { transform: rotate(10deg); }
+      10%      { transform: rotate(-5deg); }
+      12%      { transform: rotate(5deg); }
+      14%,100% { transform: rotate(0deg); }
+    }
+    @keyframes wa-intro {
+      0%, 55% { width: 155px; border-radius: 28px; }
+      100%    { width: 56px;  border-radius: 50%; }
+    }
+    @keyframes wa-text-out {
+      0%, 40%   { opacity: 1; max-width: 90px; margin-left: 6px; }
+      90%, 100% { opacity: 0; max-width: 0;    margin-left: 0; }
+    }
+    .wa-float {
+      width: 56px; height: 56px; border-radius: 50%; overflow: hidden;
+      animation: wa-intro 2.5s ease-in-out both, wa-wiggle 5s ease-in-out 6s infinite;
+    }
+    .wa-float:hover { animation-play-state: paused; }
+    .wa-float-text {
+      color: white; font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden;
+      animation: wa-text-out 2.5s ease-in-out forwards;
+    }
       /* ── Nav Dropdown ── */
     .nav-dropdown { position: relative; }
     .nav-dropdown-menu {
@@ -58,6 +88,61 @@
       white-space: nowrap;
     }
     .nav-dropdown-item:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+    /* ── Seitenspezifisch ── */
+    .form-card {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid #e8f5ec;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 2px 4px rgba(27,67,50,0.04), 0 10px 30px rgba(27,67,50,0.06);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+    .form-card:hover {
+      transform: translateY(-3px);
+      border-color: #b7e4c7;
+      box-shadow: 0 4px 8px rgba(27,67,50,0.06), 0 16px 40px rgba(27,67,50,0.12);
+    }
+    .form-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #e8f5ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .form-card h3 { font-size: 19px; font-weight: 800; color: #1b4332; letter-spacing: -0.02em; margin-bottom: 8px; }
+    .form-card p { font-size: 15px; line-height: 1.65; color: #4a7c63; margin-bottom: 20px; }
+    .form-card .form-card-foot { margin-top: auto; }
+    .form-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #2d6a4f;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    .form-link:hover { color: #1b4332; border-color: #95d5b2; }
+    .form-link:focus-visible { outline: 2px solid #40916c; outline-offset: 3px; border-radius: 2px; }
+    .form-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    .form-tag-amt { background: #e8f5ec; color: #2d6a4f; }
+    .form-tag-ext { background: #fdf3e0; color: #a9741a; }
   </style>
 
   <script type="application/ld+json">
@@ -66,7 +151,7 @@
     "@type":"BreadcrumbList",
     "itemListElement":[
     {"@type":"ListItem","position":1,"name":"Startseite","item":"https://haushaltspartner.de/"},
-    {"@type":"ListItem","position":2,"name":"Über uns"}
+    {"@type":"ListItem","position":2,"name":"Formulare"}
     ]
   }
   </script>
@@ -140,231 +225,264 @@
   </div>
 </nav>
 
-
 <!-- PAGE HERO -->
-<section class="bg-[#1b4332] pt-[70px] overflow-hidden" style="position:relative;">
+<section class="bg-[#1b4332] pt-[70px] pb-16 lg:pb-20 overflow-hidden" style="position:relative;">
   <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
     <div style="position:absolute;top:0;right:0;width:50%;height:100%;background:radial-gradient(ellipse at 80% 50%,rgba(64,145,108,0.15) 0%,transparent 70%);"></div>
   </div>
-  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 py-16 lg:py-20">
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-10">
     <a href="/" class="inline-flex items-center gap-2 text-[#95d5b2] hover:text-white text-sm font-600 transition-colors mb-8">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
       Zurück zur Startseite
     </a>
-    <span class="section-label" style="color:#95d5b2;display:block;">Über Haushaltspartner</span>
-    <h1 style="font-size:clamp(30px,5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-0.04em;color:#fff;" class="mt-2 mb-5 max-w-2xl">
-      Haushaltshilfe &amp; Alltagshilfe<br>in Hannover –<br><span style="color:#74c69d;">mit Herz dabei</span>
-    </h1>
-    <p class="text-[#b7e4c7] text-lg leading-relaxed max-w-xl">
-      Wir sind Haushaltspartner – ein lokales Unternehmen aus Ronnenberg für Hannover und die Region. Unser Antrieb ist die echte Unterstützung von Menschen, die Haushaltshilfe oder Alltagshilfe benötigen.
-    </p>
+    <div class="max-w-3xl">
+      <span class="section-label" style="color:#95d5b2;">Formulare &amp; Anträge</span>
+      <h1 style="font-size:clamp(30px,5vw,56px);font-weight:900;line-height:1.08;letter-spacing:-0.04em;color:#fff;" class="mt-2 mb-5">
+        Alle wichtigen<br><span style="color:#74c69d;">Formulare</span><br>an einem Ort
+      </h1>
+      <p class="text-[#b7e4c7] text-lg leading-relaxed mb-8 max-w-2xl">
+        Anträge rund um Pflegegrad und Vorsorge wirken oft kompliziert. Hier finden Sie die wichtigsten Unterlagen kurz erklärt – und <strong class="text-white">wir füllen sie gemeinsam mit Ihnen aus</strong>.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="/#kontakt" class="btn-gold justify-center sm:justify-start">Hilfe beim Ausfüllen anfragen</a>
+        <a href="tel:+4951092638603" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,0.2);transition:background 0.2s;" class="justify-center sm:justify-start">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          05109 2638603
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
 
-<!-- UNSERE GESCHICHTE -->
+<!-- FORMULAR-KARTEN -->
 <section class="bg-white py-20 lg:py-28">
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-      <div>
-        <span class="section-label">Unsere Geschichte</span>
-        <h2 class="section-headline mt-1 mb-6">Warum wir Haushaltspartner gegründet haben</h2>
-        <p class="text-[#4a7c63] text-[16px] leading-relaxed mb-4">
-          Haushaltspartner entstand aus einem einfachen Gedanken: In Hannover und der Region fehlte ein verlässlicher, menschlicher Anbieter für <strong class="text-[#1b4332]">Haushaltshilfe und Alltagshilfe</strong>, der nicht nur Aufgaben erledigt, sondern wirklich für Menschen da ist.
-        </p>
-        <p class="text-[#4a7c63] text-[16px] leading-relaxed mb-4">
-          Als junges Unternehmen aus Ronnenberg bei Hannover haben wir uns auf Seniorenhilfe und die Unterstützung von Menschen mit Pflegegrad 1–5 spezialisiert. Wir glauben daran, dass <strong class="text-[#1b4332]">würdevolle Unterstützung im eigenen Zuhause</strong> keine Frage des Alters ist – sondern ein Grundrecht.
-        </p>
-        <p class="text-[#4a7c63] text-[16px] leading-relaxed mb-8">
-          Heute helfen wir über 300 Kunden in Hannover und der Region – mit Haushaltshilfe, Alltagshilfe und echter menschlicher Begleitung.
-        </p>
-        <div class="flex flex-wrap gap-6">
-          <div>
-            <p style="font-size:36px;font-weight:900;color:#1b4332;letter-spacing:-0.04em;line-height:1;">300<span style="color:#40916c;">+</span></p>
-            <p class="text-[#4a7c63] text-sm font-600 uppercase tracking-widest mt-1">Zufriedene Kunden</p>
-          </div>
-          <div>
-            <p style="font-size:36px;font-weight:900;color:#1b4332;letter-spacing:-0.04em;line-height:1;">3<span style="color:#40916c;">+</span></p>
-            <p class="text-[#4a7c63] text-sm font-600 uppercase tracking-widest mt-1">Jahre in Hannover</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(27,67,50,0.12);aspect-ratio:4/3;">
-          <img src="Fotos/Haushaltshilfe%20Haushaltspartner%20H%C3%A4nde.webp" alt="Haushaltspartner – Haushaltshilfe und Alltagshilfe in Hannover mit Herz" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-
-<!-- CEO QUOTE -->
-<section class="bg-[#1b4332] py-20 lg:py-24 overflow-hidden" style="border-top:1px solid rgba(255,255,255,0.08);">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-
-      <!-- Photo -->
-      <div class="flex justify-center lg:justify-end">
-        <div style="position:relative;max-width:300px;width:100%;">
-          <div style="width:100%;aspect-ratio:1/1;border-radius:50%;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,0.4);border:4px solid rgba(255,255,255,0.15);">
-            <img src="Fotos/Haushaltshilfe-Alltagshilfe-Hannover-Haushaltspartner-Gesch%C3%A4ftsf%C3%BChrer-Songvi-Ngo%20(1).webp" alt="Songvi Ngo – Kundenberater bei Haushaltspartner" style="width:100%;height:100%;object-fit:cover;object-position:50% 15%;display:block;" loading="lazy">
-          </div>
-          <div style="position:absolute;bottom:-10px;right:10px;background:#e8a320;color:#fff;padding:8px 14px;border-radius:10px;box-shadow:0 8px 24px rgba(232,163,32,0.4);">
-            <p style="font-size:14px;font-weight:800;margin:0;">Kundenberater</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Quote -->
-      <div>
-        <span class="section-label" style="color:#95d5b2;">Unser Antrieb</span>
-        <div style="position:relative;margin-top:12px;margin-bottom:28px;">
-          <svg width="48" height="36" viewBox="0 0 48 36" fill="none" aria-hidden="true" style="position:absolute;top:-8px;left:-4px;opacity:0.2;">
-            <path d="M0 36V22.5C0 10.5 7.5 3 22.5 0L24 3.75C16.5 5.25 12.75 9.75 12 16.5H22.5V36H0ZM25.5 36V22.5C25.5 10.5 33 3 48 0L49.5 3.75C42 5.25 38.25 9.75 37.5 16.5H48V36H25.5Z" fill="#fff"/>
-          </svg>
-          <blockquote class="text-[#d8f3dc] text-[15px] lg:text-[18px] leading-relaxed" style="letter-spacing:-0.01em;padding-left:8px;">
-            „Jeder Mensch verdient würdevolle Unterstützung in den eigenen vier Wänden – unabhängig von Alter oder Pflegegrad. Mit Haushaltspartner möchte ich Familien und pflegenden Angehörigen in Hannover echte Entlastung bieten. Als junger Mensch sehe ich es als meine Aufgabe, mit gutem Beispiel voranzugehen: für eine Haushaltshilfe und Alltagshilfe, die wirklich von Herz kommt."
-          </blockquote>
-        </div>
-        <div class="flex items-center gap-4">
-          <div style="width:48px;height:2px;background:#e8a320;border-radius:2px;"></div>
-          <div>
-            <p class="text-white font-800 text-[16px]" style="letter-spacing:-0.02em;">Songvi Ngo</p>
-            <p class="text-[#74c69d] text-[13px]">Kundenberater · Haushaltspartner</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- UNSERE WERTE -->
-<section class="bg-[#f7fdf9] py-20 lg:py-28">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="text-center mb-14">
-      <span class="section-label">Was uns ausmacht</span>
-      <h2 class="section-headline mt-1">Unsere Werte für Haushaltshilfe &amp; Alltagshilfe in Hannover</h2>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <div class="benefit-card">
-        <div class="icon-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-        </div>
-        <div>
-          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Verlässlichkeit</h3>
-          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Pünktlichkeit und Zuverlässigkeit sind keine Extras – sie sind der Standard bei Haushaltspartner in Hannover.</p>
-        </div>
-      </div>
-
-      <div class="benefit-card">
-        <div class="icon-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </div>
-        <div>
-          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Mit Herz dabei</h3>
-          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Haushaltshilfe ist für uns Berufung, nicht nur Job. Wir behandeln jeden Kunden mit Würde, Respekt und echtem Mitgefühl.</p>
-        </div>
-      </div>
-
-      <div class="benefit-card">
-        <div class="icon-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </div>
-        <div>
-          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Lokal verwurzelt</h3>
-          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Wir sind aus Ronnenberg – für Hannover und die Region. Kurze Wege bedeuten schnelle Hilfe wenn sie gebraucht wird.</p>
-        </div>
-      </div>
-
-      <div class="benefit-card">
-        <div class="icon-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <div>
-          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Transparenz</h3>
-          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Klare Preise, ehrliche Kommunikation, keine versteckten Kosten. Wir erklären alles verständlich – auch die Abrechnung mit der Pflegekasse.</p>
-        </div>
-      </div>
-
-      <div class="benefit-card">
-        <div class="icon-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-        </div>
-        <div>
-          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Feste Bezugsperson</h3>
-          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Kein ständiger Personalwechsel. Ihre persönliche Haushaltshilfe in Hannover kennt Ihre Gewohnheiten und Bedürfnisse.</p>
-        </div>
-      </div>
-
-      <div class="benefit-card">
-        <div class="icon-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2d6a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div>
-          <h3 class="text-[#1b4332] font-800 text-lg mb-2" style="letter-spacing:-0.02em;">Qualifiziert &amp; erfahren</h3>
-          <p class="text-[#4a7c63] text-[15px] leading-relaxed">Unser Team ist im Umgang mit pflegebedürftigen Menschen ausgebildet. Qualität und Sorgfalt haben bei Haushaltspartner höchste Priorität.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- PARTNER -->
-<section class="bg-white py-20 lg:py-24">
-  <div class="max-w-7xl mx-auto px-5 lg:px-8">
-    <div class="text-center mb-14">
-      <span class="section-label">Netzwerk</span>
-      <h2 class="section-headline mt-1">Unsere Partner für Haushaltshilfe in Hannover</h2>
-      <p class="text-[#4a7c63] text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
-        Gemeinsam sind wir stärker. Durch unser lokales Netzwerk in Hannover können wir noch umfassender helfen.
+    <div class="text-center mb-14 max-w-2xl mx-auto">
+      <span class="section-label">Wobei brauchen Sie Unterstützung?</span>
+      <h2 class="section-headline mt-1 mb-4">Anträge rund um Pflege und Vorsorge</h2>
+      <p class="text-[#4a7c63] text-lg leading-relaxed">
+        Wählen Sie das passende Thema. Bei den Anträgen an die Pflegekasse übernehmen wir den Papierkram – die Vorsorge-Dokumente führen direkt zu den amtlichen Vordrucken.
       </p>
     </div>
 
-    <div class="flex flex-wrap justify-center gap-6">
-      <a href="https://www.hannoverhilfe.de/" target="_blank" rel="noopener noreferrer" style="display:flex;flex-direction:column;align-items:center;gap:16px;background:#f7fdf9;border:1px solid #e8f5ec;border-radius:16px;padding:36px 48px;text-decoration:none;transition:box-shadow 0.2s,transform 0.15s;box-shadow:0 2px 12px rgba(27,67,50,0.06);" class="hover:shadow-lg hover:-translate-y-1 max-w-sm w-full">
-        <img src="Brand_Assets/Logo-hannoverhilfe.webp" alt="Hannover Hilfe – Partner für Haushaltshilfe und Alltagshilfe Hannover" style="height:64px;width:auto;object-fit:contain;" loading="lazy">
-        <div class="text-center">
-          <p class="text-[#1b4332] font-700 text-[16px]" style="letter-spacing:-0.01em;">Hannover Hilfe</p>
-          <p class="text-[#4a7c63] text-[14px] mt-1">Lokaler Partner für Alltagsbegleitung &amp; Haushaltshilfe in Hannover</p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Pflegegrad beantragen -->
+      <article class="form-card">
+        <span class="form-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        </span>
+        <span class="form-tag form-tag-amt">Pflegekasse</span>
+        <h3>Antrag auf einen Pflegegrad</h3>
+        <p>
+          Der erste Schritt zu allen Leistungen. Der Antrag ist <strong style="color:#1b4332;">formlos möglich</strong> – ein Anruf oder ein kurzes Schreiben an Ihre Pflegekasse genügt. Danach meldet sich der Medizinische Dienst zur Begutachtung.
+        </p>
+        <div class="form-card-foot">
+          <a href="pflegegrad-check" class="form-link">
+            Erst einschätzen lassen
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
         </div>
+      </article>
+
+      <!-- Verhinderungspflege -->
+      <article class="form-card">
+        <span class="form-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <span class="form-tag form-tag-amt">Pflegekasse</span>
+        <h3>Verhinderungspflege beantragen</h3>
+        <p>
+          Wenn die pflegende Person ausfällt – wegen Urlaub, Krankheit oder einfach zur Erholung. Jede Pflegekasse nutzt ihr eigenes Formular. Wählen Sie Ihre Kasse aus der Liste, wir führen Sie direkt zum richtigen Antrag.
+        </p>
+        <div class="form-card-foot">
+          <a href="formulare-verhinderungspflege" class="form-link">
+            Antrag Ihrer Kasse finden
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Entlastungsbetrag -->
+      <article class="form-card">
+        <span class="form-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        </span>
+        <span class="form-tag form-tag-amt">Pflegekasse</span>
+        <h3>Entlastungsbetrag abrufen</h3>
+        <p>
+          Für den Entlastungsbetrag nach § 45b SGB XI brauchen Sie in der Regel <strong style="color:#1b4332;">kein Formular</strong>: Als anerkannter Anbieter rechnen wir direkt mit Ihrer Pflegekasse ab. Sie unterschreiben nur den Leistungsnachweis.
+        </p>
+        <p>
+          Ihren aktuellen Stand können Sie jederzeit <strong style="color:#1b4332;">telefonisch bei Ihrer Pflegekasse erfragen</strong> – oder bequem in der App Ihrer Kasse einsehen. Dort steht meist auf einen Blick, wie viel vom Entlastungsbetrag im laufenden Jahr noch offen ist.
+        </p>
+        <div class="form-card-foot">
+          <a href="entlastungsbetrag" class="form-link">
+            Zum Entlastungsbetrag
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Vorsorgevollmacht -->
+      <article class="form-card">
+        <span class="form-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 0 1 3 3L12 15l-4 1 1-4z"/></svg>
+        </span>
+        <span class="form-tag form-tag-ext">Amtlicher Vordruck</span>
+        <h3>Vorsorgevollmacht</h3>
+        <p>
+          Damit bestimmen Sie selbst eine Vertrauensperson, die für Sie entscheidet, wenn Sie es einmal nicht mehr können. Das Bundesjustizministerium stellt einen kostenlosen Mustervordruck bereit.
+        </p>
+        <div class="form-card-foot">
+          <a href="https://www.bmjv.de/DE/Service/Formulare/Formulare_node.html" target="_blank" rel="noopener noreferrer" class="form-link">
+            Formular beim BMJ
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Betreuungsverfügung -->
+      <article class="form-card">
+        <span class="form-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </span>
+        <span class="form-tag form-tag-ext">Amtlicher Vordruck</span>
+        <h3>Betreuungsverfügung</h3>
+        <p>
+          Falls doch einmal ein gerichtlicher Betreuer nötig wird: Hier legen Sie vorab fest, wen das Gericht bestellen soll – und wen ausdrücklich nicht. Ebenfalls als amtliches Muster erhältlich.
+        </p>
+        <div class="form-card-foot">
+          <a href="https://www.bmjv.de/DE/Service/Formulare/Formulare_node.html" target="_blank" rel="noopener noreferrer" class="form-link">
+            Formular beim BMJ
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Patientenverfügung -->
+      <article class="form-card">
+        <span class="form-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </span>
+        <span class="form-tag form-tag-ext">Amtliche Hilfe</span>
+        <h3>Patientenverfügung</h3>
+        <p>
+          Legen Sie im Voraus fest, welche medizinische Behandlung Sie wünschen und welche nicht. Das Bundesgesundheitsministerium bietet dazu Textbausteine und einen Schritt-für-Schritt-Assistenten.
+        </p>
+        <div class="form-card-foot">
+          <a href="https://www.bundesgesundheitsministerium.de/patientenverfuegung" target="_blank" rel="noopener noreferrer" class="form-link">
+            Textbausteine beim BMG
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <p style="font-size:13px;color:#4a7c63;line-height:1.7;margin-top:32px;text-align:center;max-width:760px;margin-left:auto;margin-right:auto;">
+      Die verlinkten Vordrucke stammen von den offiziellen Stellen – dem Bundesministerium der Justiz und dem Bundesministerium für Gesundheit. Wir stellen sie hier nur zur schnellen Auffindung zusammen. Maßgeblich ist immer das aktuelle Originaldokument der jeweiligen Stelle sowie das Formular Ihrer eigenen Pflegekasse.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- PFLEGETAGEBUCH / WIR HELFEN -->
+<section class="bg-[#f0faf2] py-20 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <div>
+        <span class="section-label">Pflegetagebuch</span>
+        <h2 class="section-headline mt-1 mb-6">Die beste Vorbereitung auf die Begutachtung</h2>
+        <p class="text-[#4a7c63] text-[16px] leading-relaxed mb-4">
+          Bei der Begutachtung durch den Medizinischen Dienst zählt, wie selbstständig jemand den Alltag bewältigt. Genau die vielen kleinen Hilfen im Tagesverlauf werden dabei aber oft vergessen – und dann fällt der Pflegegrad niedriger aus als er sollte.
+        </p>
+        <p class="text-[#4a7c63] text-[16px] leading-relaxed mb-6">
+          Ein <strong class="text-[#1b4332]">Pflegetagebuch</strong> hält über ein bis zwei Wochen fest, wobei tatsächlich Unterstützung nötig war. Es ist die stärkste Grundlage für den Gutachtertermin – und später auch für einen Widerspruch.
+        </p>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3 text-[#4a7c63] text-[15px]">
+            <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Wir bringen Ihnen ein Pflegetagebuch vorbei oder schicken es zu
+          </li>
+          <li class="flex items-start gap-3 text-[#4a7c63] text-[15px]">
+            <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Wir zeigen Ihnen, worauf es beim Ausfüllen ankommt
+          </li>
+          <li class="flex items-start gap-3 text-[#4a7c63] text-[15px]">
+            <svg class="flex-shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#40916c" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Auf Wunsch sind wir beim Begutachtungstermin dabei
+          </li>
+        </ul>
+      </div>
+
+      <div style="background:#fff;border-radius:16px;padding:34px;box-shadow:0 4px 24px rgba(27,67,50,0.08);border:1px solid #e8f5ec;">
+        <h3 style="font-size:20px;font-weight:800;color:#1b4332;letter-spacing:-0.02em;margin-bottom:10px;">Wir füllen die Anträge mit Ihnen aus</h3>
+        <p class="text-[#4a7c63] text-[15px] leading-relaxed mb-6">
+          Formulare sind unser Alltag – für Sie sind sie es nicht. Rufen Sie uns an: Wir gehen die Unterlagen in Ruhe mit Ihnen durch, kümmern uns um den Schriftverkehr mit Ihrer Pflegekasse und melden uns zurück, sobald etwas entschieden ist.
+        </p>
+        <div class="flex flex-col gap-3">
+          <a href="tel:+4951092638603" class="btn-gold justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            05109 2638603
+          </a>
+          <a href="/#kontakt" class="btn-outline-green justify-center">Kostenlos anfragen</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PASST DAZU -->
+<section class="bg-white py-16 lg:py-20">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center mb-10">
+      <span class="section-label">Passt dazu</span>
+      <h2 class="section-headline mt-1">Ihr nächster Schritt</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="pflegegrad-check" class="form-card" style="text-decoration:none;">
+        <h3>Pflegegrad-Check</h3>
+        <p style="margin-bottom:0;">Welcher Pflegegrad ist realistisch? In wenigen Minuten einschätzen.</p>
       </a>
-      <a href="https://pataletis-physio.de/" target="_blank" rel="noopener noreferrer" style="display:flex;flex-direction:column;align-items:center;gap:16px;background:#f7fdf9;border:1px solid #e8f5ec;border-radius:16px;padding:36px 48px;text-decoration:none;transition:box-shadow 0.2s,transform 0.15s;box-shadow:0 2px 12px rgba(27,67,50,0.06);" class="hover:shadow-lg hover:-translate-y-1 max-w-sm w-full">
-        <img src="Brand_Assets/logo-pataletis-physio.avif" alt="Physio Pataletis – Physiotherapie Partner Hannover" style="height:64px;width:auto;object-fit:contain;" loading="lazy">
-        <div class="text-center">
-          <p class="text-[#1b4332] font-700 text-[16px]" style="letter-spacing:-0.01em;">Physio Pataletis</p>
-          <p class="text-[#4a7c63] text-[14px] mt-1">Physiotherapie – Partner in Hannover</p>
-        </div>
+      <a href="entlastungsbetrag" class="form-card" style="text-decoration:none;">
+        <h3>Entlastungsbetrag</h3>
+        <p style="margin-bottom:0;">131 € im Monat für Pflegegrad 1–5 – so nutzen Sie ihn.</p>
+      </a>
+      <a href="pflege-lexikon" class="form-card" style="text-decoration:none;">
+        <h3>Pflege-Lexikon</h3>
+        <p style="margin-bottom:0;">Fachbegriffe rund um die Pflege, einfach erklärt.</p>
       </a>
     </div>
   </div>
 </section>
 
 
-<!-- CTA -->
+<!-- CTA SECTION -->
 <section class="bg-[#1b4332] py-16 lg:py-20">
   <div class="max-w-3xl mx-auto px-5 lg:px-8 text-center">
-    <span class="section-label" style="color:#95d5b2;">Jetzt anfragen</span>
+    <span class="section-label" style="color:#95d5b2;">Jetzt starten</span>
     <h2 style="font-size:clamp(26px,3.5vw,42px);font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:#fff;" class="mt-2 mb-4">
-      Lernen Sie Haushaltspartner<br>persönlich kennen
+      Papierkram? Übernehmen wir.
     </h2>
     <p class="text-[#b7e4c7] text-lg leading-relaxed mb-8">
-      Kostenlose Erstberatung für Haushaltshilfe &amp; Alltagshilfe in Hannover – unverbindlich und persönlich.
+      Kostenlose Erstberatung, Rückmeldung in der Regel innerhalb von 24 Stunden. Wir gehen jeden Antrag gemeinsam mit Ihnen durch.
     </p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="/#kontakt" class="btn-gold justify-center">Jetzt kostenlos anfragen</a>
-      <a href="tel:+4951092638603" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,0.2);justify-content:center;">
+      <a href="/#kontakt" class="btn-gold justify-center">Jetzt kostenlos beraten lassen</a>
+      <a href="tel:+4951092638603" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);color:#fff;font-weight:700;padding:14px 28px;border-radius:6px;text-decoration:none;border:2px solid rgba(255,255,255,0.2);transition:background 0.2s;justify-content:center;">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
         05109 2638603
       </a>
     </div>
   </div>
 </section>
-
 
 <!-- FOOTER -->
 <footer class="bg-[#0d2318] text-[#74c69d] pt-12 pb-28 lg:pb-12">
@@ -407,7 +525,9 @@
 
 <script>
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 20); });
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const iconOpen = document.getElementById('menu-icon-open');
@@ -459,36 +579,8 @@
     });
   });
 </script>
-<!-- WhatsApp Floating Button (desktop only) -->
-<style>
-  @keyframes wa-wiggle {
-    0%       { transform: rotate(0deg); }
-    2%       { transform: rotate(-15deg); }
-    4%       { transform: rotate(15deg); }
-    6%       { transform: rotate(-10deg); }
-    8%       { transform: rotate(10deg); }
-    10%      { transform: rotate(-5deg); }
-    12%      { transform: rotate(5deg); }
-    14%,100% { transform: rotate(0deg); }
-  }
-  @keyframes wa-intro {
-    0%, 55% { width: 155px; border-radius: 28px; }
-    100%    { width: 56px;  border-radius: 50%; }
-  }
-  @keyframes wa-text-out {
-    0%, 40%   { opacity: 1; max-width: 90px; margin-left: 6px; }
-    90%, 100% { opacity: 0; max-width: 0;    margin-left: 0; }
-  }
-  .wa-float {
-    width: 56px; height: 56px; border-radius: 50%; overflow: hidden;
-    animation: wa-intro 2.5s ease-in-out both, wa-wiggle 5s ease-in-out 6s infinite;
-  }
-  .wa-float:hover { animation-play-state: paused; }
-  .wa-float-text {
-    color: white; font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden;
-    animation: wa-text-out 2.5s ease-in-out forwards;
-  }
-</style>
+
+<!-- WhatsApp Floating Button -->
 <a href="https://wa.me/4915569451192" target="_blank" rel="noopener noreferrer"
    aria-label="Kontakt via WhatsApp"
    id="wa-float"
@@ -501,8 +593,6 @@
   </svg>
   <span class="wa-float-text">WhatsApp</span>
 </a>
-
-
 <script>
   setTimeout(function() {
     var el  = document.getElementById("wa-float");
